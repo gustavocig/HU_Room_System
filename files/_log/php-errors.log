@@ -1,0 +1,1502 @@
+Test
+Test
+Test
+2018-04-16 10:28:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: is_template
+  Backtrace :
+  inc/ticket.class.php:5424                          
+  inc/ticket.class.php:725                           Ticket::showListForItem()
+  inc/commonglpi.class.php:483                       Ticket::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-04-16 10:28:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: is_template
+  Backtrace :
+  inc/ticket.class.php:5424                          
+  inc/ticket.class.php:725                           Ticket::showListForItem()
+  inc/commonglpi.class.php:483                       Ticket::displayTabContentForItem()
+  inc/commonglpi.class.php:450                       CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/html.class.php:1814                            
+  front/reservation.php:49                           Html::header()
+2018-04-18 11:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Invalid argument supplied for foreach()
+  Backtrace :
+  inc/html.class.php:1813                            
+  front/reservation.php:49                           Html::header()
+2018-04-24 08:44:55 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From DBmysql::optimize_tables() in /usr/share/Estagio-HU/glpi/inc/dbmysql.class.php line 575
+  Cannot launch automatic action : crashed tables detected 
+2018-05-14 12:17:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 153
+  Invalid date 14 05! 
+2018-05-14 12:18:29 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 153
+  Invalid date 14/05/2018 12:00:00! 
+2018-05-14 12:26:06 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 153
+  Invalid date 14/05/2018 12:00:00! 
+2018-05-16 13:22:54 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: PATH_INFO
+  Backtrace :
+  inc/apirest.class.php:71                           
+  apirest.php:48                                     APIRest->call()
+2018-05-17 08:27:08 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: PATH_INFO
+  Backtrace :
+  inc/apirest.class.php:71                           
+  apirest.php:48                                     APIRest->call()
+2018-05-17 10:04:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: is_template
+  Backtrace :
+  inc/ticket.class.php:5424                          
+  inc/ticket.class.php:725                           Ticket::showListForItem()
+  inc/commonglpi.class.php:483                       Ticket::displayTabContentForItem()
+  inc/commonglpi.class.php:450                       CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-17 10:06:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: is_template
+  Backtrace :
+  inc/ticket.class.php:5424                          
+  inc/ticket.class.php:725                           Ticket::showListForItem()
+  inc/commonglpi.class.php:483                       Ticket::displayTabContentForItem()
+  inc/commonglpi.class.php:450                       CommonGLPI::displayStandardTab()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 09:59:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:786                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:809                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 13:46:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: size
+  Backtrace :
+  inc/reservationitem.class.php:509                  
+  inc/reservationitem.class.php:808                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 14:07:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: item
+  Backtrace :
+  inc/reservationitem.class.php:570                  
+  inc/reservationitem.class.php:796                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-18 14:07:44 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: item
+  Backtrace :
+  inc/reservationitem.class.php:570                  
+  inc/reservationitem.class.php:796                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 09:10:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: selectProj
+  Backtrace :
+  inc/reservationitem.class.php:561                  
+  inc/reservationitem.class.php:821                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 09:10:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: where
+  Backtrace :
+  inc/reservationitem.class.php:562                  
+  inc/reservationitem.class.php:821                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 11:11:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: videoprojector
+  Backtrace :
+  inc/reservationitem.class.php:628                  
+  inc/reservationitem.class.php:841                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 11:11:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: videoprojector
+  Backtrace :
+  inc/reservationitem.class.php:628                  
+  inc/reservationitem.class.php:841                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 11:11:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: videoprojector
+  Backtrace :
+  inc/reservationitem.class.php:628                  
+  inc/reservationitem.class.php:841                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 11:11:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: videoprojector
+  Backtrace :
+  inc/reservationitem.class.php:628                  
+  inc/reservationitem.class.php:841                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-21 14:11:06 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: 
+  Backtrace :
+  inc/reservationitem.class.php:491                  
+  inc/reservationitem.class.php:849                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 10:15:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: videoprojector
+  Backtrace :
+  inc/reservationitem.class.php:515                  
+  inc/reservationitem.class.php:849                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 10:24:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: printer
+  Backtrace :
+  plugins/room/inc/room.class.php:337                
+  inc/commonglpi.class.php:473                       PluginRoomRoom->showForm()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 11:46:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: printer
+  Backtrace :
+  plugins/room/inc/room.class.php:338                
+  inc/commonglpi.class.php:473                       PluginRoomRoom->showForm()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 12:16:02 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: printer
+  Backtrace :
+  plugins/room/inc/room.class.php:338                
+  inc/commonglpi.class.php:473                       PluginRoomRoom->showForm()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 12:41:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: tv
+  Backtrace :
+  inc/reservationitem.class.php:655                  
+  inc/reservationitem.class.php:870                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 12:41:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: tv
+  Backtrace :
+  inc/reservationitem.class.php:655                  
+  inc/reservationitem.class.php:870                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 12:41:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: tv
+  Backtrace :
+  inc/reservationitem.class.php:655                  
+  inc/reservationitem.class.php:870                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-23 12:41:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: tv
+  Backtrace :
+  inc/reservationitem.class.php:655                  
+  inc/reservationitem.class.php:870                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-05-29 10:27:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 0
+  Backtrace :
+  inc/commonglpi.class.php:722                       
+  inc/commonglpi.class.php:1162                      CommonGLPI->showTabsContent()
+  front/reservationitem.php:49                       CommonGLPI->display()
+2018-05-29 10:27:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  inc/commonglpi.class.php:722                       
+  inc/commonglpi.class.php:1162                      CommonGLPI->showTabsContent()
+  front/reservationitem.php:49                       CommonGLPI->display()
+2018-05-29 11:27:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: selected_tab
+  Backtrace :
+  inc/ajax.class.php:335                             
+  inc/commonglpi.class.php:756                       Ajax::createTabs()
+  inc/commonglpi.class.php:1172                      CommonGLPI->showTabsContent()
+  front/reservationitem.php:49                       CommonGLPI->display()
+2018-05-29 13:16:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-05-29 13:17:22 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-05-29 13:53:32 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-05-29 13:53:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-06-04 09:42:48 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/user.form.php:180                            CommonGLPI->display()
+2018-06-12 00:57:29 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-06-12 00:57:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/preference.php:74                            CommonGLPI->display()
+2018-06-18 08:49:06 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:51:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:51:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:52:30 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:52:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:53:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:53:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 08:54:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-06-18 09:04:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Catchable Fatal Error(4096): Object of class mysqli_result could not be converted to string
+  Backtrace :
+  inc/reservation.class.php:474                      
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-06-18 09:05:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/reservation.class.php:475                      
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-06-18 09:05:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/reservation.class.php:475                      
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-06-18 09:05:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/reservation.class.php:475                      
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-06-18 09:05:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  inc/reservation.class.php:475                      
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-06-18 11:50:32 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/reservation_unique.php:21                    CommonGLPI->display()

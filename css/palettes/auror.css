@@ -1,0 +1,234 @@
+
+/* ===== LOGIN ===== */
+
+#firstboxlogin  {
+   background-color: #1B2F62;
+}
+
+#logo_login {
+   border-top-color: #002458;
+    background: -moz-linear-gradient(top,#c6d6e0 0,rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#c6d6e0),color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top,#c6d6e0 0,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top,#c6d6e0 0,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top,#c6d6e0 0,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom,#c6d6e0 0,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c6d6e0',endColorstr='#00ffffff',GradientType=0); 
+}
+
+
+/*#logo_login {
+   background: url(../../pics/login_logo_glpi.png) center no-repeat, #3A5693; 
+}*/
+
+#display-login {
+   color: #FFF;
+}
+
+#text-login {
+   background-color:rgba(255,255,255,0);
+   color: #FFF;
+}
+
+/*#text-login {
+   background-color: #3A5693;
+   color: #FFF;
+}*/
+
+
+/* ====== GENERAL ====== */
+
+a, a:link, .ui-widget-content a {
+    color : #3A5693;
+}
+
+.main_form tr.headerRow th {
+   color: #8CABDB;
+}
+
+/* ====== HEADER ====== */
+
+#header_top {
+   background-color: #eaebee;
+}
+
+/*#header_top {
+   background-color: #1B2F62;
+}*/
+
+#c_preference a {
+   color: #000;
+}
+
+#c_recherche form #champRecherche input {
+   background-color: #131425;
+   color: #C7DBF5;
+}
+
+#c_menu {
+   background-color: #666;
+}
+
+/*#c_menu {
+   background-color: #3A5693;
+}*/
+
+ul#menu a.itemP, ul#menu a.itemP1 {
+   color: #FFF;
+}
+
+ul#menu > li.active,
+ul.ssmenu li.active {
+   background-color: #8CABDB;
+}
+
+ul#menu > li:hover {
+   background-color: #8BAADA;
+}
+
+ul#menu ul li a:hover {
+   background: #3A5693;
+   color: #C7DBF5;
+}
+
+ul#menu ul li a {
+   color: #131425;
+}
+
+/* ====== BUTTONS ====== */
+
+a.vsubmit, 
+.vsubmit a {
+   color: #8f5a0a;
+}
+
+#BackToTop {
+   background-color: #000;
+   color: #fff;
+}
+
+/*#tabSala {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}*/
+
+.tabSala {
+    padding: 7px 20px 7px;
+}
+
+.vsubmit:hover {
+    background: #d9d9d9;
+    -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+    box-shadow: inset 0 0 1px 1px #eaeaea;
+    color: #222;
+    cursor: pointer;
+}
+
+.fodder1 {
+  padding-left: 92px;
+}
+
+.fodderTabSala {
+    padding-left: 5px;
+}
+
+
+
+.breadcrumb_item {
+   height: 23px;
+   position: relative;
+   display: inline;
+}
+
+
+.breadcrumb_item:before {
+   left: 100%;
+   top: 50%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   border-left-color: #FFF;
+   border-width: 17px;
+   margin-top: -17px;
+   z-index: 20;
+}
+
+.breadcrumb_item:after {
+   left: 100%;
+   top: 50%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   border-left-color: #FFF;
+   border-width: 14px;
+   margin-top: -14px;
+   z-index: 20;
+   margin-left: -1px;
+}
+
+.breadcrumb_item:not(:nth-of-type(1)) {
+   padding-left: 25px !important;
+}
+
+.breadcrumb_item:nth-of-type(1) {
+   background-color: #F2F2F2;
+}
+.breadcrumb_item:nth-of-type(1):after {
+   border-left-color: #F2F2F2;
+}
+.breadcrumb_item:nth-of-type(2) {
+   background-color: #F2F2F2;
+}
+.breadcrumb_item:nth-of-type(2):after {
+   border-left-color: #F2F2F2;
+}
+.breadcrumb_item:nth-of-type(3) {
+   background-color: #FEC95C;
+}
+.breadcrumb_item:nth-of-type(3):after {
+   border-left-color: #FEC95C;
+}
+
+
+
+
+.icons_block {
+   margin-left: 10px;
+   height: 28px;
+   float: inherit !important;
+   box-sizing: border-box;
+   display: inline-block;
+   position: relative;
+   z-index: 40;
+}
+
+.icons_block span {
+   padding: 0 8px;
+   min-width: 20px;
+   display: inline-block;
+   line-height: 23px;
+   transform: translateY(5px);
+}
+
+
+
+#c_ssmenu2 {
+      overflow: auto;
+      border-bottom: 1px solid #DDD;
+   }
+
+
+#tab_bg_2_header {
+  background-color: #CCCC;
+   
+}

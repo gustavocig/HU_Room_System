@@ -1,0 +1,1000 @@
+2018-03-26 14:18:36 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-03-26 14:20:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-03-26 14:22:21 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-03-26 14:24:42 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-03-26 14:26:08 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-03-27 08:35:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-03-27 08:36:24 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-03-27 08:36:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-03-27 08:38:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-03-27 09:13:24 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-03-27 09:21:09 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-03-27 09:21:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-03-27 09:32:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-03-27 10:17:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-03-27 10:26:25 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-03-27 10:33:47 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-03-27 10:49:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-03-27 10:54:05 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-03-27 10:55:05 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-03-27 10:55:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-03-27 11:05:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-03-28 08:33:23 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-03-28 08:34:09 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-03-28 08:34:18 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-03-28 08:34:53 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-03-28 08:47:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-03-28 08:49:28 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-03-28 09:36:32 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-03-28 09:50:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-03-28 10:11:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-03-28 11:14:25 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-03-28 11:14:33 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-03-28 11:14:40 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-03-28 11:14:48 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-03-28 12:11:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-03-28 12:17:56 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-03-28 12:19:42 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-03-28 12:20:21 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-03-28 12:22:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-03-28 12:32:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-03 08:23:12 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-04-03 08:26:40 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-04-11 09:25:35 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-16 09:58:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-16 09:58:59 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-16 10:00:17 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-16 10:00:55 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-16 10:09:05 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-16 10:10:00 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-16 10:19:53 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-16 10:22:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-04-16 10:26:32 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-04-16 10:27:30 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-04-16 10:27:48 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-04-16 10:29:51 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-04-16 11:01:48 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-04-16 11:15:35 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-04-16 12:14:32 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-04-16 12:41:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-04-16 12:54:00 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-04-16 13:41:27 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-16 13:55:12 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-16 14:06:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-16 14:14:13 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-16 14:42:00 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 08:33:22 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-18 08:37:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-18 08:40:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-18 08:40:12 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:40:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 08:40:17 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 08:40:20 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-18 08:40:35 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 08:40:37 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-04-18 08:40:44 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-04-18 08:41:06 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-04-18 08:41:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-04-18 08:43:02 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-04-18 08:43:11 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-04-18 08:43:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-04-18 08:45:43 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-04-18 08:45:45 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-04-18 08:46:16 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:46:49 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 08:46:51 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 08:49:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:49:43 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 08:50:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 08:50:49 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:52:34 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 08:54:38 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 08:54:51 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:55:58 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:56:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 08:59:05 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 08:59:24 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:00:11 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:01:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 09:01:28 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:01:46 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:01:56 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:02:05 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:02:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:02:36 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:02:45 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:03:07 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:04:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:04:39 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:04:59 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:05:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:05:33 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:06:06 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:09:03 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:10:56 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:11:20 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:11:22 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:12:09 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 09:12:37 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:13:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:13:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:13:40 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:13:56 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:14:05 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:16:08 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:17:30 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:17:55 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:18:16 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:19:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:19:23 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:20:30 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:21:23 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:21:49 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:21:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:22:12 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 09:22:25 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:22:37 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:25:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:25:32 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:25:49 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:26:26 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:26:37 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:26:46 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:26:54 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:27:02 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:27:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:27:26 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:27:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:27:59 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:28:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:28:25 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:28:26 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:28:36 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Nada a ser executado
+2018-04-18 09:36:04 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 09:41:48 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 09:46:49 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 09:53:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 09:59:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-18 10:05:43 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-18 10:11:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 10:16:35 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-18 10:16:46 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-18 10:23:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 10:29:01 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 10:34:06 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 10:36:12 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 10:36:43 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 10:39:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 10:44:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 10:49:45 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 10:53:29 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 10:57:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar slaticket
+2018-04-18 11:02:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-18 11:38:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar planningrecall
+2018-04-18 11:44:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-18 11:57:12 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-18 14:59:21 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-18 14:59:54 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-23 10:01:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-23 10:02:58 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-23 10:21:56 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-23 10:29:14 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-23 14:52:03 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-23 15:00:35 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-23 15:14:32 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-04-23 15:41:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-04-23 15:50:24 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-04-23 15:57:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-04-23 16:03:36 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-04-23 16:16:47 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-04-23 16:21:57 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-04-23 16:29:19 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-04-23 16:36:02 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-04-23 17:06:40 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-23 17:40:24 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-24 08:12:19 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-24 08:23:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-24 08:44:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-04-24 08:50:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-24 08:58:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-24 09:04:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 09:14:04 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-24 09:21:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-04-24 09:27:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-04-24 09:33:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 09:50:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-04-24 10:01:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-04-24 10:07:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-24 10:08:11 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 10:08:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-04-24 10:09:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-04-24 10:09:23 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 10:15:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 10:21:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 10:28:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-24 10:39:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-24 10:45:50 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-04-24 14:05:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-04-30 08:43:00 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-02 12:01:43 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-02 12:06:56 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-03 12:05:27 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-09 09:34:17 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-09 09:39:46 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-09 09:47:16 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-09 09:50:46 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-09 09:56:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-09 09:58:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-09 10:16:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-09 10:17:00 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-09 10:17:18 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-09 10:20:48 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-09 10:24:14 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-09 10:28:54 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-09 10:29:03 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-05-09 10:33:21 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-14 10:37:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-14 10:41:54 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-14 11:33:12 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-14 12:11:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-14 12:17:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-14 12:26:06 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-14 12:39:57 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-14 12:53:00 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-14 12:58:51 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-14 13:14:14 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-14 13:29:00 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-14 13:34:27 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-14 13:43:46 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-14 13:52:06 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-14 14:09:25 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-14 14:35:19 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-15 08:27:14 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-15 13:32:49 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-16 09:08:58 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-16 09:42:24 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-16 09:42:46 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-16 09:43:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-16 09:48:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-16 10:18:05 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-16 10:26:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-16 11:08:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-16 11:13:25 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-16 11:34:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-16 11:59:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-16 12:13:18 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-16 12:21:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-16 12:27:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-16 12:36:06 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-17 08:54:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-17 09:03:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-17 09:20:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-05-17 09:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-17 10:00:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch temp
+2018-05-17 10:05:09 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch graph
+2018-05-17 10:07:26 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-17 11:03:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch closeticket
+2018-05-17 12:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch alertnotclosed
+2018-05-17 12:27:29 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-17 12:39:32 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch queuedmail
+2018-05-17 12:57:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-17 13:59:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-18 08:50:32 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-18 09:24:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-18 09:59:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-18 12:40:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-18 12:47:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-18 13:18:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-18 13:28:30 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-18 13:41:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-18 13:48:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-18 14:00:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-18 14:07:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-18 14:14:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-18 14:30:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-21 08:34:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-21 08:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-21 08:49:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-21 09:10:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-21 09:31:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 09:37:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-21 10:42:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-21 10:47:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-21 11:11:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-21 11:18:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-21 11:28:26 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-21 11:34:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-21 11:53:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-21 12:06:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-21 12:13:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-21 12:43:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 12:52:20 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-21 12:58:11 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-21 13:04:38 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-21 13:10:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-21 13:17:27 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-21 13:24:01 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 13:29:49 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-21 13:46:25 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 13:53:46 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-21 13:59:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 14:08:56 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-21 14:10:56 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-21 14:17:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-21 14:25:06 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-23 08:39:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch ticketrecurrent
+2018-05-23 08:50:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch queuedmail
+2018-05-23 09:12:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-23 09:21:04 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-23 09:37:12 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-23 09:42:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-23 09:48:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-23 10:13:22 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-23 10:24:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-23 10:32:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-23 10:56:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-23 11:02:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-23 11:10:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch mailgateerror
+2018-05-23 11:17:09 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch infocom
+2018-05-23 11:25:36 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch session
+2018-05-23 11:46:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch queuedmail
+2018-05-23 11:51:20 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch mailgate
+2018-05-23 12:03:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch ticketrecurrent
+2018-05-23 12:15:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch temp
+2018-05-23 12:20:20 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch graph
+2018-05-23 12:32:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-23 12:41:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-23 12:47:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-23 12:52:26 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-23 12:59:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-23 13:04:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-23 13:10:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-23 13:15:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-23 13:21:45 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-23 13:28:22 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-23 13:49:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-23 14:02:38 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-23 14:03:01 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-24 08:45:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-24 08:45:17 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-24 08:45:21 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-24 09:04:38 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-24 09:32:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-24 09:41:36 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-24 09:50:34 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-24 09:59:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-24 10:07:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-24 10:12:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-24 10:17:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-05-24 10:25:50 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-24 10:33:26 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-24 11:39:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-24 11:53:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-25 08:45:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-28 08:29:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-28 09:23:32 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-28 09:55:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-28 11:19:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-28 11:25:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-28 11:35:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-05-28 11:44:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-28 11:49:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-28 12:42:56 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-28 13:39:55 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-28 13:59:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-28 14:02:30 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-28 14:03:08 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-28 14:13:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-28 14:20:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-05-28 14:34:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-29 09:00:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-29 09:36:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-29 09:52:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-29 09:59:59 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-29 10:20:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-29 10:27:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-05-29 10:41:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-05-29 10:53:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-05-29 11:26:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-05-29 11:38:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-29 11:57:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-05-29 12:02:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-05-29 12:11:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-05-29 12:39:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-05-29 12:53:12 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-05-29 13:16:56 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-05-29 13:21:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch temp
+2018-05-29 13:53:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Internal #1: Launch mailgateerror
+2018-05-29 14:00:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-05-29 14:34:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-05-29 14:40:36 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-05-30 08:40:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-04 09:25:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-04 09:25:35 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-04 09:32:05 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-04 09:32:22 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-04 09:33:23 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-06-04 09:34:00 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-04 09:35:33 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-06-04 09:42:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-06-04 09:48:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-04 09:53:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-06-04 21:01:31 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-06-04 21:04:22 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-06-04 21:05:41 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-06-04 21:12:45 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-06-04 21:14:46 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-06-04 21:14:57 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-06-04 21:58:13 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-06 09:00:57 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-06 09:04:31 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-06 09:04:42 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-06 10:29:37 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-06 11:09:57 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-06 11:26:53 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-06-06 13:29:33 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-06-07 09:05:27 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-07 09:14:13 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-06-07 09:40:48 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-06-07 09:48:12 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-06-07 09:51:08 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-06-07 09:57:18 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-06-07 10:11:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-06-07 10:20:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-06-07 10:35:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-07 13:13:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-07 13:21:50 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-07 13:30:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-07 13:48:55 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-07 13:54:02 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-06-07 13:59:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-06-07 14:07:45 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-07 14:31:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-07 14:50:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-07 14:59:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-10 22:38:08 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-10 22:38:12 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-10 22:38:32 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-12 00:56:52 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-12 01:03:59 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 08:39:15 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-18 08:39:39 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-06-18 08:39:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-06-18 08:41:13 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-06-18 08:41:16 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
+2018-06-18 08:46:42 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar contract
+2018-06-18 08:48:53 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmailclean
+2018-06-18 08:54:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgateerror
+2018-06-18 09:04:05 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar infocom
+2018-06-18 09:09:32 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar session
+2018-06-18 09:16:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-18 09:20:24 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-18 09:20:59 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-18 09:24:56 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar optimize
+2018-06-18 09:25:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 09:26:47 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-18 09:30:35 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-18 09:37:50 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 09:50:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 09:59:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-18 10:10:09 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-18 10:10:12 [@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 10:23:26 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 10:35:38 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-18 10:45:43 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-18 10:51:15 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-18 11:03:02 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-18 11:09:54 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-18 11:35:56 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-18 11:40:57 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-18 11:50:32 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-19 08:41:11 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-06-19 10:20:52 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-06-19 13:15:16 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-06-20 08:42:17 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-06-26 08:56:52 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-06-26 09:19:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-06-26 09:25:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-06-26 09:31:08 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed
+2018-06-26 09:37:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar createinquest
+2018-06-26 09:47:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar watcher
