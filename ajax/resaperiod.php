@@ -45,20 +45,26 @@ Html::header_nocache();
 
 Session::checkLoginUser();
 
+$endDateName = "Repetir até dia";
+
 if (isset($_POST['type']) && isset($_POST['end'])) {
 
    echo "<table width='90%'>";
    switch ($_POST['type']) {
       case 'day' :
-         echo "<tr><td>".__('End date').'</td><td>';
-         Html::showDateField('periodicity[end]', array('value' => $_POST['end']));
+
+          /**
+           *
+           * #HOLDAT Modificação "Data final" para "Repetir até data" #1
+           *
+           */
+         echo "<tr><td>" . $endDateName . "</td><td>";
+         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
          echo "</td></tr>";
          break;
 
       case 'week' :
-         echo "<tr><td>".__('End date').'</td><td>';
-         Html::showDateField('periodicity[end]', array('value' => $_POST['end']));
-         echo "</td></tr></table>";
+
          echo "<table class='tab_glpi'>";
          echo "<tr class='center'><td>&nbsp;</td>";
          $days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
@@ -70,7 +76,16 @@ if (isset($_POST['type']) && isset($_POST['end'])) {
          foreach ($days as $day) {
             echo "<td><input type='checkbox' name='periodicity[days][$day]'></td>";
          }
+
+          /**
+           *
+           * #HOLDAT Modificação "Data final" para "Repetir até data" #2
+           *
+           */
          echo "</tr>";
+         echo "<tr><td>" . $endDateName . "</td><td>";
+         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
+         echo "</td></tr></table>";
          break;
 
       case 'month' :
@@ -79,8 +94,8 @@ if (isset($_POST['type']) && isset($_POST['end'])) {
                          'day'  => __('Each month, same day of week'));
          Dropdown::showFromArray('periodicity[subtype]', $values);
          echo "</td></tr>";
-         echo "<tr><td>".__('End date').'</td><td>';
-         Html::showDateField('periodicity[end]', array('value' => $_POST['end']));
+         echo "<tr><td>" . $endDateName . "</td><td>";
+         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
          echo "</td></tr>";
 
    }
