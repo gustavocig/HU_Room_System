@@ -387,6 +387,7 @@ class ReservationItem extends CommonDBChild {
             $_POST['tv'] = '';
             $_POST['pc'] = '';
             $_POST['wifi'] = '';
+            $_POST['location'] = '';
         }
         echo "<form method='post' name='form' action='".Toolbox::getItemTypeSearchURL(__CLASS__)."'>";
         echo "<table class='tab_cadre_fixe'><tr class='tab_bg_2'>";
@@ -475,31 +476,31 @@ class ReservationItem extends CommonDBChild {
 
 
         echo "<tr class='tab_bg_2'><td>Videoprojetor</td><td>";
-        Dropdown::showFromArray("videoprojetor",array('-','Sim', 'Não'));
+        Dropdown::showFromArray("videoprojetor", array('----','Sim', 'Não'));
         echo "</td></tr>";
 
         echo "<tr class='tab_bg_2'><td>TV</td><td>";
-        Dropdown::showFromArray("tv",array('-','Sim', 'Não'));
+        Dropdown::showFromArray("tv", array('----','Sim', 'Não'));
         echo "</td></tr>";
 
         echo "<tr class='tab_bg_2'><td>PC</td><td>";
-        Dropdown::showFromArray("pc",array('-','Sim', 'Não'));
+        Dropdown::showFromArray("pc", array('----','Sim', 'Não'));
         echo "</td></tr>";
 
         echo "<tr class='tab_bg_2'><td>Wi-Fi</td><td>";
-        Dropdown::showFromArray("wifi",array('-','Sim', 'Não'));
+        Dropdown::showFromArray("wifi", array('----','Sim', 'Não'));
+        echo "</td></tr>";
+
+        echo "<tr class='tab_bg_2'><td>Local</td><td>";
+        Dropdown::showFromArray("location", array('----','GEP', 'HU', 'MEAC'));
         echo "</td></tr>";
 
 
         echo "<tr class='tab_bg_2'><td>".'Quantidade de pessoas'."</td><td>";
         $randRoomSizes = mt_rand();
         echo "<div class='no-wrap'>";
-        echo "<input id='roomSize".$randRoomSizes."' type='text' onfocus='this.value=``' size='4' name='size' ".
-            "value='   -'>";
+        echo "<input id='roomSize" . $randRoomSizes . "' type='text' onfocus='this.value=``' size='4' name='size'>";
         echo "</div>";
-
-
-
 
 
 
@@ -521,7 +522,7 @@ class ReservationItem extends CommonDBChild {
             echo "<div id='nosearch' class='center'>";
             echo "<form name='form' method='GET' action='reservation.form.php'>";
             echo "<table class='tab_cadre_fixehov'>";
-            echo "<tr><th colspan='8'>Salas Disponíveis</th></tr>\n";
+            echo "<tr><th colspan='9'>Salas Disponíveis</th></tr>\n";
 
 
             // Index header for row attributes
@@ -543,8 +544,9 @@ class ReservationItem extends CommonDBChild {
             $proj  = ($_POST['videoprojetor'] == 0) ? NULL : $_POST['videoprojetor'];
             $pc  = ($_POST['pc'] == 0) ? NULL : $_POST['pc'];
             $wifi  = ($_POST['wifi'] == 0) ? NULL : $_POST['wifi'];
+            $location = ($_POST['location'] == 0) ? NULL : $_POST['location'];
 
-            if(($_POST['size'] === "   -") || ($_POST['size'] === "")) {
+            if($_POST['size'] === "") {
                 $size = NULL;
             } else {
                 $size = $_POST['size'];
@@ -553,34 +555,35 @@ class ReservationItem extends CommonDBChild {
             //}
             //$left  = "";
             //$where = "";
-            $except = "";
+            $exceptRoom = "";
+            $exceptLocation = "";
             $projQuery = "";
             $tvQuery = "";
             $pcQuery = "";
             $wifiQuery = "";
+            $locationQuery = "";
             //$begin -> end
             //$end -> begin
 
             $sizeQuery = (isset($size)) ? "OR (`glpi_plugin_room_rooms`.`size` < ". $size.")" : "";
 
             if (isset($_POST['submit']) && isset($begin) && isset($end)) {
-                $except = "AND 
+                $exceptRoom = "AND 
                         `glpi_plugin_room_rooms`.`id` NOT IN (
                                   SELECT `glpi_plugin_room_rooms`.`id` AS id
                                   FROM `glpi_plugin_room_rooms`
                                   INNER JOIN `glpi_reservations`
                                       ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
-                                         AND 
-                                         ('". $begin."' <= `glpi_reservations`.`end`
-                                            AND '". $end."' >= `glpi_reservations`.`begin`)";
+                                         AND  
+                                         ('" . $begin . "' <= `glpi_reservations`.`end`
+                                            AND '" . $end . "' >= `glpi_reservations`.`begin`)";
 
             }
 
             if(isset($proj)) {
                 if($proj == 1) {
                     $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 0)";
-                }
-                elseif($proj == 2) {
+                } elseif($proj == 2) {
                     $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 1)";
                 }
             }
@@ -588,8 +591,7 @@ class ReservationItem extends CommonDBChild {
             if(isset($tv)) {
                 if($tv == 1) {
                     $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 0)";
-                }
-                elseif($tv == 2) {
+                } elseif($tv == 2) {
                     $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 1)";
                 }
             }
@@ -597,8 +599,7 @@ class ReservationItem extends CommonDBChild {
             if(isset($pc)) {
                 if($pc == 1) {
                     $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 0)";
-                }
-                elseif($pc == 2) {
+                } elseif($pc == 2) {
                     $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 1)";
                 }
             }
@@ -606,14 +607,47 @@ class ReservationItem extends CommonDBChild {
             if(isset($wifi)) {
                 if($wifi == 1) {
                     $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 0)";
-                }
-                elseif($wifi == 2) {
+                } elseif($wifi == 2) {
                     $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 1)";
                 }
             }
 
             $where = "WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)";
-            $order = "ORDER BY size;";
+
+
+            /**
+             * #HOLDAT Specification of Room's characteristics exception query string
+             */
+            $exceptRoom .= $sizeQuery;
+            $exceptRoom .= $projQuery;
+            $exceptRoom .= $tvQuery;
+            $exceptRoom .= $pcQuery;
+            $exceptRoom .= $wifiQuery;
+            $exceptRoom .= ")";
+            $exceptRoom .= $where;
+
+
+            /**
+             * #HOLDAT Specification of Location's characteristics exception query string
+             */
+            if(isset($location)) {
+                $exceptLocation = "AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`";
+
+                if($location == 1) {
+                    $locationQuery = "AND ((`glpi_locations`.`name` = 'HU') OR (`glpi_locations`.`name` = 'MEAC')))";
+                } elseif($location == 2) {
+                    $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'MEAC')))";
+                } elseif($location == 3) {
+                    $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'HU')))";
+                }
+                $exceptLocation .= $locationQuery;
+                $exceptLocation .= $where;
+            }
 
 
 
@@ -628,6 +662,14 @@ class ReservationItem extends CommonDBChild {
                }
             }*/
 
+            /**
+             *
+             * Extra "WHERE" is there for a reason, to guarantee that both the rooms inside the "From" and those outside
+             * select only those that aren't deleted.
+             * Was already tested without, and results ended up including all rooms registered, regardless if they were
+             * deleted or not.
+             *
+             */
             $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
                           `glpi_plugin_room_rooms`.`name` AS name,
                           `glpi_plugin_room_rooms`.`size` AS size,
@@ -635,22 +677,27 @@ class ReservationItem extends CommonDBChild {
                           `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
                           `glpi_plugin_room_rooms`.`tv` AS tv,
                           `glpi_plugin_room_rooms`.`computer` AS pc,
-                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
                         FROM `glpi_plugin_room_rooms`
                         LEFT JOIN `glpi_reservations`
                             ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
                         WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
                         ";
 
+            /**
+             * #HOLDAT Specification of query order
+             */
+            $order = "ORDER BY size;";
 
-            $query .= $except;
-            $query .= $sizeQuery;
-            $query .= $projQuery;
-            $query .= $tvQuery;
-            $query .= $pcQuery;
-            $query .= $wifiQuery;
-            $query .= ")";
-            $query .= $where;
+
+            /**
+             * #HOLDAT Building the complete query
+             */
+            $query .= $exceptRoom;
+            $query .= $exceptLocation;
             $query .= $order;
 
             /*
@@ -691,6 +738,7 @@ class ReservationItem extends CommonDBChild {
                             <td class='td_header'>Possui TV?</td>
                             <td class='td_header'>Possui PC?</td>
                             <td class='td_header'>Possui Wi-Fi?</td>
+                            <td class='td_header'>Local</td>
                            </tr>";
 
 
@@ -718,6 +766,7 @@ class ReservationItem extends CommonDBChild {
                         echo ($row["tv"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
                         echo ($row["pc"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
                         echo ($row["wifi"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
+                        echo "<td>" . nl2br($row["location"]) . "</td>";
 
                         if ($showentity) {
                             echo "<td>" . Dropdown::getDropdownName("glpi_entities", $row["entities_id"]) .
