@@ -106,6 +106,13 @@ if (isset($_POST["update"])) {
          $input                        = array();
          $input['reservationitems_id'] = $reservationitems_id;
          $input['comment']             = $_POST['comment'];
+         $input['theme']               = $_POST['theme'];
+
+          /**
+           *
+           * #HOLDAT Added 'Thematic area' attribute, to reservations
+           *
+           */
 
          if (count($dates_to_add)) {
             $input['group'] = $rr->getUniqueGroupFor($reservationitems_id);

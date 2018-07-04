@@ -766,7 +766,6 @@ class Reservation extends CommonDBChild {
 
          $params   = array('type'     => '__VALUE__',
                            'end'      => $resa->fields["end"]);
-         //echo "HEREEEEEE - ".$params['type'];
 
          Ajax::updateItemOnSelectEvent($field_id, "resaperiodcontent$rand",
                                        $CFG_GLPI["root_doc"]."/ajax/resaperiod.php", $params);
@@ -774,6 +773,12 @@ class Reservation extends CommonDBChild {
 
          echo "</td></tr>\n";
       }
+
+      echo "<tr class='tab_bg_2'><td>Área Temática da reserva</td><td>";
+      $valueThemes =  array('NULL' => ' - ',
+                              'Aula' => 'Aula',
+                              'Apresentação' => 'Apresentação');
+      Dropdown::showFromArray('theme', $valueThemes);
 
       echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
       echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' placeholder='Descreva sua atividade com no mínimo X caracteres' required>".$resa->fields["comment"]."</textarea>";
@@ -1086,6 +1091,19 @@ class Reservation extends CommonDBChild {
                $rand  = mt_rand();
                $modif = $modif_end = "";
 
+
+                /**
+                 *
+                 * #HOLDAT Implemented tooltip content modifier, so that thematic area is displayed, if available
+                 *
+                 */
+               $tooltipContent = "";
+
+               if($row["theme"] != "") {
+                   $tooltipContent .= "Área: " . $row["theme"] . "</br>";
+               }
+               $tooltipContent .= $row["comment"];
+
                 /**
                  * #HOLDAT Changed to allow all users to see comments
                  */
@@ -1093,13 +1111,13 @@ class Reservation extends CommonDBChild {
                    $modif = "<a id='content_" . $ID . $rand . "'
                                   href='reservation.form.php?id=" . $row['id'] . "'>";
                    $modif_end = "</a>";
-                   $modif_end .= Html::showToolTip($row["comment"],
+                   $modif_end .= Html::showToolTip($tooltipContent,
                        array('applyto' => "content_" . $ID . $rand,
                            'display' => false));
                } else {
                    $modif = "<a id='content_" . $ID . $rand . "'>";
                    $modif_end = "</a>";
-                   $modif_end .= Html::showToolTip($row["comment"],
+                   $modif_end .= Html::showToolTip($tooltipContent,
                        array('applyto' => "content_" . $ID . $rand,
                            'display' => false));
                }

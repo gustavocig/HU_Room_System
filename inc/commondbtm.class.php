@@ -393,6 +393,7 @@ class CommonDBTM extends CommonGLPI {
    function addToDB() {
       global $DB;
 
+
       //unset($this->fields["id"]);
       $nb_fields = count($this->fields);
       if ($nb_fields > 0) {
@@ -432,6 +433,7 @@ class CommonDBTM extends CommonGLPI {
 
          }
          $query .= ")";
+
 
          if ($result=$DB->query($query)) {
             // Already define for entity / insert_id does not work

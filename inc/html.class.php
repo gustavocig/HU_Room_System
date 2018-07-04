@@ -3157,15 +3157,16 @@ class Html
      *
      * @param $name      name of the element
      * @param $options  array of possible options:
-     *      - value      : default value to display (default '')
-     *      - maybeempty : may be empty ? (true by default)
-     *      - canedit    :  could not modify element (true by default)
-     *      - min        :  minimum allowed date (default '')
-     *      - max        : maximum allowed date (default '')
-     *      - showyear   : should we set/diplay the year? (true by default)
-     *      - display    : boolean display of return string (default true)
-     *      - rand       : specific rand value (default generated one)
-     *      - yearrange  : set a year range to show in drop-down (default '')
+     *      - value         : default value to display (default '')
+     *      - maybeempty    : may be empty ? (true by default)
+     *      - canedit       : could not modify element (true by default)
+     *      - min           : minimum allowed date (default '')
+     *      - max           : maximum allowed date (default '')
+     *      - showyear      : should we set/diplay the year? (true by default)
+     *      - display       : boolean display of return string (default true)
+     *      - rand          : specific rand value (default generated one)
+     *      - yearrange     : set a year range to show in drop-down (default '')
+     *      - readonlyHTML  : makes it so that only input field is in read only
      *
      * @return rand value used if displayes else string
      **/
@@ -3184,15 +3185,24 @@ class Html
         $p['display'] = true;
         $p['rand'] = mt_rand();
         $p['yearrange'] = '';
+        $p['readonlyHTML'] = false;
 
         foreach ($options as $key => $val) {
             if (isset($p[$key])) {
                 $p[$key] = $val;
             }
         }
+
         $output = "<div class='no-wrap'>";
-        $output .= "<input id='showdate" . $p['rand'] . "' type='text' size='10' name='_$name' " .
-            "value='" . self::convDate($p['value']) . "'>";
+        $output .= "<input id='showdate" . $p['rand'] . "' type='text' class=' dateFieldNotEditable ' size='10' name='_$name' " .
+            "value='" . self::convDate($p['value']) . "'";
+
+        if($p['readonlyHTML'] == true) {
+            $output .= " readonly>";
+        } else {
+            $output .= ">";
+        }
+
         $output .= Html::hidden($name, array('value' => $p['value'],
             'id' => "hiddendate" . $p['rand'],
             'size' => 10));
@@ -3221,7 +3231,12 @@ class Html
                   showOn: 'button',
                   showWeek: true,
                   buttonImage: '" . $CFG_GLPI['root_doc'] . "/pics/calendar.png',
-                  buttonImageOnly: true  ";
+                  buttonImageOnly: false";
+        /**
+         *
+         * #HOLDAT buttonImageOnly false
+         *
+         */
 
         if (!$p['canedit']) {
             $js .= ",disabled: true";
