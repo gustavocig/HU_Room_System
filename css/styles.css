@@ -514,6 +514,18 @@ input.save {
    opacity: 1;
 }
 
+/**
+    *
+    *
+    * #HOLDAT CSS outline remover for datefields not supposed to be edited
+    *
+    *
+ */
+
+.dateFieldNotEditable {
+   outline: none;
+}
+
 /* ################--------------- Layout  ---------------#################### */
 .layout_classic.form div.navigationheader,
 .layout_vsplit.form div.navigationheader {
@@ -2409,15 +2421,16 @@ ul#menu ul.ssmenu {
 }
 
 #header #c_logo2 {
-   position: absolute;
-   display: inline;
-   z-index: 1000;
-   width: 200px;
-   height: 40px;
-   float: left;
-   background-image: url("../pics/logoMEACMin.png");
-   background-repeat: no-repeat;
-   margin-left: 140px;
+    position: absolute;
+    display: inline;
+    z-index: 1000;
+    width: 200px;
+    height: 40px;
+    float: left;
+    background-image: url("../pics/logoMEACMin.png");
+    background-repeat: no-repeat;
+    margin-left: 140px;
+}
 
 #header #c_logo a {
    display: block;
