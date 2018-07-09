@@ -415,14 +415,25 @@ class ReservationItem extends CommonDBChild {
         echo "<th colspan='3'>Procure uma sala para sua atividade</th></tr>";
 
 
+
+        /**
+         * #HOLDAT Controls 'semester' reservation logic
+         */
+        $currentMonth = date('m');
+        $maxMonth = 12;
+        if((1 <= $currentMonth) && ($currentMonth <= 6)) {
+            $maxMonth = 6;
+        }
+        $maxDate = '31' . '-' . $maxMonth . '-' . date('Y');
+
+
         echo "<tr class='tab_bg_2'><td>Data</td><td>";
         //Html::showDateField("reserve[begin]", array('value'      =>  $_POST['reserve']["begin"],
         Html::showDateField("reserve[day]", array('value'      =>  $_POST['reserve']["day"],
             'maybeempty' => false,
-            'readonlyHTML' => true
-            //'max' => '2018-12-24',
-            //'mintime' => '07:00',
-            //'maxtime' => '23:30'
+            'readonlyHTML' => true,
+            'min' => date('d-m-Y'),
+            'max' => $maxDate
         ));
         echo "</td><td rowspan='3'>";
         echo "<input type='submit' class='submit' name='submit' value=\""._sx('button', 'Search')."\">";
@@ -430,7 +441,7 @@ class ReservationItem extends CommonDBChild {
 
 
         /**
-         * #Holdat Definition of min and max time values
+         * #HOLDAT Definition of min and max time values
          */
         $timeMin = 6;
         $timeMax = 23;
@@ -452,7 +463,7 @@ class ReservationItem extends CommonDBChild {
                 'display_emptychoice' => true,
                 'min'                 => $timeMin,
                 'max'                 => $timeMax,
-                'emptylabel'          => 'Especifique o horario de termino do evento'));
+                'emptylabel'          => 'Especifique o horario de inicio do evento'));
 
         echo "<br><div id='time_begin$randTimeInit'></div>";
 
@@ -600,307 +611,309 @@ class ReservationItem extends CommonDBChild {
 
         if(isset($_POST["submit"])) {
 
-            // GET method passed to form creation
-            echo "<div id='nosearch' class='center'>";
-            echo "<form name='form' method='GET' action='reservation.form.php'>";
-            echo "<table class='tab_cadre_fixehov'>";
-            echo "<tr><th colspan='9'>Salas Disponíveis</th></tr>\n";
+            if ($_POST['reserve']["_timebegin"] < $_POST['reserve']["_timeend"]) {
+                // GET method passed to form creation
+                echo "<div id='nosearch' class='center'>";
+                echo "<form name='form' method='GET' action='reservation.form.php'>";
+                echo "<table class='tab_cadre_fixehov'>";
+                echo "<tr><th colspan='9'>Salas Disponíveis</th></tr>\n";
 
 
-            // Index header for row attributes
+                // Index header for row attributes
 
 
-            /*foreach ($CFG_GLPI["reservation_types"] as $itemtype) {
-               if (!($item = getItemForItemtype($itemtype))) {
-                  continue;
-               }
-               $itemtable = getTableForItemType($itemtype);
-               $otherserial = "'' AS otherserial";
-               if ($item->isField('otherserial')) {
-                  $otherserial = "`$itemtable`.`otherserial`";
-               }*/
+                /*foreach ($CFG_GLPI["reservation_types"] as $itemtype) {
+                   if (!($item = getItemForItemtype($itemtype))) {
+                      continue;
+                   }
+                   $itemtable = getTableForItemType($itemtype);
+                   $otherserial = "'' AS otherserial";
+                   if ($item->isField('otherserial')) {
+                      $otherserial = "`$itemtable`.`otherserial`";
+                   }*/
 
-            /**
-             * #HOLDAT Corrects time dropdown problem of passing a POST value
-             * not matching the shown value chosen in the dropdown
-             */
-            if($_POST['reserve']["_timebegin"] != 0 ) {
-                $_POST['reserve']["_timebegin"] += $timeMin;
-            }
-
-            if($_POST['reserve']["_timeend"] != 0 ) {
-                $_POST['reserve']["_timeend"] += $timeMin;
-            }
-
-            /**
-             * #HOLDAT Reformats time once again, now so that seconds are added
-             * Done so that values comply with the Date type in SQL
-             */
-            $begin = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timebegin"]);
-            $end   = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timeend"]);
-
-            $begin = $_POST['reserve']['day'] . ' ' . $begin;
-            $end = $_POST['reserve']['day'] . ' ' . $end;
-
-            $tv  = ($_POST['tv'] == 0) ? NULL : $_POST['tv'];
-            $proj  = ($_POST['videoprojetor'] == 0) ? NULL : $_POST['videoprojetor'];
-            $pc  = ($_POST['pc'] == 0) ? NULL : $_POST['pc'];
-            $wifi  = ($_POST['wifi'] == 0) ? NULL : $_POST['wifi'];
-            $location = ($_POST['location'] == 0) ? NULL : $_POST['location'];
-
-            if($_POST['size'] === "") {
-                $size = NULL;
-            } else {
-                $size = $_POST['size'];
-            }
-
-            //}
-            //$left  = "";
-            //$where = "";
-            $exceptRoom = "";
-            $exceptLocation = "";
-            $projQuery = "";
-            $tvQuery = "";
-            $pcQuery = "";
-            $wifiQuery = "";
-            $locationQuery = "";
-            //$begin -> end
-            //$end -> begin
-
-            $sizeQuery = (isset($size)) ? "OR (`glpi_plugin_room_rooms`.`size` < ". $size.")" : "";
-
-
-            if (isset($_POST['submit']) && isset($begin) && isset($end)) {
-                $exceptRoom = "AND 
-                        `glpi_plugin_room_rooms`.`id` NOT IN (
-                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
-                                  FROM `glpi_plugin_room_rooms`
-                                  INNER JOIN `glpi_reservations`
-                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
-                                         AND  
-                                         ('" . $begin . "' < `glpi_reservations`.`end`
-                                            AND '" . $end . "' > `glpi_reservations`.`begin`)";
-
-            }
-
-            if(isset($proj)) {
-                if($proj == 1) {
-                    $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 0)";
-                } elseif($proj == 2) {
-                    $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 1)";
+                /**
+                 * #HOLDAT Corrects time dropdown problem of passing a POST value
+                 * not matching the shown value chosen in the dropdown
+                 */
+                if ($_POST['reserve']["_timebegin"] != 0) {
+                    $_POST['reserve']["_timebegin"] += $timeMin;
                 }
-            }
 
-            if(isset($tv)) {
-                if($tv == 1) {
-                    $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 0)";
-                } elseif($tv == 2) {
-                    $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 1)";
+                if ($_POST['reserve']["_timeend"] != 0) {
+                    $_POST['reserve']["_timeend"] += $timeMin;
                 }
-            }
 
-            if(isset($pc)) {
-                if($pc == 1) {
-                    $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 0)";
-                } elseif($pc == 2) {
-                    $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 1)";
+                /**
+                 * #HOLDAT Reformats time once again, now so that seconds are added
+                 * Done so that values comply with the Date type in SQL
+                 */
+                $begin = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timebegin"]);
+                $end = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timeend"]);
+
+                $begin = $_POST['reserve']['day'] . ' ' . $begin;
+                $end = $_POST['reserve']['day'] . ' ' . $end;
+
+                $tv = ($_POST['tv'] == 0) ? NULL : $_POST['tv'];
+                $proj = ($_POST['videoprojetor'] == 0) ? NULL : $_POST['videoprojetor'];
+                $pc = ($_POST['pc'] == 0) ? NULL : $_POST['pc'];
+                $wifi = ($_POST['wifi'] == 0) ? NULL : $_POST['wifi'];
+                $location = ($_POST['location'] == 0) ? NULL : $_POST['location'];
+
+                if ($_POST['size'] === "") {
+                    $size = NULL;
+                } else {
+                    $size = $_POST['size'];
                 }
-            }
 
-            if(isset($wifi)) {
-                if($wifi == 1) {
-                    $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 0)";
-                } elseif($wifi == 2) {
-                    $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 1)";
+                //}
+                //$left  = "";
+                //$where = "";
+                $exceptRoom = "";
+                $exceptLocation = "";
+                $projQuery = "";
+                $tvQuery = "";
+                $pcQuery = "";
+                $wifiQuery = "";
+                $locationQuery = "";
+                //$begin -> end
+                //$end -> begin
+
+                $sizeQuery = (isset($size)) ? "OR (`glpi_plugin_room_rooms`.`size` < " . $size . ")" : "";
+
+
+                if (isset($_POST['submit']) && isset($begin) && isset($end)) {
+                    $exceptRoom = "AND 
+                            `glpi_plugin_room_rooms`.`id` NOT IN (
+                                      SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                      FROM `glpi_plugin_room_rooms`
+                                      INNER JOIN `glpi_reservations`
+                                          ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                             AND  
+                                             ('" . $begin . "' < `glpi_reservations`.`end`
+                                                AND '" . $end . "' > `glpi_reservations`.`begin`)";
+
                 }
-            }
 
-            $where = "WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)";
-
-
-            /**
-             * #HOLDAT Specification of Room's characteristics exception query string
-             */
-            $exceptRoom .= $sizeQuery;
-            $exceptRoom .= $projQuery;
-            $exceptRoom .= $tvQuery;
-            $exceptRoom .= $pcQuery;
-            $exceptRoom .= $wifiQuery;
-            $exceptRoom .= ")";
-            $exceptRoom .= $where;
-
-
-            /**
-             * #HOLDAT Specification of Location's characteristics exception query string
-             */
-            if(isset($location)) {
-                $exceptLocation = "AND 
-                                `glpi_plugin_room_rooms`.`id` NOT IN (
-                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
-                                    FROM `glpi_plugin_room_rooms`
-                                    INNER JOIN `glpi_locations`
-                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`";
-
-                if($location == 1) {
-                    $locationQuery = "AND ((`glpi_locations`.`name` = 'HU') OR (`glpi_locations`.`name` = 'MEAC')))";
-                } elseif($location == 2) {
-                    $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'MEAC')))";
-                } elseif($location == 3) {
-                    $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'HU')))";
-                }
-                $exceptLocation .= $locationQuery;
-                $exceptLocation .= $where;
-            }
-
-
-
-            /*if (isset($_POST["reservation_types"]) && !empty($_POST["reservation_types"])) {
-               $tmp = explode('#', $_POST["reservation_types"]);
-               $where .= " AND `glpi_reservationitems`.`itemtype` = '".$tmp[0]."'";
-               if (isset($tmp[1]) && ($tmp[0] == 'Peripheral')
-                   && ($itemtype == 'Peripheral')) {
-                  $left  .= " LEFT JOIN `glpi_peripheraltypes`
-                                 ON (`glpi_peripherals`.`peripheraltypes_id` = `glpi_peripheraltypes`.`id`)";
-                  $where .= " AND `$itemtable`.`peripheraltypes_id` = '".$tmp[1]."'";
-               }
-            }*/
-
-            /**
-             *
-             * Extra "WHERE" is there for a reason, to guarantee that both the rooms inside the "From" and those outside
-             * select only those that aren't deleted.
-             * Was already tested without, and results ended up including all rooms registered, regardless if they were
-             * deleted or not.
-             *
-             */
-            $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
-                          `glpi_plugin_room_rooms`.`name` AS name,
-                          `glpi_plugin_room_rooms`.`size` AS size,
-                          `glpi_plugin_room_rooms`.`comment` AS comment,
-                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
-                          `glpi_plugin_room_rooms`.`tv` AS tv,
-                          `glpi_plugin_room_rooms`.`computer` AS pc,
-                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
-                          `glpi_locations`.`name` AS location
-                        FROM `glpi_plugin_room_rooms`
-                        LEFT JOIN `glpi_reservations`
-                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
-                        LEFT JOIN `glpi_locations`
-                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
-                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
-                        ";
-
-            /**
-             * #HOLDAT Specification of query order
-             */
-            $order = "ORDER BY size;";
-
-
-            /**
-             * #HOLDAT Building the complete query
-             */
-            $query .= $exceptRoom;
-            $query .= $exceptLocation;
-            $query .= $order;
-
-
-            /*
-            $query = "SELECT `glpi_reservationitems`.`id`,
-                             `glpi_reservationitems`.`comment`,
-                             `$itemtable`.`name` AS name,
-                             `$itemtable`.`entities_id` AS entities_id,
-                             $otherserial,
-                             `glpi_locations`.`id` AS location,
-                             `glpi_reservationitems`.`items_id` AS items_id
-                      FROM `glpi_reservationitems`
-                      INNER JOIN `$itemtable`
-                           ON (`glpi_reservationitems`.`itemtype` = '$itemtype'
-                               AND `glpi_reservationitems`.`items_id` = `$itemtable`.`id`)
-                      $left
-                      LEFT JOIN `glpi_locations`
-                           ON (`$itemtable`.`locations_id` = `glpi_locations`.`id`)
-                      WHERE `glpi_reservationitems`.`is_active` = '1'
-                            AND `glpi_reservationitems`.`is_deleted` = '0'
-                            AND `$itemtable`.`is_deleted` = '0'
-                            $where ".
-                            getEntitiesRestrictRequest(" AND", $itemtable, '',
-                                                       $_SESSION['glpiactiveentities'],
-                                                       $item->maybeRecursive())."
-                      ORDER BY `$itemtable`.`entities_id`,
-                               `$itemtable`.`name`";
-           */
-
-            if ($result = $DB->query($query)) {
-                if ($result->num_rows > 0) {
-
-                    echo "<tr class='tab_bg_2_header'>
-                            <td></td>
-                            <td>Sala</td>
-                            <td class='td_header'>Capacidade</td>
-                            <td class='td_header'>Comentários</td>
-                            <td class='td_header'>Possui videoprojetor?</td>
-                            <td class='td_header'>Possui TV?</td>
-                            <td class='td_header'>Possui PC?</td>
-                            <td class='td_header'>Possui Wi-Fi?</td>
-                            <td class='td_header'>Local</td>
-                           </tr>";
-
-
-
-                    while ($row = $DB->fetch_assoc($result)) {
-
-                        echo "<tr class='tab_bg_2_salas'><td>";
-                        echo "<input type='checkbox'  name='item[" . $row["id"] . "]' value='" . $row["id"] . "'>" .
-                            "</td>";
-                        //$typename = $item->getTypeName();
-                        /*if ($itemtype == 'Peripheral') {
-                           $item->getFromDB($row['items_id']);
-                           if (isset($item->fields["peripheraltypes_id"])
-                               && ($item->fields["peripheraltypes_id"] != 0)) {
-
-                              $typename = Dropdown::getDropdownName("glpi_peripheraltypes",
-                                                                    $item->fields["peripheraltypes_id"]);
-                           }
-                        }*/
-                        echo "<td><a href='reservation.php?reservationitems_id=" . $row['id'] . "'>" .
-                            sprintf(__('%1$s'), $row["name"]) . "</a></td>";
-                        echo "<td>" . nl2br($row["size"]) . "</td>";
-                        echo "<td>" . nl2br($row["comment"]) . "</td>";
-                        echo ($row["videoprojetor"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
-                        echo ($row["tv"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
-                        echo ($row["pc"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
-                        echo ($row["wifi"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
-                        echo "<td>" . nl2br($row["location"]) . "</td>";
-
-                        if ($showentity) {
-                            echo "<td>" . Dropdown::getDropdownName("glpi_entities", $row["entities_id"]) .
-                                "</td>";
-                        }
-                        echo "</tr>\n";
-                        $ok = true;
-
-                        /**
-                         * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
-                         */
-                        $js = "$(document).ready(function(){
-                            $('input[type=checkbox]').click(function(){
-                                $('input[type=checkbox]').prop('checked', false);
-                                $(this).prop('checked', true);
-                            });
-                        });";
-
-
-                        echo Html::scriptBlock($js);
-
+                if (isset($proj)) {
+                    if ($proj == 1) {
+                        $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 0)";
+                    } elseif ($proj == 2) {
+                        $projQuery = "OR (`glpi_plugin_room_rooms`.`videoprojector` = 1)";
                     }
                 }
+
+                if (isset($tv)) {
+                    if ($tv == 1) {
+                        $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 0)";
+                    } elseif ($tv == 2) {
+                        $tvQuery = "OR (`glpi_plugin_room_rooms`.`tv` = 1)";
+                    }
+                }
+
+                if (isset($pc)) {
+                    if ($pc == 1) {
+                        $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 0)";
+                    } elseif ($pc == 2) {
+                        $pcQuery = "OR (`glpi_plugin_room_rooms`.`computer` = 1)";
+                    }
+                }
+
+                if (isset($wifi)) {
+                    if ($wifi == 1) {
+                        $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 0)";
+                    } elseif ($wifi == 2) {
+                        $wifiQuery = "OR (`glpi_plugin_room_rooms`.`wifi` = 1)";
+                    }
+                }
+
+                $where = "WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)";
+
+
+                /**
+                 * #HOLDAT Specification of Room's characteristics exception query string
+                 */
+                $exceptRoom .= $sizeQuery;
+                $exceptRoom .= $projQuery;
+                $exceptRoom .= $tvQuery;
+                $exceptRoom .= $pcQuery;
+                $exceptRoom .= $wifiQuery;
+                $exceptRoom .= ")";
+                $exceptRoom .= $where;
+
+
+                /**
+                 * #HOLDAT Specification of Location's characteristics exception query string
+                 */
+                if (isset($location)) {
+                    $exceptLocation = "AND 
+                                    `glpi_plugin_room_rooms`.`id` NOT IN (
+                                        SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                        FROM `glpi_plugin_room_rooms`
+                                        INNER JOIN `glpi_locations`
+                                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`";
+
+                    if ($location == 1) {
+                        $locationQuery = "AND ((`glpi_locations`.`name` = 'HU') OR (`glpi_locations`.`name` = 'MEAC')))";
+                    } elseif ($location == 2) {
+                        $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'MEAC')))";
+                    } elseif ($location == 3) {
+                        $locationQuery = "AND ((`glpi_locations`.`name` = 'GEP') OR (`glpi_locations`.`name` = 'HU')))";
+                    }
+                    $exceptLocation .= $locationQuery;
+                    $exceptLocation .= $where;
+                }
+
+
+                /*if (isset($_POST["reservation_types"]) && !empty($_POST["reservation_types"])) {
+                   $tmp = explode('#', $_POST["reservation_types"]);
+                   $where .= " AND `glpi_reservationitems`.`itemtype` = '".$tmp[0]."'";
+                   if (isset($tmp[1]) && ($tmp[0] == 'Peripheral')
+                       && ($itemtype == 'Peripheral')) {
+                      $left  .= " LEFT JOIN `glpi_peripheraltypes`
+                                     ON (`glpi_peripherals`.`peripheraltypes_id` = `glpi_peripheraltypes`.`id`)";
+                      $where .= " AND `$itemtable`.`peripheraltypes_id` = '".$tmp[1]."'";
+                   }
+                }*/
+
+                /**
+                 *
+                 * Extra "WHERE" is there for a reason, to guarantee that both the rooms inside the "From" and those outside
+                 * select only those that aren't deleted.
+                 * Was already tested without, and results ended up including all rooms registered, regardless if they were
+                 * deleted or not.
+                 *
+                 */
+                $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                              `glpi_plugin_room_rooms`.`name` AS name,
+                              `glpi_plugin_room_rooms`.`size` AS size,
+                              `glpi_plugin_room_rooms`.`comment` AS comment,
+                              `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                              `glpi_plugin_room_rooms`.`tv` AS tv,
+                              `glpi_plugin_room_rooms`.`computer` AS pc,
+                              `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                              `glpi_locations`.`name` AS location
+                            FROM `glpi_plugin_room_rooms`
+                            LEFT JOIN `glpi_reservations`
+                                ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                            LEFT JOIN `glpi_locations`
+                                ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                            WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                            ";
+
+                /**
+                 * #HOLDAT Specification of query order
+                 */
+                $order = "ORDER BY size;";
+
+
+                /**
+                 * #HOLDAT Building the complete query
+                 */
+                $query .= $exceptRoom;
+                $query .= $exceptLocation;
+                $query .= $order;
+
+
+                /*
+                $query = "SELECT `glpi_reservationitems`.`id`,
+                                 `glpi_reservationitems`.`comment`,
+                                 `$itemtable`.`name` AS name,
+                                 `$itemtable`.`entities_id` AS entities_id,
+                                 $otherserial,
+                                 `glpi_locations`.`id` AS location,
+                                 `glpi_reservationitems`.`items_id` AS items_id
+                          FROM `glpi_reservationitems`
+                          INNER JOIN `$itemtable`
+                               ON (`glpi_reservationitems`.`itemtype` = '$itemtype'
+                                   AND `glpi_reservationitems`.`items_id` = `$itemtable`.`id`)
+                          $left
+                          LEFT JOIN `glpi_locations`
+                               ON (`$itemtable`.`locations_id` = `glpi_locations`.`id`)
+                          WHERE `glpi_reservationitems`.`is_active` = '1'
+                                AND `glpi_reservationitems`.`is_deleted` = '0'
+                                AND `$itemtable`.`is_deleted` = '0'
+                                $where ".
+                                getEntitiesRestrictRequest(" AND", $itemtable, '',
+                                                           $_SESSION['glpiactiveentities'],
+                                                           $item->maybeRecursive())."
+                          ORDER BY `$itemtable`.`entities_id`,
+                                   `$itemtable`.`name`";
+               */
+
+                if ($result = $DB->query($query)) {
+                    if ($result->num_rows > 0) {
+
+                        echo "<tr class='tab_bg_2_header'>
+                                <td></td>
+                                <td>Sala</td>
+                                <td class='td_header'>Capacidade</td>
+                                <td class='td_header'>Comentários</td>
+                                <td class='td_header'>Possui videoprojetor?</td>
+                                <td class='td_header'>Possui TV?</td>
+                                <td class='td_header'>Possui PC?</td>
+                                <td class='td_header'>Possui Wi-Fi?</td>
+                                <td class='td_header'>Local</td>
+                               </tr>";
+
+
+                        while ($row = $DB->fetch_assoc($result)) {
+
+                            echo "<tr class='tab_bg_2_salas'><td>";
+                            echo "<input type='checkbox'  name='item[" . $row["id"] . "]' value='" . $row["id"] . "'>" .
+                                "</td>";
+                            //$typename = $item->getTypeName();
+                            /*if ($itemtype == 'Peripheral') {
+                               $item->getFromDB($row['items_id']);
+                               if (isset($item->fields["peripheraltypes_id"])
+                                   && ($item->fields["peripheraltypes_id"] != 0)) {
+
+                                  $typename = Dropdown::getDropdownName("glpi_peripheraltypes",
+                                                                        $item->fields["peripheraltypes_id"]);
+                               }
+                            }*/
+                            echo "<td><a href='reservation.php?reservationitems_id=" . $row['id'] . "'>" .
+                                sprintf(__('%1$s'), $row["name"]) . "</a></td>";
+                            echo "<td>" . nl2br($row["size"]) . "</td>";
+                            echo "<td>" . nl2br($row["comment"]) . "</td>";
+                            echo ($row["videoprojetor"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
+                            echo ($row["tv"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
+                            echo ($row["pc"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
+                            echo ($row["wifi"] == 1) ? "<td>" . nl2br("Sim") . "</td>" : "<td>" . nl2br("Não") . "</td>";
+                            echo "<td>" . nl2br($row["location"]) . "</td>";
+
+                            if ($showentity) {
+                                echo "<td>" . Dropdown::getDropdownName("glpi_entities", $row["entities_id"]) .
+                                    "</td>";
+                            }
+                            echo "</tr>\n";
+                            $ok = true;
+
+                            /**
+                             * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
+                             */
+                            $js = "$(document).ready(function(){
+                                $('input[type=checkbox]').click(function(){
+                                    $('input[type=checkbox]').prop('checked', false);
+                                    $(this).prop('checked', true);
+                                });
+                            });";
+
+
+                            echo Html::scriptBlock($js);
+                    }
+                } else {
+                       /**
+                        * Needs to be filled up with exception handling for the room search.
+                        */
+                    }
             }
 
             if ($ok) {
                 echo "<tr class='tab_bg_1 center'><td colspan='8'>";
                 if (isset($_POST['reserve'])) {
                     echo Html::hidden('timebegin', array('value' => $begin));
-                    echo Html::hidden('timeend', array('value'   => $end));
+                    echo Html::hidden('timeend', array('value' => $end));
                 }
                 echo "<input type='submit' value=\"Continuar\" class='submit'></td></tr>\n";
 
@@ -909,6 +922,7 @@ class ReservationItem extends CommonDBChild {
             echo "<input type='hidden' name='id' value=''>";
             echo "</form>";// No CSRF token needed
             echo "</div>\n";
+        }
         }
     }
 

@@ -2403,3 +2403,18 @@ Test
   inc/reservationitem.class.php:1083                 ReservationItem::showListSimple()
   inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
   ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 13:41:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 31121531178280! 
+2018-07-09 13:42:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 31-121531178280! 
+2018-07-09 13:42:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 31-121531178280! 
+2018-07-09 13:43:30 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 31-122018! 
+2018-07-09 13:43:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 31-122018! 
