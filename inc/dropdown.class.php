@@ -1528,7 +1528,7 @@ class Dropdown {
 
    /**
     * Dropdown integers
-    *
+    * #HOLDAT Dropdown times
     * @since version 0.83
     *
     * @param $myname        select name
@@ -1641,9 +1641,15 @@ class Dropdown {
                if ($minute < 10) {
                   $minute = '0'.$minute;
                }
+                /**
+                 * #HOLDAT Added foremost 0 for single digit 'hour' value
+                 */
+               if ($hour < 10) {
+                  $hour = '0' . $hour;
+               }
 
                //TRANS: %1$d the number of hours, %2$s the number of minutes : display 3h15
-               $values[$i] = sprintf(__('%1$dh%2$s'), $hour, $minute);
+               $values[$i] = sprintf(__('%1$sh%2$s'), $hour, $minute);
             }
          }
       }
@@ -1654,6 +1660,55 @@ class Dropdown {
                                             'display_emptychoice' => $params['display_emptychoice'],
                                             'rand'                => $params['rand'],
                                             'emptylabel'          => $params['emptylabel']));
+   }
+
+    /**
+     * #HOLDAT Simple Dropdown of times based in min and max values
+     * @since version 0.83
+     *
+     * @param $myname        select name
+     * @param $options array of options
+     *    - value           : default value
+     *    - min             : min value : default 0
+     *    - max             : max value : default DAY_TIMESTAMP
+     *    - value           : default value
+     *    - addfirstminutes : add first minutes before first step (default false)
+     *    - toadd           : array of values to add
+     *    - inhours         : only show timestamp in hours not in days
+     *    - display         : boolean / display or return string
+     *    - width           : string / display width of the item
+     */
+   static function showSimpleTimeDropdown($myname, $options) {
+       global $CFG_GLPI;
+
+       $params['value']               = '';
+       $params['display_emptychoice'] = true;
+       $params['emptylabel']          = 'Escolha um valor';
+       $params['min']                 = 0;
+       $params['step']                = 1;
+       $params['max']                 = 23;
+       $params['width']               = '55%';
+
+       foreach($options as $key => $value) {
+           $params[$key] = $value;
+       }
+
+       $values = array();
+
+       for($elem = $params['min']; $elem <= $params['max']; $elem += $params['step']) {
+           $values[] = $elem;
+       }
+
+       $values = Toolbox::formatTimeValues($values);
+
+       return Dropdown::showFromArray($myname, $values,
+           array('value'             => $params['value'],
+               'width'               => $params['width'],
+               'display_emptychoice' => $params['display_emptychoice'],
+               'emptylabel'          => $params['emptylabel']));
+
+
+
    }
 
 

@@ -633,6 +633,10 @@ class Reservation extends CommonDBChild {
    function showForm($ID, $options=array()) {
       global $CFG_GLPI;
 
+
+       /**
+        * #HOLDAT Modified to support changes in the room search, while also making the dates immutable directly
+        */
       if (!Session::haveRight("reservation", ReservationItem::RESERVEANITEM)) {
          return false;
       }
@@ -655,13 +659,15 @@ class Reservation extends CommonDBChild {
 
       } else {
          $resa->getEmpty();
-         $resa->fields["begin"] = $options['begin'];
-         if (!isset($options['end'])) {
+         $resa->fields["begin"] = $options['timebegin'];
+         $resa->fields["end"] = $options['timeend'];
+
+         /*if (!isset($options['end'])) {
             $resa->fields["end"] = date("Y-m-d H:00:00",
                                         strtotime($resa->fields["begin"])+HOUR_TIMESTAMP);
          } else {
             $resa->fields["end"] = $options['end'];
-         }
+         }*/
       }
 
       // No item : problem
@@ -681,7 +687,7 @@ class Reservation extends CommonDBChild {
       // Add Hardware name
       $r = new ReservationItem();
 
-      echo "<tr class='tab_bg_1'><td>".__('Item')."</td>";
+      echo "<tr class='tab_bg_1'><td>Sala</td>";
       echo "<td>";
       foreach ($options['item'] as $itemID) {
          $r->getFromDB($itemID);
@@ -724,20 +730,26 @@ class Reservation extends CommonDBChild {
          }
          echo "</td></tr>\n";
       }
-      echo "<tr class='tab_bg_2'><td>".__('Start date')."</td><td>";
-      $rand_begin = Html::showDateTimeField("resa[begin]",
+      echo "<tr class='tab_bg_2'><td>Inicio da reserva</td><td>";
+      /*$rand_begin = Html::showDateTimeField("resa[begin]",
                                             array('value'      => $resa->fields["begin"],
                                                   'timestep'   => -1,
                                                   'maybeempty' => false));
-      echo "</td></tr>\n";
+      */
+       echo "<input type='text' name='timebegin' value='" . date('d-m-Y H:i', strtotime($resa->fields['begin'])). "' readonly>";
+       echo "<input type='hidden' name='resa[begin]' value='" . $resa->fields['begin'] . "' >";
+       echo "</td></tr>\n";
       $default_delay = floor((strtotime($resa->fields["end"])-strtotime($resa->fields["begin"]))
                              /$CFG_GLPI['time_step']/MINUTE_TIMESTAMP)
                        *$CFG_GLPI['time_step']*MINUTE_TIMESTAMP;
-      echo "<tr class='tab_bg_2'><td>".__('Duration')."</td><td>";
-      $rand = Dropdown::showTimeStamp("resa[_duration]",
+      echo "<tr class='tab_bg_2'><td>Fim da reserva</td><td>";
+
+      echo "<input type='text' name='timeend' value='" . date('d-m-Y H:i', strtotime($resa->fields['end'])). "' readonly>";
+      echo "<input type='hidden' name='resa[end]' value='" . $resa->fields['end'] . "' >";
+      /*$rand = Dropdown::showTimeStamp("resa[_duration]",
                                       array('min'        => 0,
                                             'max'        => 24*HOUR_TIMESTAMP,
-                                            'value'      => $default_delay,
+                                            'value'      => '',
                                             'emptylabel' => __('Specify an end date')));
       echo "<br><div id='date_end$rand'></div>";
       $params = array('duration'     => '__VALUE__',
@@ -750,7 +762,8 @@ class Reservation extends CommonDBChild {
       if ($default_delay == 0) {
          $params['duration'] = 0;
          Ajax::updateItem("date_end$rand", $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);
-      }
+      }*/
+
       Alert::displayLastAlert('Reservation', $ID);
       echo "</td></tr>\n";
 
@@ -775,7 +788,7 @@ class Reservation extends CommonDBChild {
       }
 
       echo "<tr class='tab_bg_2'><td>Área Temática da reserva</td><td>";
-      $valueThemes =  array('NULL' => ' - ',
+      $valueThemes =  array('NULL' => ' ---- ',
                               'Aula' => 'Aula',
                               'Apresentação' => 'Apresentação');
       Dropdown::showFromArray('theme', $valueThemes);

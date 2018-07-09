@@ -1738,6 +1738,86 @@ class Toolbox {
       }
    }
 
+    /**
+     *
+     * #HOLDAT Manages POST variables so that no exceptions occur in the new code,
+     * while also keeping expected behaviour.
+     *
+     * @param $data array data to process
+     *
+     * @return processed datas
+     **/
+    static function managePOSTPlanTimes(&$data) {
+
+        if ((!isset($data['timeend']))
+                && !isset($data['timebegin'])) {
+            $data['timeend'] = $data['_timeend'];
+            $data['timebegin'] = $data['_timebegin'];
+        }
+    }
+
+    /**
+     * #HOLDAT Function to iterate over an array, applying the function timeAddForemostZero() to each element.
+     *
+     * @param $array array to be iterated and modified
+     * @return reformated array
+     */
+    static function timeAddForemostZeroToArray($array) {
+        foreach($array as $key => $value) {
+            $array[$key] = self::timeAddForemostZero($value);
+        }
+        return $array;
+    }
+
+    /**
+     * #HOLDAT Basic function to format time with a 0 in front of single digit number
+     *
+     * @param $number number to be formated
+     * @return formated number
+     */
+    static function timeAddForemostZero($number) {
+        if($number < 10) {
+            $number = '0' . $number;
+        }
+        return $number;
+    }
+
+    /**
+     * #HOLDAT Iterates over array, applying addColonAndRightmostZeros() to each element.
+     *
+     * @param $values array of numbers
+     * @return reformated array $values
+     */
+    static function addColonAndRightmostZerosToArray($values) {
+        foreach($values as $key => $value) {
+            $values[$key] = self::addColonAndRightmostZeros($value);
+        }
+        return $values;
+    }
+
+    /**
+     * #HOLDAT Adds colon and rightmost zeros to value.
+     * Example: 02 -> 02:00
+     *
+     * @param $value
+     * @return reformated $value
+     */
+    static function addColonAndRightmostZeros($value) {
+        $value = $value . ':' . '00';
+        return $value;
+    }
+
+
+    /**
+     * @param $values
+     * @return mixed|reformated
+     */
+    static function formatTimeValues($values) {
+        $values = self::timeAddForemostZeroToArray($values);
+        $values = self::addColonAndRightmostZerosToArray($values);
+        return $values;
+    }
+
 
    /**
     * Manage login redirection

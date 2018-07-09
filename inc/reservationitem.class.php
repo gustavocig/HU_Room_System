@@ -247,6 +247,8 @@ class ReservationItem extends CommonDBChild {
      **/
     static function showActivationFormForItem(CommonDBTM $item) {
 
+
+
         if (!self::canUpdate()) {
             return false;
         }
@@ -346,6 +348,19 @@ class ReservationItem extends CommonDBChild {
         return false;
     }
 
+    static function printArray($array) {
+        foreach($array as $key => $value) {
+            if(is_array($value)) {
+                echo "</br>     ArrayKey - ".$key;
+                self::printArray($value);
+            } else {
+                echo "</br>     elemKey - ".$key;
+                echo "</br>     elemval - ".$value;
+            }
+        }
+
+    }
+
 
     static function showListSimple() {
         global $DB, $CFG_GLPI;
@@ -365,7 +380,8 @@ class ReservationItem extends CommonDBChild {
 
         if (isset($_POST['reserve'])) {
             echo "<div id='viewresasearch'  class='center'>";
-            Toolbox::manageBeginAndEndPlanDates($_POST['reserve']);
+            //Toolbox::manageBeginAndEndPlanDates($_POST['reserve']);
+            Toolbox::managePOSTPlanTimes($_POST['reserve']);
             echo "<div id='nosearch' class='center firstbloc'>".
                 "<a href=\"".$CFG_GLPI['root_doc']."/front/reservationitem.php\">";
             echo "Limpar resultados da pesquisa.</a></div>\n";
@@ -379,8 +395,13 @@ class ReservationItem extends CommonDBChild {
             echo "<div id='viewresasearch' style=\"display:block;\" class='center'>";
             $begin_time                 = time();
             $begin_time                -= ($begin_time%HOUR_TIMESTAMP);
-            $_POST['reserve']["begin"]  = date("Y-m-d H:i:s",$begin_time);
-            $_POST['reserve']["end"]    = date("Y-m-d H:i:s",$begin_time+HOUR_TIMESTAMP);
+            //
+
+            //$_POST['reserve']["begin"]  = date("Y-m-d",$begin_time);
+            //$_POST['reserve']["end"]    = date("Y-m-d H:i:s",$begin_time+HOUR_TIMESTAMP);
+            $_POST['reserve']['day']    = date("Y-m-d",$begin_time);
+            $_POST['reserve']["timebegin"]= date("H:m",$begin_time);
+            $_POST['reserve']["timeend"]  = date("H:m",$begin_time + HOUR_TIMESTAMP);
             $_POST['reservation_types'] = '';
             $_POST['size'] = '';
             $_POST['videoprojetor'] = '';
@@ -394,10 +415,11 @@ class ReservationItem extends CommonDBChild {
         echo "<th colspan='3'>Procure uma sala para sua atividade</th></tr>";
 
 
-        echo "<tr class='tab_bg_2'><td>".__('Start date')."</td><td>";
-        Html::showDateTimeField("reserve[begin]", array('value'      =>  $_POST['reserve']["begin"],
-            'maybeempty' => false
-            //'oneline' => true
+        echo "<tr class='tab_bg_2'><td>Data</td><td>";
+        //Html::showDateField("reserve[begin]", array('value'      =>  $_POST['reserve']["begin"],
+        Html::showDateField("reserve[day]", array('value'      =>  $_POST['reserve']["day"],
+            'maybeempty' => false,
+            'readonlyHTML' => true
             //'max' => '2018-12-24',
             //'mintime' => '07:00',
             //'maxtime' => '23:30'
@@ -406,20 +428,80 @@ class ReservationItem extends CommonDBChild {
         echo "<input type='submit' class='submit' name='submit' value=\""._sx('button', 'Search')."\">";
         echo "</td></tr>";
 
-        echo "<tr class='tab_bg_2'><td>".__('Duration')."</td><td>";
-        $default_delay = floor((strtotime($_POST['reserve']["end"]) - strtotime($_POST['reserve']["begin"]))
-                /$CFG_GLPI['time_step']/MINUTE_TIMESTAMP)
-            *$CFG_GLPI['time_step']*MINUTE_TIMESTAMP;
-        $rand = Dropdown::showTimeStamp("reserve[_duration]", array('min'        => 0,
-            'max'        =>6*HOUR_TIMESTAMP,
-            'value'      => '',
-            'emptylabel' => 'Especifique a duração do evento'));
-        echo "<br><div id='date_end$rand'></div>";
-        $params = array('duration'     => '__VALUE__',
-            'end'          => $_POST['reserve']["end"],
-            'name'         => "reserve[end]");
 
-        Ajax::updateItemOnSelectEvent("dropdown_reserve[_duration]$rand", "date_end$rand",
+        /**
+         * #Holdat Definition of min and max time values
+         */
+        $timeMin = 6;
+        $timeMax = 23;
+
+        echo "<tr class='tab_bg_2'><td>Horario de Inicio</td><td>";
+
+
+        /*$randTimeInit = Dropdown::showTimeStamp("reserve[_timebegin]", array('min'        => 7*HOUR_TIMESTAMP,
+            'max'        => 23*HOUR_TIMESTAMP,
+            'value'      => '',
+            'step'       => 60*MINUTE_TIMESTAMP,
+            'emptylabel' => 'Especifique o horario de inicio do evento',
+            'width'      => '55%'));*/
+
+
+        $randTimeInit = Dropdown::showSimpleTimeDropdown("reserve[_timebegin]",
+            array('value'             => '',
+                'width'               => '55%',
+                'display_emptychoice' => true,
+                'min'                 => $timeMin,
+                'max'                 => $timeMax,
+                'emptylabel'          => 'Especifique o horario de termino do evento'));
+
+        echo "<br><div id='time_begin$randTimeInit'></div>";
+
+        $params = array('duration'     => '__VALUE__',
+            'begin'          => $_POST['reserve']["timebegin"],
+            'name'         => "reserve[timebegin]");
+
+        Ajax::updateItemOnSelectEvent("dropdown_reserve[_timebegin]$randTimeInit", "time_begin$randTimeInit",
+            $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);
+
+        echo "</td></tr>";
+
+
+
+        echo "<tr class='tab_bg_2'><td>Horário de Termino</td><td>";
+        //$default_delay = floor((strtotime(["end"]) - strtotime($_POST['reserve']["begin"]))
+        //        /$CFG_GLPI['time_step']/MINUTE_TIMESTAMP)
+        //    *$CFG_GLPI['time_step']*MINUTE_TIMESTAMP;
+
+        /*$randTimeEnd = Dropdown::showTimeStamp("reserve[_timeend]", array('min'        => 7*HOUR_TIMESTAMP,
+            'max'        => 23*HOUR_TIMESTAMP,
+            'value'      => '',
+            'step'       => 60*MINUTE_TIMESTAMP,
+            'emptylabel' => 'Especifique o horario de termino do evento',
+            'width'      => '55%'));
+
+        $randTimeEnd = Dropdown::showFromArray("reserve[_timeend]", $timeValues,
+            array('value'             => '',
+                'width'               => '55%',
+                'display_emptychoice' => true,
+                'emptylabel'          => 'Especifique o horario de termino do evento'));*/
+        /**
+         * #HOLDAT Finish new time implementation by, finishing the dropdowns and appending it's value with the 'day' value
+         * thus becoming a ''date' variable' allowing to be used in SQL
+         */
+        $randTimeEnd = Dropdown::showSimpleTimeDropdown("reserve[_timeend]",
+                array('value'             => '',
+                    'width'               => '55%',
+                    'display_emptychoice' => true,
+                    'min'                 => $timeMin,
+                    'max'                 => $timeMax,
+                    'emptylabel'          => 'Especifique o horario de termino do evento'));
+
+        echo "<br><div id='time_end$randTimeEnd'></div>";
+        $params = array('duration'     => '__VALUE__',
+            'end'          => $_POST['reserve']["timeend"],
+            'name'         => "reserve[timeend]");
+
+        Ajax::updateItemOnSelectEvent("dropdown_reserve[_timeend]$randTimeEnd", "time_end$randTimeEnd",
             $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);
         echo "</td></tr>";
 
@@ -537,8 +619,28 @@ class ReservationItem extends CommonDBChild {
                if ($item->isField('otherserial')) {
                   $otherserial = "`$itemtable`.`otherserial`";
                }*/
-            $begin = $_POST['reserve']["begin"];
-            $end   = $_POST['reserve']["end"];
+
+            /**
+             * #HOLDAT Corrects time dropdown problem of passing a POST value
+             * not matching the shown value chosen in the dropdown
+             */
+            if($_POST['reserve']["_timebegin"] != 0 ) {
+                $_POST['reserve']["_timebegin"] += $timeMin;
+            }
+
+            if($_POST['reserve']["_timeend"] != 0 ) {
+                $_POST['reserve']["_timeend"] += $timeMin;
+            }
+
+            /**
+             * #HOLDAT Reformats time once again, now so that seconds are added
+             * Done so that values comply with the Date type in SQL
+             */
+            $begin = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timebegin"]);
+            $end   = Toolbox::addColonAndRightmostZeros($_POST['reserve']["_timeend"]);
+
+            $begin = $_POST['reserve']['day'] . ' ' . $begin;
+            $end = $_POST['reserve']['day'] . ' ' . $end;
 
             $tv  = ($_POST['tv'] == 0) ? NULL : $_POST['tv'];
             $proj  = ($_POST['videoprojetor'] == 0) ? NULL : $_POST['videoprojetor'];
@@ -567,6 +669,7 @@ class ReservationItem extends CommonDBChild {
 
             $sizeQuery = (isset($size)) ? "OR (`glpi_plugin_room_rooms`.`size` < ". $size.")" : "";
 
+
             if (isset($_POST['submit']) && isset($begin) && isset($end)) {
                 $exceptRoom = "AND 
                         `glpi_plugin_room_rooms`.`id` NOT IN (
@@ -575,8 +678,8 @@ class ReservationItem extends CommonDBChild {
                                   INNER JOIN `glpi_reservations`
                                       ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
                                          AND  
-                                         ('" . $begin . "' <= `glpi_reservations`.`end`
-                                            AND '" . $end . "' >= `glpi_reservations`.`begin`)";
+                                         ('" . $begin . "' < `glpi_reservations`.`end`
+                                            AND '" . $end . "' > `glpi_reservations`.`begin`)";
 
             }
 
@@ -700,6 +803,7 @@ class ReservationItem extends CommonDBChild {
             $query .= $exceptLocation;
             $query .= $order;
 
+
             /*
             $query = "SELECT `glpi_reservationitems`.`id`,
                              `glpi_reservationitems`.`comment`,
@@ -776,9 +880,7 @@ class ReservationItem extends CommonDBChild {
                         $ok = true;
 
                         /**
-                         *
                          * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
-                         *
                          */
                         $js = "$(document).ready(function(){
                             $('input[type=checkbox]').click(function(){
@@ -797,8 +899,8 @@ class ReservationItem extends CommonDBChild {
             if ($ok) {
                 echo "<tr class='tab_bg_1 center'><td colspan='8'>";
                 if (isset($_POST['reserve'])) {
-                    echo Html::hidden('begin', array('value' => $_POST['reserve']["begin"]));
-                    echo Html::hidden('end', array('value'   => $_POST['reserve']["end"]));
+                    echo Html::hidden('timebegin', array('value' => $begin));
+                    echo Html::hidden('timeend', array('value'   => $end));
                 }
                 echo "<input type='submit' value=\"Continuar\" class='submit'></td></tr>\n";
 

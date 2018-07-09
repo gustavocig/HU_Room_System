@@ -3891,3 +3891,1802 @@
   inc/reservation_unique.class.php:72                CommonDBTM->getFromDB()
   inc/commonglpi.class.php:473                       reservation_unique->showForm()
   ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 09:59:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 09:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 09:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:698                  
+  inc/reservationitem.class.php:971                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:00:22 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 15
+  Backtrace :
+  inc/reservationitem.class.php:697                  
+  inc/reservationitem.class.php:970                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:00:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 13
+  Backtrace :
+  inc/reservationitem.class.php:695                  
+  inc/reservationitem.class.php:968                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:00:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 16:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 17:30:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 13
+  Backtrace :
+  inc/reservationitem.class.php:695                  
+  inc/reservationitem.class.php:968                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:01:55 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 13
+  Backtrace :
+  inc/reservationitem.class.php:695                  
+  inc/reservationitem.class.php:968                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:03:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 13
+  Backtrace :
+  inc/reservationitem.class.php:695                  
+  inc/reservationitem.class.php:967                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:03:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0;
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:30:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+            ' at line 13
+  Backtrace :
+  inc/reservationitem.class.php:695                  
+  inc/reservationitem.class.php:967                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:21:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`)OR (`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Unknown column 'glpi_locations.name' in 'on clause'
+  Backtrace :
+  inc/reservationitem.class.php:707                  
+  inc/reservationitem.class.php:981                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:21:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`)OR (`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Unknown column 'glpi_locations.name' in 'on clause'
+  Backtrace :
+  inc/reservationitem.class.php:707                  
+  inc/reservationitem.class.php:981                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 10:21:14 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND 
+                                         (\'2018-07-04 10:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 10:00:00\' >= `glpi_reservations`.`begin`)OR (`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\'))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Unknown column 'glpi_locations.name' in 'on clause'
+  Backtrace :
+  inc/reservationitem.class.php:707                  
+  inc/reservationitem.class.php:981                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:31:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:31:13 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:31:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:31:20 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\'))))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND ((`glpi_locations`.`name` = ' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:32:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:32:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:32:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\'))))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                           ' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:35:06 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:35:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:35:25 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:35:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`)AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\'))))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                           ' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:37:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'HU\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:37:36 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:37:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:717                  
+  inc/reservationitem.class.php:991                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:45:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'MEAC\'))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:719                  
+  inc/reservationitem.class.php:993                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:48:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)AND 
+                                `glpi_plugin_room_rooms`.`id` NOT IN (
+                                    SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                    FROM `glpi_plugin_room_rooms`
+                                    INNER JOIN `glpi_locations`
+                                        ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`AND ((`glpi_locations`.`name` = \'GEP\') OR (`glpi_locations`.`name` = \'HU\')))))ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')ORDER BY size' at line 29
+  Backtrace :
+  inc/reservationitem.class.php:719                  
+  inc/reservationitem.class.php:993                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 11:49:02 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 11:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 11:00:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:718                  
+  inc/reservationitem.class.php:992                  ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-04 12:23:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'2018-07-04 12:00:00\' <= `glpi_reservations`.`end`
+                                            AND \'2018-07-04 12:00:00\' >= `glpi_reservations`.`begin`)OR (`glpi_plugin_room_rooms`.`size` < fdf))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Unknown column 'fdf' in 'on clause'
+  Backtrace :
+  inc/reservationitem.class.php:732                  
+  inc/reservationitem.class.php:1006                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:11:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:764                  
+  inc/reservationitem.class.php:1038                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:13:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:764                  
+  inc/reservationitem.class.php:1038                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:15:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:764                  
+  inc/reservationitem.class.php:1038                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:18:18 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:772                  
+  inc/reservationitem.class.php:1046                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:18:54 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:769                  
+  inc/reservationitem.class.php:1043                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 12:45:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= `glpi_reservations`.`end`
+                                            AND \'0\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:775                  
+  inc/reservationitem.class.php:1049                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 13:11:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:775                  
+  inc/reservationitem.class.php:1049                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 13:14:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:775                  
+  inc/reservationitem.class.php:1049                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-05 13:14:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:775                  
+  inc/reservationitem.class.php:1049                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 10:13:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        )WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 16
+  Backtrace :
+  inc/reservationitem.class.php:790                  
+  inc/reservationitem.class.php:1064                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 10:34:34 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= `glpi_reservations`.`end`
+                                            AND \'0\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:783                  
+  inc/reservationitem.class.php:1057                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 10:38:59 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= `glpi_reservations`.`end`
+                                            AND \'0\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:784                  
+  inc/reservationitem.class.php:1058                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 10:39:27 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'28800\' <= `glpi_reservations`.`end`
+                                            AND \'32400\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:784                  
+  inc/reservationitem.class.php:1058                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:42:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'0\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:784                  
+  inc/reservationitem.class.php:1058                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:42:22 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'28800\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'36000\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:784                  
+  inc/reservationitem.class.php:1058                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:45:15 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'0\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:786                  
+  inc/reservationitem.class.php:1060                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:46:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'0\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:789                  
+  inc/reservationitem.class.php:1063                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:46:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'28800\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'32400\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:789                  
+  inc/reservationitem.class.php:1063                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-06 11:48:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'28800\' <= cast(`glpi_reservations`.`end` as time)
+                                            AND \'32400\' >= cast(`glpi_reservations`.`begin` as time)))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:789                  
+  inc/reservationitem.class.php:1063                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:06:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:815                  
+  inc/reservationitem.class.php:1089                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:07:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'1:00\' <= `glpi_reservations`.`end`
+                                            AND \'3:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:815                  
+  inc/reservationitem.class.php:1089                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:13:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'6:00\' <= `glpi_reservations`.`end`
+                                            AND \'6:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:823                  
+  inc/reservationitem.class.php:1097                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:15:24 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:832                  
+  inc/reservationitem.class.php:1106                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:15:30 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:832                  
+  inc/reservationitem.class.php:1106                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:15:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:832                  
+  inc/reservationitem.class.php:1106                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:16:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'0:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:828                  
+  inc/reservationitem.class.php:1102                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 09:17:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                          `glpi_plugin_room_rooms`.`name` AS name,
+                          `glpi_plugin_room_rooms`.`size` AS size,
+                          `glpi_plugin_room_rooms`.`comment` AS comment,
+                          `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                          `glpi_plugin_room_rooms`.`tv` AS tv,
+                          `glpi_plugin_room_rooms`.`computer` AS pc,
+                          `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                          `glpi_locations`.`name` AS location
+                        FROM `glpi_plugin_room_rooms`
+                        LEFT JOIN `glpi_reservations`
+                            ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                        LEFT JOIN `glpi_locations`
+                            ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                        WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                        AND 
+                        `glpi_plugin_room_rooms`.`id` NOT IN (
+                                  SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                  FROM `glpi_plugin_room_rooms`
+                                  INNER JOIN `glpi_reservations`
+                                      ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                         AND  
+                                         (\'7:00\' <= `glpi_reservations`.`end`
+                                            AND \'0:00\' >= `glpi_reservations`.`begin`))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<='
+  Backtrace :
+  inc/reservationitem.class.php:828                  
+  inc/reservationitem.class.php:1102                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-09 11:05:20 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT *
+                FROM `glpi_reservations`
+                WHERE 
+                      `reservationitems_id` = \'1\'
+                      AND \'09-07-2018 08:00\' < `end`
+                      AND \'2018-07-09 08:00:09\' > `begin`
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<'
+  Backtrace :
+  inc/reservation.class.php:251                      
+  inc/reservation.class.php:184                      Reservation->is_reserved()
+  inc/commondbtm.class.php:817                       Reservation->prepareInputForAdd()
+  front/reservation.form.php:128                     CommonDBTM->add()
+2018-07-09 11:05:43 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT *
+                FROM `glpi_reservations`
+                WHERE 
+                      `reservationitems_id` = \'1\'
+                      AND \'09-07-2018 07:00\' < `end`
+                      AND \'2018-07-09 07:00:09\' > `begin`
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<'
+  Backtrace :
+  inc/reservation.class.php:251                      
+  inc/reservation.class.php:184                      Reservation->is_reserved()
+  inc/commondbtm.class.php:817                       Reservation->prepareInputForAdd()
+  front/reservation.form.php:128                     CommonDBTM->add()
+2018-07-09 11:05:58 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT *
+                FROM `glpi_reservations`
+                WHERE 
+                      `reservationitems_id` = \'1\'
+                      AND \'09-07-2018 07:00\' < `end`
+                      AND \'2018-07-09 07:00:09\' > `begin`
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<'
+  Backtrace :
+  inc/reservation.class.php:251                      
+  inc/reservation.class.php:184                      Reservation->is_reserved()
+  inc/commondbtm.class.php:817                       Reservation->prepareInputForAdd()
+  front/reservation.form.php:128                     CommonDBTM->add()
+2018-07-09 11:06:42 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT *
+                FROM `glpi_reservations`
+                WHERE 
+                      `reservationitems_id` = \'1\'
+                      AND \'09-07-2018 08:00\' < `end`
+                      AND \'2018-07-09 08:00:09\' > `begin`
+  Error: Illegal mix of collations (utf8_general_ci,COERCIBLE) and (latin1_swedish_ci,NUMERIC) for operation '<'
+  Backtrace :
+  inc/reservation.class.php:251                      
+  inc/reservation.class.php:184                      Reservation->is_reserved()
+  inc/commondbtm.class.php:817                       Reservation->prepareInputForAdd()
+  front/reservation.form.php:128                     CommonDBTM->add()

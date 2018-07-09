@@ -221,6 +221,12 @@ class PluginRoomRoom extends CommonDBTM {
         return $ong;
     }
 
+
+    /**
+     *
+     * #HOLDAT Forms for changes in room info
+     *
+     */
     // Cette fonction affiche le formulaire de l'objet (en création ou en édition/consultation)
     // Cette fonction est appelée par /front/room.form.php
     // showForm(ID de l'objet,tableau pour les options)
@@ -256,17 +262,22 @@ class PluginRoomRoom extends CommonDBTM {
         }
         echo "</tr>";
 
-        // Reste du tableau
+
         // Nom de la salle
         echo "<tr class='tab_bg_1'><td>" . __('Name') . ":		</td>";
         echo "<td>";
         Html::autocompletionTextField($this, 'name');
         echo "</td>";
+
+        /**
+         *
+         * #HOLDAT Local checkbox(HU, MEAC, GEP)
+         *
+         */
         echo "<td>" . __('Location') . ":		</td>";
         echo "<td>";
         Dropdown::show('Location', array(
-            'value' => $this->fields["locations_id"],
-            'entity' => $this->fields["entities_id"]
+            'value' => $this->fields["locations_id"]
         ));
         echo "</td></tr>";
 
@@ -316,7 +327,11 @@ class PluginRoomRoom extends CommonDBTM {
         Dropdown::showInteger("size", $this->fields["size"], 0, 500);
         echo "</td>";
 
-        // Dropdown du Groupe responsable technique
+        /**
+         *
+         * #HOLDAT "Area Tematica" forms
+         *
+         */
         echo '<td>' . __('Group in charge of the hardware') . '</td><td>';
         Group::dropdown([
             'name'      => 'groups_id_tech',

@@ -1172,7 +1172,7 @@ class Html
 
     /**
      * Include common HTML headers
-     *
+     * #HOLDAT Header/Libs
      * @param $title title used for the page (default '')
      *
      * @return nothing
@@ -3524,6 +3524,201 @@ class Html
         }
         return $output;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * #HOLDAT Display Time form
+     *
+     * @since version HU
+     *
+     * @param $name            name of the element
+     * @param $options  array  of possible options:
+     *   - value      : default value to display (default '')
+     *   - timestep   : step for time in minute (-1 use default config) (default -1)
+     *   - maybeempty : may be empty ? (true by default)
+     *   - canedit    : could not modify element (true by default)
+     *   - mindate    : minimum allowed date (default '')
+     *   - maxdate    : maximum allowed date (default '')
+     *   - mintime    : minimum allowed time (default '')
+     *   - maxtime    : maximum allowed time (default '')
+     *   - showyear   : should we set/diplay the year? (true by default)
+     *   - display    : boolean display or get string (default true)
+     *   - rand       : specific random value (default generated one)
+     *
+     * @return rand value used if displayes else string
+     **/
+    static function showTimeField($name, $options = array())
+    {
+        global $CFG_GLPI;
+
+        $p['value'] = '';
+        $p['maybeempty'] = true;
+        $p['canedit'] = true;
+        $p['minhour'] = '';
+        $p['maxhour'] = '';
+        $p['minminutes'] = '';
+        $p['maxminutes'] = '';
+        $p['timestep'] = -1;
+        $p['display'] = true;
+        $p['oneline'] = false;
+        $p['rand'] = mt_rand();
+
+        foreach ($options as $key => $val) {
+            if (isset($p[$key])) {
+                $p[$key] = $val;
+            }
+        }
+
+        if ($p['timestep'] < 0) {
+            $p['timestep'] = 30;
+        }
+
+        $minHour = 0;
+        $maxHour = 23;
+        $minMinute = 0;
+        $maxMinute = 59;
+
+        $hour_value = '';
+        /*if (!empty($p['value'])) {
+            list($date_value, $hour_value) = explode(' ', $p['value']);
+        }*/
+
+        if (!empty($p['mintime'])) {
+            list($minHour, $minMinute) = explode(':', $p['mintime']);
+
+            // Check time in interval
+            if (!empty($hour_value) && ($hour_value < $p['mintime'])) {
+                $hour_value = $p['mintime'];
+            }
+        }
+
+        if (!empty($p['maxtime'])) {
+            list($maxHour, $maxMinute) = explode(':', $p['maxtime']);
+
+            // Check time in interval
+            if (!empty($hour_value) && ($hour_value > $p['maxtime'])) {
+                $hour_value = $p['maxtime'];
+            }
+        }
+
+        // reconstruct value to be valid
+        /*if (!empty($date_value)) {
+            $p['value'] = $date_value . ' ' . $hour_value;
+        }*/
+
+        $output = "<div class='no-wrap'>";
+        $output .= "<input id='showtime" . $p['rand'] . "' type='text' name='_$name' value='" .
+            $p['value'] . "'>";
+        $output .= Html::hidden($name, array('value' => $p['value'], 'id' => "hiddentime" . $p['rand']));
+        if ($p['maybeempty'] && $p['canedit']) {
+            $output .= "<img src='" . $CFG_GLPI['root_doc'] . "/pics/reset.png' alt=\"" . __('Clear') .
+                "\" id='resetdate" . $p['rand'] . "' class='pointer'>";
+        }
+        $output .= "</div>";
+
+        $js = "";
+        if ($p['maybeempty'] && $p['canedit']) {
+            $js .= "$('#resetdate" . $p['rand'] . "').click(function(){
+                  $('#showtime" . $p['rand'] . "').val('');
+                  $('#hiddentime" . $p['rand'] . "').val('');
+                  });";
+        }
+
+        $js .= "$( '#showtime" . $p['rand'] . "' ).timepicker({
+                  altField: '#hiddentime" . $p['rand'] . "',
+                  altTimeFormat: 'HH:mm',
+                  pickerTimeFormat : 'HH:mm',
+                  altFieldTimeOnly: false,
+                  parse: 'loose',
+                  stepMinute: " . $p['timestep'] . ",
+                  showSecond: false,
+                  showButtonPanel: true,
+                  controlType: 'select'";
+        if (!$p['canedit']) {
+            $js .= ",disabled: true";
+        }
+
+        /*if (!empty($p['oneline'])) {
+            $js .= ",oneLine: '" . $p['oneline'] . "'";
+        }
+
+        if (!empty($p['min'])) {
+            $js .= ",minDate: '" . self::convDate($p['min']) . "'";
+        }
+
+        if (!empty($p['max'])) {
+            $js .= ",maxDate: '" . self::convDate($p['max']) . "'";
+        }*/
+
+        /*if (!empty($p['maxtime'])) {
+            $js .= ",hourMax: '" . $maxHour . "'";
+            $js .= ",minuteMax: '" . $maxMinute . "'";
+        }
+
+        if (!empty($p['mintime'])) {
+            $js .= ",hourMin: '" . $minHour . "'";
+            $js .= ",minuteMin: '" . $minMinute . "'";
+        }
+
+        switch ($_SESSION['glpidate_format']) {
+            //$aux_set_format_br = 1;
+            //switch ($aux_set_format_br) {
+            case 1 :
+                $p['showyear'] ? $format = 'dd-mm-yy' : $format = 'dd-mm';
+                break;
+
+            case 2 :
+                $p['showyear'] ? $format = 'mm-dd-yy' : $format = 'mm-dd';
+                break;
+
+            default :
+                $p['showyear'] ? $format = 'yy-mm-dd' : $format = 'mm-dd';
+        }
+        $js .= ",dateFormat: '" . $format . "'";
+        $js .= ",timeFormat: 'HH:mm'";
+
+        */
+
+        $js .= "});";
+
+        $output .= Html::scriptBlock($js);
+
+
+        if ($p['display']) {
+            echo $output;
+            return $p['rand'];
+        }
+        return $output;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Show generic date search
