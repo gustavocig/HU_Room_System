@@ -446,7 +446,7 @@ class ReservationItem extends CommonDBChild {
         $timeMin = 6;
         $timeMax = 23;
 
-        echo "<tr class='tab_bg_2'><td>Horario de Inicio</td><td>";
+        echo "<tr class='tab_bg_2'><td>Horário de Inicio</td><td>";
 
 
         /*$randTimeInit = Dropdown::showTimeStamp("reserve[_timebegin]", array('min'        => 7*HOUR_TIMESTAMP,
@@ -889,24 +889,8 @@ class ReservationItem extends CommonDBChild {
                             echo "</tr>\n";
                             $ok = true;
 
-                            /**
-                             * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
-                             */
-                            $js = "$(document).ready(function(){
-                                $('input[type=checkbox]').click(function(){
-                                    $('input[type=checkbox]').prop('checked', false);
-                                    $(this).prop('checked', true);
-                                });
-                            });";
-
-
-                            echo Html::scriptBlock($js);
                     }
-                } else {
-                       /**
-                        * Needs to be filled up with exception handling for the room search.
-                        */
-                    }
+                }
             }
 
             if ($ok) {
@@ -922,7 +906,53 @@ class ReservationItem extends CommonDBChild {
             echo "<input type='hidden' name='id' value=''>";
             echo "</form>";// No CSRF token needed
             echo "</div>\n";
-        }
+
+        } else {
+                /**
+                 * Needs to be filled up with exception handling for the room search.
+                 */
+                echo "<div id='errorSearch' title='Pesquisa Inválida'>";
+                echo "<p>";
+                echo "Horário de inicio passado para pesquisa maior ou igual a horário de termino.</br></br>";
+                echo "Por favor, reveja sua pesquisa.";
+                echo "</p>";
+                echo "</div>";
+
+            }
+
+
+            /**
+             * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
+             */
+            $js = "$(document).ready(function(){
+                                $('input[type=checkbox]').click(function(){
+                                    $('input[type=checkbox]').prop('checked', false);
+                                    $(this).prop('checked', true);
+                                });
+                            });";
+
+            $js .= "$(document).ready(function() {
+                    $('#errorSearch').dialog({
+                        modal: true,
+                        draggable: false,
+                        resizable: false,
+                        closeOnEscape: true,
+                        dialogClass: 'no-close',
+                        show: true,
+                        hide: 'fadeOut',
+                        buttons: [
+                        {
+                            text: 'Fechar',
+                            click: function() {
+                                $(this).dialog( 'close' );
+                            }
+                        }
+                        ]
+                    });
+                });";
+
+
+            echo Html::scriptBlock($js);
         }
     }
 

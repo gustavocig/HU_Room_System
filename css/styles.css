@@ -249,6 +249,14 @@ option {
    text-align:center;
 }
 
+.submit:hover {
+    background: #d9d9d9;
+    -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+    box-shadow: inset 0 0 1px 1px #eaeaea;
+    color: #222;
+    cursor: pointer;
+}
+
 select {
    font-size: 11px;
    color: black;
@@ -524,6 +532,11 @@ input.save {
 
 .dateFieldNotEditable {
    outline: none;
+}
+
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
 }
 
 /* ################--------------- Layout  ---------------#################### */
