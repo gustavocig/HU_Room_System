@@ -500,12 +500,12 @@ class ReservationItem extends CommonDBChild {
          * thus becoming a ''date' variable' allowing to be used in SQL
          */
         $randTimeEnd = Dropdown::showSimpleTimeDropdown("reserve[_timeend]",
-                array('value'             => '',
-                    'width'               => '55%',
-                    'display_emptychoice' => true,
-                    'min'                 => $timeMin,
-                    'max'                 => $timeMax,
-                    'emptylabel'          => 'Especifique o horario de termino do evento'));
+            array('value'             => '',
+                'width'               => '55%',
+                'display_emptychoice' => true,
+                'min'                 => $timeMin,
+                'max'                 => $timeMax,
+                'emptylabel'          => 'Especifique o horario de termino do evento'));
 
         echo "<br><div id='time_end$randTimeEnd'></div>";
         $params = array('duration'     => '__VALUE__',
@@ -600,7 +600,10 @@ class ReservationItem extends CommonDBChild {
 
 
         echo "<td rowspan='3'>";
-        echo "<button id='special-cases' class='vsubmit'>Casos Especiais</button>";
+        echo "<a id='special-cases-button' class='vsubmit'>Casos Especiais</a>";
+
+
+
         echo "</td></tr>";
 
 
@@ -889,55 +892,91 @@ class ReservationItem extends CommonDBChild {
                             echo "</tr>\n";
                             $ok = true;
 
+                        }
                     }
                 }
-            }
 
-            if ($ok) {
-                echo "<tr class='tab_bg_1 center'><td colspan='8'>";
-                if (isset($_POST['reserve'])) {
-                    echo Html::hidden('timebegin', array('value' => $begin));
-                    echo Html::hidden('timeend', array('value' => $end));
+                if ($ok) {
+                    echo "<tr class='tab_bg_1 center'><td colspan='8'>";
+                    if (isset($_POST['reserve'])) {
+                        echo Html::hidden('timebegin', array('value' => $begin));
+                        echo Html::hidden('timeend', array('value' => $end));
+                    }
+                    echo "<input type='submit' value=\"Continuar\" class='submit'></td></tr>\n";
+
                 }
-                echo "<input type='submit' value=\"Continuar\" class='submit'></td></tr>\n";
+                echo "</table>\n";
+                echo "<input type='hidden' name='id' value=''>";
+                echo "</form>";// No CSRF token needed
+                echo "</div>\n";
 
-            }
-            echo "</table>\n";
-            echo "<input type='hidden' name='id' value=''>";
-            echo "</form>";// No CSRF token needed
-            echo "</div>\n";
-
-        } else {
+            } else {
                 /**
-                 * Needs to be filled up with exception handling for the room search.
+                 * #HOLDAT Exception room query modal.
                  */
-                echo "<div id='errorSearch' title='Pesquisa Inválida'>";
+                echo "<div id='errorSearch' class='invisible' title='Pesquisa Inválida'>";
                 echo "<p>";
                 echo "Horário de inicio passado para pesquisa maior ou igual a horário de termino.</br></br>";
                 echo "Por favor, reveja sua pesquisa.";
                 echo "</p>";
                 echo "</div>";
-
             }
+        }
+
+        echo "<div id='special-cases-dialog' class='invisible' title='Alerta para Casos Especiais'>
+                <p>O requerimento de reservas para casos especiais ou não contemplados pelas opções dispostas no sistema,
+                é um requerimento mais lento, que passará pela avaliação de um grupo moderador, podendo ser, inclusive, eventualmente negada.</p>
+                <p>Qualquer resultado a cerca do requerimento será repassado ao usuário cadastrante através de e-mail.</p>
+                <p>Ademais, qualquer requisição formalizada através deste requerimento especial, 
+                cuja qual pudesse ser contemplada por opções já presentes no sistema será negada.</p></br>
+                <p>Deseja continuar com cadastro?</p></div>";
+
+        echo "<div id='special-cases-forms' class='invisible' title='Criar requisição especial'>
+                <p class='validateTips'>Fill all fields</p>";
+        echo "<form>
+                <fieldset>
+                <label for='timeBegin'>Begins</label>
+                    <input type='text' name='timeBegin' id='timeBegin' class='text ui-widget-content ui-corner-all' readonly>
+                <label for='timeEnd'>Ends</label>
+                    <input type='text' name='timeEnd' id='timeEnd' class='text ui-widget-content ui-corner-all' readonly>
+                <label for='description'>Description</label>
+                    <textarea type='textarea' name='description' id='description' rows='8' cols='70' maxlength='585' required 
+                    placeholder='Descreva sua requisição da forma mais completa e detalhada possível. 
+                    Exemplo: 'Desejo reservar a Sala X na hora especificada acima toda a primeira segunda-feira de cada mês.' 
+                    class='text ui-widget-content ui-corner-all'></textarea>
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type='Enviar requisição' tabindex='-1' style='position:absolute; top:-1000px'>
+                </fieldset>
+            </form></div>";
 
 
-            /**
-             * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
-             */
-            $js = "$(document).ready(function(){
+        echo "<div id='special-cases-confirm' class='invisible' title='Confirmação de pedido de requisição'>
+                <p>Requisição enviada para analise, confirmação ou rejeição da mesma será informada por e-mail.</p>
+              </div>";
+
+
+        /**
+         * #HOLDAT Funcionalidade para que checkbox de salas fique limitado a apenas uma sala
+         */
+        $js = "$(document).ready(function(){
                                 $('input[type=checkbox]').click(function(){
                                     $('input[type=checkbox]').prop('checked', false);
                                     $(this).prop('checked', true);
                                 });
                             });";
 
-            $js .= "$(document).ready(function() {
+        /**
+         * #HOLDAT Implements query exception handler, by displaying a 'error' modal, to the user.
+         */
+        $js .= "$(document).ready(function() {
                     $('#errorSearch').dialog({
                         modal: true,
                         draggable: false,
                         resizable: false,
                         closeOnEscape: true,
                         dialogClass: 'no-close',
+                        height: 'auto',
+                        width: 700,
                         show: true,
                         hide: 'fadeOut',
                         buttons: [
@@ -952,8 +991,97 @@ class ReservationItem extends CommonDBChild {
                 });";
 
 
-            echo Html::scriptBlock($js);
-        }
+        /**
+         * #HOLDAT Implements modals for the requisition of special reservations.
+         * E-mail functionality still needs to be implemented
+         */
+        $js .="$(document).ready(function(){
+                
+                
+                $('#special-cases-confirm').dialog({
+                        autoOpen: false,
+	                    resizable: false,
+	                    draggable: false,
+                        closeOnEscape: true,
+                        dialogClass: 'no-close',
+	                    height: 'auto',
+	                    width: 700,
+	                    modal: true,
+	                    show: true,
+                        hide: 'fadeOut',
+	                    buttons: [
+                            {
+                                text: 'Fechar',
+                                click: function() {
+                                    $(this).dialog( 'close' );
+                                }
+                            }
+                        ]
+                });
+                
+                
+                $('#special-cases-forms').dialog({
+                        autoOpen: false,
+	                    resizable: false,
+	                    draggable: false,
+                        closeOnEscape: true,
+                        dialogClass: 'no-close',
+	                    height: 'auto',
+	                    width: 700,
+	                    modal: true,
+	                    show: true,
+                        hide: 'fadeOut',
+	                    buttons: [
+                            {
+                                text: 'Cancelar',
+                                click: function() {
+                                    $(this).dialog( 'close' );
+                                }
+                            },
+                            {
+                                text: 'Enviar',
+                                click: function() {
+                                    $('#special-cases-confirm').dialog( 'open' );
+                                    $('#special-cases-forms').dialog( 'close' );
+                                }
+                            }
+                        ]
+                });
+                
+                
+                
+                
+                $('#special-cases-button').click(function(){
+                    $('#special-cases-dialog').dialog({
+                        modal: true,
+                        draggable: false,
+                        resizable: false,
+                        closeOnEscape: true,
+                        dialogClass: 'no-close',
+                        height: 'auto',
+	                    width: 700,
+                        show: true,
+                        hide: 'fadeOut',
+                        buttons: [
+                            {
+                                text: 'Não',
+                                click: function() {
+                                    $(this).dialog( 'close' );
+                                }
+                            },
+                            {
+                                text: 'Sim',
+                                click: function() {
+                                    $('#special-cases-forms').dialog( 'open' );
+                                    $('#special-cases-dialog').dialog( 'close' );
+                                }
+                            }
+                        ]
+                    });
+                });
+            });";
+
+        echo Html::scriptBlock($js);
     }
 
 
