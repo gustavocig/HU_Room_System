@@ -33,166 +33,175 @@
 
 
 /** @file
-* @brief
-*/
+ * @brief
+ */
 
 // Check PHP version not to have trouble
 if (version_compare(PHP_VERSION, "5.4.0") < 0) {
-   die("PHP >= 5.4.0 required");
+    die("PHP >= 5.4.0 required");
 }
 
 define('DO_NOT_CHECK_HTTP_REFERER', 1);
 // If config_db doesn't exist -> start installation
 define('GLPI_ROOT', dirname(__FILE__));
-include (GLPI_ROOT . "/config/based_config.php");
+include(GLPI_ROOT . "/config/based_config.php");
 
 if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
-   include_once (GLPI_ROOT . "/inc/autoload.function.php");
-   Html::redirect("install/install.php");
-   die();
+    include_once(GLPI_ROOT . "/inc/autoload.function.php");
+    Html::redirect("install/install.php");
+    die();
 
 } else {
-   $TRY_OLD_CONFIG_FIRST = true;
-   include (GLPI_ROOT . "/inc/includes.php");
-   $_SESSION["glpicookietest"] = 'testcookie';
+    $TRY_OLD_CONFIG_FIRST = true;
+    include(GLPI_ROOT . "/inc/includes.php");
+    $_SESSION["glpicookietest"] = 'testcookie';
 
-   // For compatibility reason
-   if (isset($_GET["noCAS"])) {
-      $_GET["noAUTO"] = $_GET["noCAS"];
-   }
+    // For compatibility reason
+    if (isset($_GET["noCAS"])) {
+        $_GET["noAUTO"] = $_GET["noCAS"];
+    }
 
-   Auth::checkAlternateAuthSystems(true, isset($_GET["redirect"])?$_GET["redirect"]:"");
+    Auth::checkAlternateAuthSystems(true, isset($_GET["redirect"]) ? $_GET["redirect"] : "");
 
-   // Send UTF8 Headers
-   header("Content-Type: text/html; charset=UTF-8");
+    // Send UTF8 Headers
+    header("Content-Type: text/html; charset=UTF-8");
 
-   // Start the page
-   echo '<!DOCTYPE html>'."\n";
-   echo '<head><title>HU - Reserva de Sala</title>'."\n";
-   echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'."\n";
-   echo '<meta http-equiv="Content-Script-Type" content="text/javascript"/>'."\n";
-   echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n";
-   html::includeFaviconIcons();
+    // Start the page
+    echo '<!DOCTYPE html>' . "\n";
+    echo '<head><title>HU - Reserva de Sala</title>' . "\n";
+    echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>' . "\n";
+    echo '<meta http-equiv="Content-Script-Type" content="text/javascript"/>' . "\n";
+    echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n";
+    html::includeFaviconIcons();
 
-   // auto desktop / mobile viewport
-   echo "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+    // auto desktop / mobile viewport
+    echo "<meta name='viewport' content='width=device-width, initial-scale=1'>";
 
-   // Appel CSS
-   echo '<link rel="stylesheet" href="'.$CFG_GLPI["root_doc"].'/css/styles.css" type="text/css" '.
-         'media="screen" />';
-   // CSS theme link
-      echo Html::css($CFG_GLPI["root_doc"]."/css/palettes/".$CFG_GLPI["palette"].".css");
-   // surcharge CSS hack for IE
-   echo "<!--[if lte IE 6]>" ;
-   echo "<link rel='stylesheet' href='".$CFG_GLPI["root_doc"]."/css/styles_ie.css' type='text/css' ".
-         "media='screen' >\n";
-   echo "<![endif]-->";
+    // Appel CSS
+    echo '<link rel="stylesheet" href="' . $CFG_GLPI["root_doc"] . '/css/styles.css" type="text/css" ' .
+        'media="screen" />';
+    // CSS theme link
+    echo Html::css($CFG_GLPI["root_doc"] . "/css/palettes/" . $CFG_GLPI["palette"] . ".css");
+    // surcharge CSS hack for IE
+    echo "<!--[if lte IE 6]>";
+    echo "<link rel='stylesheet' href='" . $CFG_GLPI["root_doc"] . "/css/styles_ie.css' type='text/css' " .
+        "media='screen' >\n";
+    echo "<![endif]-->";
 //    echo "<script type='text/javascript'><!--document.getElementById('var_login_name').focus();-->".
 //          "</script>";
 
-   echo "</head>";
+    echo "</head>";
 
-   echo "<body>";
-   echo "<div id='firstboxlogin'>";
-   echo "<img src='pics/logoHUWC.png' id='img_login'>";
-   echo "<div id='logo_login'></div>";
-   echo "<div id='text-login'>";
-   echo nl2br(Toolbox::unclean_html_cross_side_scripting_deep($CFG_GLPI['text_login']));
-   echo "</div>";
+    echo "<body>";
+    echo "<div id='firstboxlogin'>";
+    echo "<img src='pics/logoHUWC.png' id='img_login'>";
+    echo "<div id='logo_login_neutral'></div>";
+    echo "<div id='reservation_bar'>Sistema de Reserva de Salas(HU/MEAC/GEP)</div>";
+    echo "<div id='text-login'>";
+    echo nl2br(Toolbox::unclean_html_cross_side_scripting_deep($CFG_GLPI['text_login']));
+    echo "</div>";
 
-   echo "<div id='boxlogin'>";
-   echo "<form action='".$CFG_GLPI["root_doc"]."/front/login.php' method='post'>";
+    echo "<div id='boxlogin'>";
 
-   $_SESSION['namfield'] = $namfield = uniqid('fielda');
-   $_SESSION['pwdfield'] = $pwdfield = uniqid('fieldb');
+    /**
+     * #HOLDAT Added div to better format login view
+     */
+    echo "<div id='boxformat'>";
 
-   // Other CAS
-   if (isset($_GET["noAUTO"])) {
-      echo "<input type='hidden' name='noAUTO' value='1' />";
-   }
-   // redirect to ticket
-   if (isset($_GET["redirect"])) {
-      Toolbox::manageRedirect($_GET["redirect"]);
-      echo '<input type="hidden" name="redirect" value="'.$_GET['redirect'].'"/>';
-   }
-   echo '<p class="login_input">
-         <input type="text" name="'.$namfield.'" id="login_name" required="required"
-                placeholder="'.__('Login').'" />
+    echo "<form action='" . $CFG_GLPI["root_doc"] . "/front/login.php' method='post'>";
+
+    $_SESSION['namfield'] = $namfield = uniqid('fielda');
+    $_SESSION['pwdfield'] = $pwdfield = uniqid('fieldb');
+
+    // Other CAS
+    if (isset($_GET["noAUTO"])) {
+        echo "<input type='hidden' name='noAUTO' value='1' />";
+    }
+    // redirect to ticket
+    if (isset($_GET["redirect"])) {
+        Toolbox::manageRedirect($_GET["redirect"]);
+        echo '<input type="hidden" name="redirect" value="' . $_GET['redirect'] . '"/>';
+    }
+    echo '<p class="login_input">
+         <input type="text" name="' . $namfield . '" id="login_name" required="required"
+                placeholder="' . __('Login') . '" />
          <span class="login_img"></span>
          </p>';
-   echo '<p class="login_input">
-         <input type="password" name="'.$pwdfield.'" id="login_password" required="required"
-                placeholder="'.__('Password').'"  />
+    echo '<p class="login_input">
+         <input type="password" name="' . $pwdfield . '" id="login_password" required="required"
+                placeholder="' . __('Password') . '"  />
          <span class="login_img"></span>
          </p>';
-   echo '<p class="login_input">
-         <input type="submit" name="submit" value="'._sx('button','Post').'" class="submit" />
+    echo '<p class="login_input">
+         <input type="submit" name="submit" value="' . _sx('button', 'Post') . '" class="submit" />
          </p>';
 
-   if ($CFG_GLPI["use_mailing"]
-       && countElementsInTable('glpi_notifications',
-                               "`itemtype`='User'
+    if ($CFG_GLPI["use_mailing"]
+        && countElementsInTable('glpi_notifications',
+            "`itemtype`='User'
                                 AND `event`='passwordforget'
                                 AND `is_active`=1")) {
-      echo '<a id="forget" href="front/lostpassword.php?lostpassword=1">'.
-             __('Forgotten password?').'</a>';
-   }
-   Html::closeForm();
+        echo '<a id="forget" href="front/lostpassword.php?lostpassword=1">' .
+            __('Forgotten password?') . '</a>';
+    }
+    Html::closeForm();
 
-   echo "<script type='text/javascript' >\n";
-   echo "document.getElementById('login_name').focus();";
-   echo "</script>";
+    echo "<script type='text/javascript' >\n";
+    echo "document.getElementById('login_name').focus();";
+    echo "</script>";
 
-   echo "</div>";  // end login box
+    echo "</div>";  // end login box
 
-
-   echo "<div class='error'>";
-   echo "<noscript><p>";
-   _e('You must activate the JavaScript function of your browser');
-   echo "</p></noscript>";
-
-   if (isset($_GET['error']) && isset($_GET['redirect'])) {
-      switch ($_GET['error']) {
-         case 1 : // cookie error
-            _e('You must accept cookies to reach this application');
-            break;
-
-         case 2 : // GLPI_SESSION_DIR not writable
-            _e('Checking write permissions for session files');
-            break;
-
-         case 3 :
-            _e('Invalid use of session ID');
-            break;
-      }
-   }
-   echo "</div>";
-
-   // Display FAQ is enable
-   if ($CFG_GLPI["use_public_faq"]) {
-      echo '<div id="box-faq">'.
-            '<a href="front/helpdesk.faq.php">[ '.__('Access to the Frequently Asked Questions').' ]';
-      echo '</a></div>';
-   }
-
-   echo "<div id='display-login'>";
-   Plugin::doHook('display_login');
-   echo "</div>";
+    echo "</div>"; // end box reformat
 
 
-   echo "</div>"; // end contenu login
+    echo "<div class='error'>";
+    echo "<noscript><p>";
+    _e('You must activate the JavaScript function of your browser');
+    echo "</p></noscript>";
 
-   if (GLPI_DEMO_MODE) {
-      echo "<div class='center'>";
-      Event::getCountLogin();
-      echo "</div>";
-   }
-   echo "<div id='footer-login'>" . Html::getCopyrightMessage() . "</div>";
+    if (isset($_GET['error']) && isset($_GET['redirect'])) {
+        switch ($_GET['error']) {
+            case 1 : // cookie error
+                _e('You must accept cookies to reach this application');
+                break;
+
+            case 2 : // GLPI_SESSION_DIR not writable
+                _e('Checking write permissions for session files');
+                break;
+
+            case 3 :
+                _e('Invalid use of session ID');
+                break;
+        }
+    }
+    echo "</div>";
+
+    // Display FAQ is enable
+    if ($CFG_GLPI["use_public_faq"]) {
+        echo '<div id="box-faq">' .
+            '<a href="front/helpdesk.faq.php">[ ' . __('Access to the Frequently Asked Questions') . ' ]';
+        echo '</a></div>';
+    }
+
+    echo "<div id='display-login'>";
+    Plugin::doHook('display_login');
+    echo "</div>";
+
+
+    echo "</div>"; // end contenu login
+
+    if (GLPI_DEMO_MODE) {
+        echo "<div class='center'>";
+        Event::getCountLogin();
+        echo "</div>";
+    }
+    echo "<div id='footer-login'>" . Html::getCopyrightMessage() . "</div>";
 
 }
 // call cron
 if (!GLPI_DEMO_MODE) {
-   CronTask::callCronForce();
+    CronTask::callCronForce();
 }
 
 echo "</body></html>";
