@@ -52,9 +52,13 @@ Html::header(Reservation::getTypeName(Session::getPluralNumber()), $_SERVER['PHP
 
 Reservation::showCalendar($_GET["reservationitems_id"]);
 
+
 if ($_SESSION["glpiactiveprofile"]["interface"] == "helpdesk") {
 Html::helpFooter();
 } else {
 Html::footer();
 }
+
+
+
 ?>

@@ -1,0 +1,11 @@
+- Make a backup of the DB;
+- Reinstall GLPI from 0;
+- Reinstall Room Management plugin;
+- Update all of GLPI's files(except config, files and vendor directories(DO yourself a favor, and don't touch these));
+- Verify the DB;
+- Update GLPI_Reservations(add 'theme' column "ALTER TABLE glpi_reservations ADD theme varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL");
+- Update GLPI_Reservationitems, GLPI_Plugin_Room_Rooms;
+- Fill any empty tables if necessary;
+- Hopefully, that should be enough;
+- Keep in mind that these steps are specific for an application where there has been no modifications to anything besides
+the reservaion and room tables;

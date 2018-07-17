@@ -1245,6 +1245,13 @@ class Html
         echo "<![endif]-->";
         echo Html::css($CFG_GLPI["root_doc"] . "/css/print.css", array('media' => 'print'));
 
+
+        /**
+         * #HOLDAT Test CSS Timepicker.css
+         */
+        echo html::css($CFG_GLPI["root_doc"] . "/lib/jqueryplugins/timepicker/jquery.timepicker.css");
+
+
         self::includeFaviconIcons();
 
 
@@ -1355,6 +1362,12 @@ class Html
                 }
             }
         }
+
+
+        /**
+         * #HOLDAT Test Lib Timepicker.js
+         */
+        echo html::script($CFG_GLPI["root_doc"] . "/lib/jqueryplugins/timepicker/jquery.timepicker.js");
 
         // End of Head
         echo "</head>\n";
@@ -3197,7 +3210,7 @@ class Html
         $output .= "<input id='showdate" . $p['rand'] . "' type='text' class=' dateFieldNotEditable ' size='10' name='_$name' " .
             "value='" . self::convDate($p['value']) . "'";
 
-        if($p['readonlyHTML'] == true) {
+        if ($p['readonlyHTML'] == true) {
             $output .= " readonly>";
         } else {
             $output .= ">";
@@ -3526,23 +3539,6 @@ class Html
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * #HOLDAT Display Time form
      *
@@ -3709,15 +3705,25 @@ class Html
     }
 
 
+    /*static function showNewTimefield( $options = array(array()) )
+    {
 
-
-
-
-
-
-
-
-
+        $js = "$(document).ready(function() {";
+        foreach ($options as $numTimefield => $timefield) {
+            $js .= "$('" . $timefield['id'] . "').timepicker({
+                    timeFormat: " . $timefield['format'] . ",
+                    interval: " . $timefield['interval'] . ",
+                    minTime: '" . $timefield['min'] . "',
+                    maxTime: '" . $timefield['max'] . "',
+                    dynamic: " . $timefield['dynamic'] . ",
+                    dropdown: " . $timefield['dropdown'] . ",
+                    scrollbar: " . $timefield['scrollbar'] . ",
+                    zindex: 10000
+                });";
+        }
+        $js .= "});";
+        self::scriptBlock($js);
+    }*/
 
 
     /**
@@ -4177,6 +4183,47 @@ class Html
         } else {
             return $out;
         }
+    }
+
+
+    /**
+     * Creates a generic modal to display any sort of message necessary.
+     * WIP - Might be interesting to pass by parameter the type of modal as well
+     *       Maybe creating a 'generator' of modals, so to speak.
+     * @param $textToDisplay , text to be displayed in the modal
+     */
+    static function genericModal($textToDisplay)
+    {
+        global $CFG_GLPI;
+
+        $randId = mt_rand();
+        echo "<div id='genericModal" . $randId . "' class='invisible' title='Confirmação de reserva'>";
+        echo "<p> ". $textToDisplay. "</p>";
+        echo "</div>";
+
+        $js = "$(document).ready(function() {
+            $('#genericModal" . $randId . "').dialog({
+                modal: true,
+                draggable: false,
+                resizable: false,
+                closeOnEscape: true,
+                dialogClass: 'no-close',
+                height: 'auto',
+                width: 500,
+                show: true,
+                hide: 'fadeOut',
+                autoOpen: true,
+                buttons: [
+                    {
+                        text: 'Fechar',
+                        click: function() {
+                            $(this).dialog( 'close' );
+                        }
+                    }
+                ]
+            });
+        })";
+        echo html::scriptBlock($js);
     }
 
 

@@ -2418,3 +2418,86 @@ Test
 2018-07-09 13:43:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
   From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
   Invalid date 31-122018! 
+2018-07-12 11:49:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: format
+  Backtrace :
+  inc/html.class.php:3714                            
+  inc/reservationitem.class.php:1108                 Html::showNewTimefield()
+  inc/reservationitem.class.php:1320                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-12 11:49:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: format
+  Backtrace :
+  inc/html.class.php:3714                            
+  inc/reservationitem.class.php:1108                 Html::showNewTimefield()
+  inc/reservationitem.class.php:1320                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()
+2018-07-16 13:00:52 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: finised_reservation
+  Backtrace :
+  front/reservation.php:61                           
+2018-07-16 13:01:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: finised_reservation
+  Backtrace :
+  front/reservation.php:61                           
+2018-07-16 13:02:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: glpi_finished_reservation
+  Backtrace :
+  front/reservation.php:61                           
+2018-07-17 10:37:34 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: js
+  Backtrace :
+  inc/html.class.php:4227                            
+  inc/reservation.class.php:647                      Html::genericModal()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 11:16:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:662                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 11:16:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/reservation.class.php:663                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 11:17:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:662                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 11:17:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/reservation.class.php:663                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 12:41:04 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: local
+  Backtrace :
+  inc/reservation.class.php:666                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()
+2018-07-17 12:42:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Catchable Fatal Error(4096): Object of class mysqli_result could not be converted to string
+  Backtrace :
+  front/reservation.php:54                           
+2018-07-17 12:42:59 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Array to string conversion
+  Backtrace :
+  front/reservation.php:54                           
+2018-07-17 12:43:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Trying to get property of non-object
+  Backtrace :
+  inc/reservation.class.php:678                      
+  front/reservation.php:54                           Reservation::findRoomById()
+2018-07-17 12:46:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: local
+  Backtrace :
+  inc/reservation.class.php:666                      
+  inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
+  front/reservation.php:53                           Reservation::showCalendar()

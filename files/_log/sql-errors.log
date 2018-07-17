@@ -5690,3 +5690,35 @@
   inc/reservation.class.php:184                      Reservation->is_reserved()
   inc/commondbtm.class.php:817                       Reservation->prepareInputForAdd()
   front/reservation.form.php:128                     CommonDBTM->add()
+2018-07-16 12:22:18 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                              `glpi_plugin_room_rooms`.`name` AS name,
+                              `glpi_plugin_room_rooms`.`size` AS size,
+                              `glpi_plugin_room_rooms`.`comment` AS comment,
+                              `glpi_plugin_room_rooms`.`videoprojector` AS videoprojetor,
+                              `glpi_plugin_room_rooms`.`tv` AS tv,
+                              `glpi_plugin_room_rooms`.`computer` AS pc,
+                              `glpi_plugin_room_rooms`.`wifi` AS wifi,
+                              `glpi_locations`.`name` AS location
+                            FROM `glpi_plugin_room_rooms`
+                            LEFT JOIN `glpi_reservations`
+                                ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
+                            LEFT JOIN `glpi_locations`
+                                ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                            WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
+                            AND 
+                            `glpi_plugin_room_rooms`.`id` NOT IN (
+                                      SELECT `glpi_plugin_room_rooms`.`id` AS id
+                                      FROM `glpi_plugin_room_rooms`
+                                      INNER JOIN `glpi_reservations`
+                                          ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`
+                                             AND  
+                                             (\'2018-07-16 7:00\' < `glpi_reservations`.`end`
+                                                AND \'2018-07-16 8:00\' > `glpi_reservations`.`begin`)OR (`glpi_plugin_room_rooms`.`size` < alert(\\\'teste\\\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size;
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'teste\')))WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0)ORDER BY size' at line 24
+  Backtrace :
+  inc/reservationitem.class.php:847                  
+  inc/reservationitem.class.php:1326                 ReservationItem::showListSimple()
+  inc/commonglpi.class.php:483                       ReservationItem::displayTabContentForItem()
+  ajax/common.tabs.php:97                            CommonGLPI::displayStandardTab()

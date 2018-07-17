@@ -126,6 +126,13 @@ if (isset($_POST["update"])) {
                 || (Session::getLoginUserID() === $input["users_id"])) {
                unset($rr->fields["id"]);
                if ($newID = $rr->add($input)) {
+                   $_SESSION['glpi_finished_reservation']['confirmed'] = true;
+                   $_SESSION['glpi_finished_reservation']['user'] = $_SESSION['glpiname'];
+                   $_SESSION['glpi_finished_reservation']['local'] = reservation::findRoomById($input['reservationitems_id']);
+                   //$_SESSION['glpi_finished_reservation']['comment'] = $input['comment'];
+                   //$_SESSION['glpi_finished_reservation']['theme'] = $input['theme'];
+                   //$_SESSION['glpi_finished_reservation']['time_begin'] = $input['begin'];
+                   //$_SESSION['glpi_finished_reservation']['time_end'] = $input['end'];
                   Event::log($newID, "reservation", 4, "inventory",
                            sprintf(__('%1$s adds the reservation %2$s for item %3$s'),
                                    $_SESSION["glpiname"], $newID, $reservationitems_id));
@@ -146,6 +153,7 @@ if (isset($_POST["update"])) {
          $toadd .= "&mois_courant=".intval($begin_month);
          $toadd .= "&annee_courante=".intval($begin_year);
       }
+
       Html::redirect($CFG_GLPI["root_doc"] . "/front/reservation.php$toadd");
    }
 //          $times  = $_POST["periodicity_times"];

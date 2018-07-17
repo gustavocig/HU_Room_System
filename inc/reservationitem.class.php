@@ -932,17 +932,17 @@ class ReservationItem extends CommonDBChild {
                 <p>Deseja continuar com cadastro?</p></div>";
 
         echo "<div id='special-cases-forms' class='invisible' title='Criar requisição especial'>
-                <p class='validateTips'>Fill all fields</p>";
+                <p class='validateTips'>Preencha todos os campos</p>";
         echo "<form>
                 <fieldset>
-                <label for='timeBegin'>Begins</label>
-                    <input type='text' name='timeBegin' id='timeBegin' class='text ui-widget-content ui-corner-all' readonly>
-                <label for='timeEnd'>Ends</label>
-                    <input type='text' name='timeEnd' id='timeEnd' class='text ui-widget-content ui-corner-all' readonly>
-                <label for='description'>Description</label>
-                    <textarea type='textarea' name='description' id='description' rows='8' cols='70' maxlength='585' required 
-                    placeholder='Descreva sua requisição da forma mais completa e detalhada possível. 
-                    Exemplo: 'Desejo reservar a Sala X na hora especificada acima toda a primeira segunda-feira de cada mês.' 
+                <label for='timeBeginModal'>Horário de Inicio</label>
+                    <input type='text' name='timeBeginModal'  id='timeBeginModal' size='35' class='text ui-widget-content ui-corner-all timeModal'>
+                <label for='timeEndModal'>Horário de Termino</label>
+                    <input type='text' name='timeEndModal' id='timeEndModal' class='text ui-widget-content ui-corner-all timeModal'>
+                <label for='description'>Descrição da requisição de reserva</label>
+                    <textarea type='textarea' name='description' id='description' rows='7' cols='104' required 
+                    placeholder='Descreva sua requisição da forma mais completa e detalhada possível.
+Exemplo: Desejo reservar a Sala Frota Pinto, na hora especificada acima, toda a primeira segunda-feira de cada mês.'
                     class='text ui-widget-content ui-corner-all'></textarea>
                 <!-- Allow form submission with keyboard without duplicating the dialog button -->
                 <input type='Enviar requisição' tabindex='-1' style='position:absolute; top:-1000px'>
@@ -1081,7 +1081,56 @@ class ReservationItem extends CommonDBChild {
                 });
             });";
 
+        $js .= "$(document).ready(function() {
+            $('#timeBeginModal').timepicker({
+                timeFormat: 'HH:mm',
+                interval: 60,
+                minTime: '06:00',
+                maxTime: '23:00',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true,
+                zindex: 10000
+	    });
+		$('#timeEndModal').timepicker({
+                timeFormat: 'HH:mm',
+                interval: 60,
+                minTime: '06:00',
+                maxTime: '23:00',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true,
+                zindex: 10000
+		});
+		
+		
+        });";
+
+
         echo Html::scriptBlock($js);
+
+        /*html::showNewTimefield(array(
+            array(
+                'id' => '#timeBeginModal',
+                'format' => '\'HH:mm\'',
+                'interval' => 60,
+                'min' => '06:00',
+                'max' => '23:00',
+                'dynamic' => 'false',
+                'dropdown' => 'true',
+                'scrollbar' => 'true'
+            ),
+            array(
+                'id' => '#timeEndModal',
+                'format' => 'HH:mm',
+                'interval' => 60,
+                'min' => '06:00',
+                'max' => '23:00',
+                'dynamic' => 'false',
+                'dropdown' => 'true',
+                'scrollbar' => 'true'
+            )
+        ));*/
     }
 
 

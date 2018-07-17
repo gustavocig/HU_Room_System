@@ -592,5 +592,17 @@ class PluginRoomRoom extends CommonDBTM {
             $DB->query($query2);
         }
     }
+
+
+    /*static function plugin_find_room_by_id($ID) {
+        global $DB;
+
+        $query = "SELECT name FROM glpi_plugin_room_rooms WHERE id='$ID'";
+        if ($result = $DB->query($query)) {
+            return $result;
+        }
+
+        return -1;
+    }*/
 }
 ?>
