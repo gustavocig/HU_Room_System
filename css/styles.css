@@ -4064,6 +4064,7 @@ textarea {
     color: #8f5a0a;
     opacity: .9;
     border: none;
+    margin: 1px;
 }
 
 .vsubmitSecondary:active {
@@ -4072,4 +4073,5 @@ textarea {
     color: #222;
     border: none;
     transform: translateY(4px);
+    margin: 1px;
 }

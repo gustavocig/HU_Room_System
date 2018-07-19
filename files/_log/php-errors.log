@@ -2501,3 +2501,7 @@ Test
   inc/reservation.class.php:666                      
   inc/reservation.class.php:644                      Reservation::formatReservationConfirmationString()
   front/reservation.php:53                           Reservation::showCalendar()
+2018-07-19 13:04:08 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: reserve
+  Backtrace :
+  ajax/resaperiod.php:76                             

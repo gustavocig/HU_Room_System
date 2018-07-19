@@ -50,6 +50,19 @@ $endDateName = "Repetir até dia";
 if (isset($_POST['type']) && isset($_POST['end'])) {
 
    echo "<table width='90%'>";
+
+
+    /**
+     * #HOLDAT Controls 'semester' reservation logic
+     */
+    $currentMonth = date('m');
+    $maxMonth = 12;
+    if((1 <= $currentMonth) && ($currentMonth <= 6)) {
+        $maxMonth = 6;
+    }
+    $maxDate = '31' . '-' . $maxMonth . '-' . date('Y');
+
+
    switch ($_POST['type']) {
       case 'day' :
 
@@ -59,7 +72,11 @@ if (isset($_POST['type']) && isset($_POST['end'])) {
            *
            */
          echo "<tr><td>" . $endDateName . "</td><td>";
-         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
+          Html::showDateField('periodicity[end]', array('maybeempty' => false,
+              'readonlyHTML' => true,
+              'min' => date('d-m-Y'),
+              'max' => $maxDate
+          ));
          echo "</td></tr>";
          break;
 
@@ -84,7 +101,11 @@ if (isset($_POST['type']) && isset($_POST['end'])) {
            */
          echo "</tr>";
          echo "<tr><td>" . $endDateName . "</td><td>";
-         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
+          Html::showDateField('periodicity[end]', array('maybeempty' => false,
+              'readonlyHTML' => true,
+              'min' => date('d-m-Y'),
+              'max' => $maxDate
+          ));
          echo "</td></tr></table>";
          break;
 
@@ -95,7 +116,11 @@ if (isset($_POST['type']) && isset($_POST['end'])) {
          Dropdown::showFromArray('periodicity[subtype]', $values);
          echo "</td></tr>";
          echo "<tr><td>" . $endDateName . "</td><td>";
-         Html::showDateField('periodicity[end]', array('maybeempty' => false, 'readonlyHTML' => true));
+          Html::showDateField('periodicity[end]', array('maybeempty' => false,
+              'readonlyHTML' => true,
+              'min' => date('d-m-Y'),
+              'max' => $maxDate
+          ));
          echo "</td></tr>";
 
    }
