@@ -1759,8 +1759,8 @@ class Html
             if (isset($menu[$sector]['default'])) {
                 $link = $menu[$sector]['default'];
             }
-            echo "<li class='breadcrumb_item'><a href='" . $CFG_GLPI["root_doc"] . $link . "' title=\"" . $menu[$sector]['title'] . "\">" .
-                $menu[$sector]['title'] . "</a></li>";
+            /*echo "<li class='breadcrumb_item'><a href='" . $CFG_GLPI["root_doc"] . $link . "' title=\"" . $menu[$sector]['title'] . "\">" .
+                $menu[$sector]['title'] . "</a></li>";*/
         }
 
         if (isset($menu[$sector]['content'][$item])) {
@@ -1808,7 +1808,7 @@ class Html
 
             // Add item
             echo "<li class='icons_block'>";
-            echo "<span>";
+            /*echo "<span>";
             if (isset($links['add'])) {
                 echo Html::image($CFG_GLPI["root_doc"] . "/pics/menu_add.png",
                     array('alt' => __('Add'),
@@ -1817,7 +1817,7 @@ class Html
                 echo Html::image($CFG_GLPI["root_doc"] . "/pics/menu_add_off.png",
                     array('alt' => __('Add')));
             }
-            echo "</span>";
+            echo "</span>";*/
 
             // Search Item
             echo "<span>";

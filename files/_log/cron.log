@@ -1406,3 +1406,15 @@ Interno #1: Executar watcher
 Interno #1: Executar closeticket
 2018-07-19 09:46:10 [@gustavoc-HP-Compaq-Pro-6305-SFF]
 Interno #1: Executar alertnotclosed
+2018-07-19 10:03:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-07-19 10:06:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-07-19 10:12:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar reservation
+2018-07-19 10:32:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-07-19 10:38:09 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-07-19 10:43:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail

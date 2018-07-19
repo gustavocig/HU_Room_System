@@ -1033,16 +1033,17 @@ Exemplo: Desejo reservar a Sala Frota Pinto, na hora especificada acima, toda a 
                         hide: 'fadeOut',
 	                    buttons: [
                             {
-                                text: 'Cancelar',
-                                click: function() {
-                                    $(this).dialog( 'close' );
-                                }
-                            },
-                            {
-                                text: 'Enviar',
+                                    text: 'Enviar',
                                 click: function() {
                                     $('#special-cases-confirm').dialog( 'open' );
                                     $('#special-cases-forms').dialog( 'close' );
+                                }
+                            },
+                            {
+                                text: 'Cancelar',
+                                click: function() {
+                                    $(this).dialog( 'close' );
+
                                 }
                             }
                         ]
@@ -1064,16 +1065,16 @@ Exemplo: Desejo reservar a Sala Frota Pinto, na hora especificada acima, toda a 
                         hide: 'fadeOut',
                         buttons: [
                             {
-                                text: 'Não',
-                                click: function() {
-                                    $(this).dialog( 'close' );
-                                }
-                            },
-                            {
-                                text: 'Sim',
+                                text: 'Continuar',
                                 click: function() {
                                     $('#special-cases-forms').dialog( 'open' );
                                     $('#special-cases-dialog').dialog( 'close' );
+                                }
+                            },
+                            {
+                                text: 'Cancelar',
+                                click: function() {
+                                    $(this).dialog( 'close' );
                                 }
                             }
                         ]

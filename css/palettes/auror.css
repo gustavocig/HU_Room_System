@@ -137,6 +137,9 @@ a.vsubmit,
 }
 
 
+/**
+    #HOLDAT Breadcrumb items, header 'yellow arrow' config
+ */
 
 .breadcrumb_item {
    height: 23px;
@@ -184,16 +187,16 @@ a.vsubmit,
 .breadcrumb_item:nth-of-type(1):after {
    border-left-color: #F2F2F2;
 }
-.breadcrumb_item:nth-of-type(2) {
+/*.breadcrumb_item:nth-of-type(2) {
    background-color: #F2F2F2;
 }
 .breadcrumb_item:nth-of-type(2):after {
    border-left-color: #F2F2F2;
-}
-.breadcrumb_item:nth-of-type(3) {
+}*/
+.breadcrumb_item:nth-of-type(2) {
    background-color: #FEC95C;
 }
-.breadcrumb_item:nth-of-type(3):after {
+.breadcrumb_item:nth-of-type(2):after {
    border-left-color: #FEC95C;
 }
 
