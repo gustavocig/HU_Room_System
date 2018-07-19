@@ -542,34 +542,58 @@ class Reservation extends CommonDBChild
         $annee_avant = $annee_courante - 1;
         $annee_apres = $annee_courante + 1;
 
+
+        /**
+         * #HOLDAT Adds previous and next year 'toggle' function.
+         */
+
         echo "<div class='calendrier_mois'>";
-        echo "<div class='center b'>$annee_avant</div>";
+        echo "<div class='center b ' id='previousYearToggle'>$annee_avant</div>";
 
         for ($i = $mois_courant; $i < 13; $i++) {
-            echo "<div class='calendrier_case2'>";
+            echo "<div class='calendrier_case2 invisible previousYear'>";
             echo "<a href='reservation.php?reservationitems_id=$ID&amp;mois_courant=$i&amp;" .
                 "annee_courante=$annee_avant'>" . $monthsarray[$i] . "</a></div>";
         }
 
-        echo "<div class='center b'>$annee_courante</div>";
+        echo "<div class='center b' id='currentYearToggle'>$annee_courante</div>";
 
         for ($i = 1; $i < 13; $i++) {
             if ($i == $mois_courant) {
-                echo "<div class='calendrier_case1 b'>" . $monthsarray[$i] . "</div>\n";
+                echo "<div class='calendrier_case1 b invisible currentYear'>" . $monthsarray[$i] . "</div>\n";
             } else {
-                echo "<div class='calendrier_case2'>";
+                echo "<div class='calendrier_case2 invisible currentYear'>";
                 echo "<a href='reservation.php?reservationitems_id=$ID&amp;mois_courant=$i&amp;" .
                     "annee_courante=$annee_courante'>" . $monthsarray[$i] . "</a></div>\n";
             }
         }
-        echo "<div class='center b'>$annee_apres</div>\n";
+        echo "<div class='center b' id='nextYearToggle'>$annee_apres</div>\n";
 
         for ($i = 1; $i < $mois_courant + 1; $i++) {
-            echo "<div class='calendrier_case2'>";
+            echo "<div class='calendrier_case2 invisible nextYear'>";
             echo "<a href='reservation.php?reservationitems_id=$ID&amp;mois_courant=$i&amp;" .
                 "annee_courante=$annee_apres'>" . $monthsarray[$i] . "</a></div>\n";
         }
         echo "</div>";
+
+
+        $js = "$(document).ready(function() {
+            $('#previousYearToggle').click(function() {
+                $('.previousYear').toggleClass('invisible');
+            });
+            $('#currentYearToggle').click(function() {
+                $('.currentYear').toggleClass('invisible');
+            });
+            $('#nextYearToggle').click(function() {
+                $('.nextYear').toggleClass('invisible');
+            });
+        })";
+
+        echo html::scriptBlock($js);
+
+
+
+
         echo "</td></tr></table>";
         echo "</td><td class='top' width='100%'>";
 

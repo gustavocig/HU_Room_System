@@ -4075,3 +4075,19 @@ textarea {
     transform: translateY(4px);
     margin: 1px;
 }
+
+
+#previousYearToggle, #currentYearToggle, #nextYearToggle {
+    margin: 10px 0 5px 8px;
+    color: #8f5a0a;
+    border: 1px solid #FEC95C;
+    padding: 1px 8px;
+    border-radius: 2px;
+}
+
+#previousYearToggle:hover, #currentYearToggle:hover, #nextYearToggle:hover {
+    cursor: pointer;
+    color: #222;
+    opacity: .9;
+    background-color: #fffefa;
+}
