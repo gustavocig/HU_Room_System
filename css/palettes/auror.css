@@ -126,19 +126,7 @@ a.vsubmit,
     padding: 7px 20px 7px;
 }
 
-.vsubmit:hover {
-    background: #d9d9d9;
-    -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
-    box-shadow: inset 0 0 1px 1px #eaeaea;
-    color: #222;
-    cursor: pointer;
-}
 
-.vsubmit:active {
-    background-color: #999999;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
 
 .fodder1 {
   padding-left: 92px;

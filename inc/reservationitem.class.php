@@ -600,7 +600,7 @@ class ReservationItem extends CommonDBChild {
 
 
         echo "<td rowspan='3'>";
-        echo "<a id='special-cases-button' class='vsubmit'>Casos Especiais</a>";
+        echo "<div id='special-cases-button' class='vsubmitSecondary'>Casos Especiais</div>";
 
 
 
