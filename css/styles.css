@@ -4091,3 +4091,23 @@ textarea {
     opacity: .9;
     background-color: #fffefa;
 }
+
+
+#buttonsCalendar {
+    text-align: right;
+}
+
+.menuCalendar {
+    background-color: #f8f7f3;
+    border: 1px solid #FEC95C;
+    border-radius: 2px;
+    margin: 0 5px 0;
+    padding: 3px 17px 0 17px;
+    border-bottom: none;
+    color: #8f5a0a;
+}
+
+.menuCalendar:hover {
+    text-decoration: underline #8F5A02;
+    cursor: pointer;
+}

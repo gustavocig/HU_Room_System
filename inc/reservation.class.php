@@ -593,9 +593,16 @@ class Reservation extends CommonDBChild
 
 
 
-
         echo "</td></tr></table>";
         echo "</td><td class='top' width='100%'>";
+
+
+        echo "<div id='buttonsCalendar'>";
+        echo "<button class='menuCalendar' id='buttonBackwards'>Retornar</button>";
+        echo "<button class='menuCalendar' id='buttonShowAll'>Mostrar Tudo</button>";
+        echo "<button class='menuCalendar' id='buttonForwards'>Avançar</button>";
+        echo "</div>";
+
 
         // test
         echo "<table width='100%' class='tab_cadre'><tr>";
@@ -607,7 +614,16 @@ class Reservation extends CommonDBChild
         echo "<th width='14%'>" . __('Saturday') . "</th>";
         echo "<th width='14%'>" . __('Sunday') . "</th>";
         echo "</tr>\n";
-        echo "<tr class='tab_bg_3' >";
+
+
+        list($currentmonth, $currentday, $currentyear) =  explode('/',strftime('%m/%d/%Y'));
+
+        if(($currentday - (8 - $jour_debut_mois) <= 0) && ($annee_courante == $currentyear)
+            && ($mois_courant == $currentmonth)) {
+            echo "<tr class='tab_bg_3 currentWeek week0' >";
+        } else {
+            echo "<tr class='tab_bg_3 week0' >";
+        }
 
         // Insert blank cell before the first day of the month
         for ($i = 1; $i < $jour_debut_mois; $i++) {
@@ -619,6 +635,8 @@ class Reservation extends CommonDBChild
             $mois_courant = "0" . $mois_courant;
         }
 
+        $week = 1;
+
         for ($i = 1; $i < $nb_jour[$mois_courant - 1] + 1; $i++) {
             if ($i < 10) {
                 $ii = "0" . $i;
@@ -626,8 +644,13 @@ class Reservation extends CommonDBChild
                 $ii = $i;
             }
 
-            echo "<td class='top' height='100px'>";
-            echo "<table class='center' width='100%'><tr><td class='center'>";
+            /*if($i == $currentday) {
+                echo "<td class='top invisible' height='100px'>";
+            } else {
+                echo "<td class='top' height='100px'>";
+            }*/
+            echo "<td class='top day" . $i . "' height='100px'>";
+            echo "<table class='center test" . $i . "' width='100%'><tr><td class='center'>";
             echo "<span class='calendrier_jour'>" . $i . "</span></td></tr>\n";
 
             if (!empty($ID)) {
@@ -647,7 +670,13 @@ class Reservation extends CommonDBChild
             if ((($i + $jour_debut_mois) % 7) == 1) {
                 echo "</tr>\n";
                 if ($i != $nb_jour[$mois_courant - 1]) {
-                    echo "<tr class='tab_bg_3'>";
+                    if(($currentday - $i <= 7) && ($currentday - $i >= 1) && ($annee_courante == $currentyear)
+                        && ($mois_courant == $currentmonth)) {
+                        echo "<tr class='tab_bg_3 currentWeek week" . $week . "'>";
+                    } else {
+                        echo "<tr class='tab_bg_3 week" . $week . "'>";
+                    }
+                    $week +=1;
                 }
             }
         }
@@ -662,6 +691,96 @@ class Reservation extends CommonDBChild
 
         echo "</tr></table>\n";
         echo "</td></tr></table></div>\n";
+
+        $js = "first_execution = true;
+        current_week = -1;
+        
+        $('#buttonForwards').click(forwardWeek);
+        $('#buttonBackwards').click(backwardWeek);
+        $('#buttonShowAll').click(showFullCalendar);
+        
+        function forwardWeek() {
+            new_week = 0;
+            for(i = 0; i < " . $week . "; i++) {
+                if(first_execution) {
+                    if( !$('.week' + i).hasClass('currentWeek') ) {
+                        $('.week' + i).addClass('invisible');
+                    } else {
+                        current_week = i;
+                    }
+                } else {
+                    if(i === current_week) {
+                        $('.week' + i).addClass('invisible');
+                        if(current_week == " . $week . " - 1) {
+                            l = 0;
+                            new_week = 0;
+                        } else {
+                            l = i + 1;
+                            new_week = current_week + 1;
+                        }
+                        console.log(l);
+                        $('.week' + l).removeClass('invisible');
+                    }
+                }
+            }
+            if(current_week === -1) {
+                $('.week0').removeClass('invisible');
+                current_week = 0;
+            }
+            if(!first_execution) {
+                current_week = new_week;
+            }
+            first_execution = false;
+        };
+        
+        
+        function backwardWeek() {
+            new_week = 0;
+            for(i = 0; i < " . $week . "; i++) {
+                if(first_execution) {
+                    if( !$('.week' + i).hasClass('currentWeek') ) {
+                        $('.week' + i).addClass('invisible');
+                    } else {
+                        current_week = i;
+                    }
+                } else {
+                    if(i == current_week) {
+                        $('.week' + i).addClass('invisible');
+                        if(current_week == 0) {
+                            l = " . ($week - 1) . ";
+                            new_week = " . ($week - 1) . ";
+                        } else {
+                            l = i - 1;
+                            new_week = current_week - 1;
+                        }
+                        console.log(l);
+                        $('.week' + l).removeClass('invisible');
+                    }
+                }
+            }
+            if(current_week === -1) {
+                $('.week" . ($week-1) . "').removeClass('invisible');
+                current_week = " . ($week-1) . ";
+            }
+            if(!first_execution) {
+                current_week = new_week;
+            }
+            console.log(first_execution);
+            first_execution = false;
+        };
+        
+        function showFullCalendar() {
+            for(i = 0; i < " . $week . "; i++) {
+                $('.week' + i).removeClass('invisible');
+            }
+            first_execution = true;
+            current_week = -1;
+        };
+        
+        
+        ";
+
+        echo html::scriptBlock($js);
 
 
         if (isset($_SESSION['glpi_finished_reservation']['confirmed']) && $_SESSION['glpi_finished_reservation']['confirmed']) {
