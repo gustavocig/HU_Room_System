@@ -591,7 +591,17 @@ class Reservation extends CommonDBChild
 
         echo html::scriptBlock($js);
 
-
+        $mail = new GLPIMailer();
+        $mail->setFrom('gustavocignachi@hotmail.com');
+        $mail->addAddress('gustavocignachi@hotmail.com');
+        $mail->Subject  = 'First PHPMailer Message';
+        $mail->Body     = 'Hi! This is my first e-mail sent through PHPMailer.';
+        if(!$mail->send()) {
+            echo 'Message was not sent.';
+            echo 'Mailer error: ' . $mail->ErrorInfo;
+        } else {
+            echo 'Message has been sent.';
+        }
 
         echo "</td></tr></table>";
         echo "</td><td class='top' width='100%'>";
@@ -1002,7 +1012,7 @@ class Reservation extends CommonDBChild
         Dropdown::showFromArray('theme', $valueThemes);
 
         echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
-        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
+        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
         echo "</td></tr>\n";
 
 
@@ -1039,33 +1049,30 @@ class Reservation extends CommonDBChild
         }
         echo "</table>";
 
-        /*$js = "$(document).ready( () => {
-                $('#reservationText').on('change invalid', function() {
-                   var textfield = $(this).get(0);
-                   textfield.setCustomValidity('');
 
-                   if (!textfield.validity.valid) {
-                      textfield.setCustomValidity('Por favor, preencha o espaço acima com até no máximo 150 caracteres.');
-                   }
-                });
-       })";*/
+        $js = "$(document).ready(function() {
+            $('#reservationText').qtip({
+                content: {
+                    text: 520 - $('#reservationText').val().length,
+                    title: 'Número de caracteres restantes'
+                },
+                style: {
+                    classes: 'qtip-shadow qtip-bootstrap'
+                },
+                hide: {
+                    event: 'unfocus'
+                }
+            });
+        });
 
-        /*$js = "$(document).ready( () => {
-                   $('#reservationFormSubmit').click( (event) => {
-                      if( $('#reservationText').val().length > 0 ) {
-                         event.preventDefault();
-                         var eventMaxChar = document.createEvent('HTMLEvents');
-                         eventMaxChar.initEvent('change', true, false);
-                         $('#reservationText').fireEvent(eventMaxChar);
-                      }
-                });
+        $('#reservationText').keyup(function () {
+            let qapi = $('#reservationText').data('qtip');
+            let newtip = 520 - $('#reservationText').val().length;
+            qapi.options.content.text = newtip;
+            qapi.elements.content.text(newtip);
         });";
 
-
-        //if( $('#reservationText').val().length > 150 ) {
-       //     event.preventDefault();
-        //}
-        echo Html::scriptBlock($js);*/
+        echo Html::scriptBlock($js);
 
         Html::closeForm();
         echo "</div>\n";
