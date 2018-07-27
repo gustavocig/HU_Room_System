@@ -591,7 +591,7 @@ class Reservation extends CommonDBChild
 
         echo html::scriptBlock($js);
 
-        $mail = new GLPIMailer();
+        /*$mail = new GLPIMailer();
         $mail->setFrom('gustavocignachi@hotmail.com');
         $mail->addAddress('gustavocignachi@hotmail.com');
         $mail->Subject  = 'First PHPMailer Message';
@@ -601,7 +601,7 @@ class Reservation extends CommonDBChild
             echo 'Mailer error: ' . $mail->ErrorInfo;
         } else {
             echo 'Message has been sent.';
-        }
+        }*/
 
         echo "</td></tr></table>";
         echo "</td><td class='top' width='100%'>";

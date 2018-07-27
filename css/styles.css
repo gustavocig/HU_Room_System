@@ -4108,6 +4108,6 @@ textarea {
 }
 
 .menuCalendar:hover {
-    text-decoration: underline #8F5A02;
     cursor: pointer;
+    text-shadow: 0.1px 0px 0px #8f5a0a;
 }
