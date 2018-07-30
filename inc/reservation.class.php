@@ -459,20 +459,23 @@ class Reservation extends CommonDBChild
                 $name = sprintf(__('%1$s'), $name);
             }
 
-            $all = "<a class='vsubmit' href='reservation.php?reservationitems_id=&amp;mois_courant=" .
+            $all = "<a class='vsubmit buttonSpecificRoom' href='reservation.php?reservationitems_id=&amp;mois_courant=" .
                 "$mois_courant&amp;annee_courante=$annee_courante'>" . __('Show all') . "</a>";
 
         } else {
             $type = "";
             $name = "Todas as salas reservaveis";
-            $all = "&nbsp;";
+            $all = null;
         }
 
-        echo "<div class='center'><table class='tab_glpi'><tr><td>";
+        //echo "<div class='center'><table class='tab_glpi'><tr><td>";
+        echo "<div class='headLiner'><table><tr><td>";
         echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/reservation.png' alt='' title=''></td>";
-        echo "<td class ='b'>" . $name . "</td></tr>";
-        echo "<tr><td colspan='2' class ='center'>$all</td></tr></table></div><br>\n";
+        echo "<td class ='b'>" . $name . "</td>";
+        echo isset($all) ? "<td colspan='2' class ='center'>$all</td></tr>" : "";
+        echo "</table></div><br>\n";
 
+        echo "<div class='fodderInBetween'></div>";
 
         /**
          * #HOLDAT Shows Room tabs accordingly to MySQL query, showing it's name, comment as 'title' and ordered alphabetically

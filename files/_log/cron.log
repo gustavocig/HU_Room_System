@@ -1616,3 +1616,17 @@ Interno #1: Executar mailgate
 Interno #1: Executar reservation
 2018-07-30 11:39:56 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
 Interno #1: Executar queuedmail
+2018-07-30 12:11:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-07-30 12:23:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
+2018-07-30 14:35:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar temp
+2018-07-30 14:44:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar ticketrecurrent
+2018-07-30 14:53:48 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar graph
+2018-07-30 14:59:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar mailgate
+2018-07-30 15:06:20 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar queuedmail
