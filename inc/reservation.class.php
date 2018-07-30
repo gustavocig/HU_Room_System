@@ -478,7 +478,8 @@ class Reservation extends CommonDBChild
          * #HOLDAT Shows Room tabs accordingly to MySQL query, showing it's name, comment as 'title' and ordered alphabetically
          * A fodder span is used to align the right margin of the buttons with the page's calendar.
          * Another fodder span is used to separate between buttons, using 5px as distance.
-         * Sometimes CSS changes aren't immediately visible, needing things, such as, changing browser, to be able to visualize.
+         * Sometimes CSS changes aren't immediately visible, needing things, such as, changing browser, to be able to visualize
+         * or you can disable CSS caching in your browser, to see the effects immediatelly.
          */
         $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
                                 `glpi_plugin_room_rooms`.`name` AS name,
@@ -492,7 +493,11 @@ class Reservation extends CommonDBChild
         if ($result = $DB->query($query)) {
             if ($result->num_rows > 0) {
                 echo "<div>
-                    <span class='fodder1'></span>";
+                    <span class='fodder1'></span>
+                    <a class='vsubmit' id='salasToggle' title='Mostrar Salas'>Salas
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/right.png' id='rightImgToggle'></a>\n
+                    <a class='vsubmit tabSala' id='voltarTabSalas'>
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>Voltar</a>\n";
                 while ($row = $DB->fetch_assoc($result)) {
                     echo "<a class='vsubmit tabSala' href='../front/reservation.php?reservationitems_id=" . $row['id'] .
                         "' title='Mostrar calendário - " . $row['comment'] . "'>" . $row['name'] . "</a>";
@@ -502,6 +507,7 @@ class Reservation extends CommonDBChild
             }
         }
 
+        echo "<div class='fodderInBetween'></div>";
 
         // Check bisextile years
         if (($annee_courante % 4) == 0) {
@@ -579,29 +585,18 @@ class Reservation extends CommonDBChild
 
         $js = "$(document).ready(function() {
             $('#previousYearToggle').click(function() {
-                $('.previousYear').toggleClass('invisible');
+                $('.previousYear').toggle('fast');
             });
             $('#currentYearToggle').click(function() {
-                $('.currentYear').toggleClass('invisible');
+                $('.currentYear').toggle('fast');
             });
             $('#nextYearToggle').click(function() {
-                $('.nextYear').toggleClass('invisible');
+                $('.nextYear').toggle('fast');
             });
         })";
 
         echo html::scriptBlock($js);
 
-        /*$mail = new GLPIMailer();
-        $mail->setFrom('gustavocignachi@hotmail.com');
-        $mail->addAddress('gustavocignachi@hotmail.com');
-        $mail->Subject  = 'First PHPMailer Message';
-        $mail->Body     = 'Hi! This is my first e-mail sent through PHPMailer.';
-        if(!$mail->send()) {
-            echo 'Message was not sent.';
-            echo 'Mailer error: ' . $mail->ErrorInfo;
-        } else {
-            echo 'Message has been sent.';
-        }*/
 
         echo "</td></tr></table>";
         echo "</td><td class='top' width='100%'>";

@@ -945,6 +945,23 @@ $(function(){
 });
 
 
-//#HOLDAT Added script for modals and timepickers
+/**
+ * Function that operates the toggle between show and hide of the 'salas's buttons.
+ * @type {jQuery}
+ */
+salasToggle = $(document).ready(function() {
+    $('#salasToggle').click(() => {
+        $('#salasToggle').fadeToggle(200, () => {
+            $('.tabSala').fadeToggle(200);
+        });
+    });
+    $('#voltarTabSalas').click(() => {
+        $('.tabSala').fadeToggle(200, () => {
+            $('#salasToggle').fadeIn(200);
+        });
+    });
+});
+
+
 
 

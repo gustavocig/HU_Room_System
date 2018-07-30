@@ -4087,9 +4087,9 @@ textarea {
 
 #previousYearToggle:hover, #currentYearToggle:hover, #nextYearToggle:hover {
     cursor: pointer;
-    color: #222;
     opacity: .9;
-    background-color: #fffefa;
+    text-shadow: 0.1px 0px 0px #4c3006;
+    background-color: #fefdf9;
 }
 
 
@@ -4109,5 +4109,24 @@ textarea {
 
 .menuCalendar:hover {
     cursor: pointer;
-    text-shadow: 0.1px 0px 0px #8f5a0a;
+    opacity: .9;
+    text-shadow: 0.5px 0px 0px #8f5a0a;
+    background-color: #fefdf9;
+}
+
+#rightImgToggle {
+    padding-left: 0.5em;
+}
+
+#leftImgToggle {
+    padding-right: 0.5em;
+}
+
+#voltarTabSalas, #salasToggle {
+    padding: 0.3em 0.3em;
+    margin-right: 1em;
+}
+
+.fodderInBetween {
+    padding: 0.2em 0;
 }
