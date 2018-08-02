@@ -16969,3 +16969,69 @@ Test
   Backtrace :
   inc/reservation.class.php:614                      
   front/reservation.php:53                           Reservation::showCalendar()
+2018-08-01 11:30:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:33:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:35:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:37:18 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:44:37 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:48:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:48:41 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:48:46 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:49:03 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:49:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-01 11:49:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()

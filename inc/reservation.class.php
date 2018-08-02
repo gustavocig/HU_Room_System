@@ -700,93 +700,73 @@ class Reservation extends CommonDBChild
         echo "</tr></table>\n";
         echo "</td></tr></table></div>\n";
 
-        $js = "first_execution = true;
-        current_week = -1;
-        
-        $('#buttonForwards').click(forwardWeek);
-        $('#buttonBackwards').click(backwardWeek);
+        $js = "
+        // Initializes week-scrolling functionality
+        startWeekScrolling();
+
+        $('#buttonForwards').click(forward1Week);
+        $('#buttonBackwards').click(backward1Week);
         $('#buttonShowAll').click(showFullCalendar);
         
-        function forwardWeek() {
-            new_week = 0;
-            for(i = 0; i < " . $week . "; i++) {
-                if(first_execution) {
-                    if( !$('.week' + i).hasClass('currentWeek') ) {
-                        $('.week' + i).addClass('invisible');
-                    } else {
-                        current_week = i;
-                    }
-                } else {
-                    if(i === current_week) {
-                        $('.week' + i).addClass('invisible');
-                        if(current_week == " . $week . " - 1) {
-                            l = 0;
-                            new_week = 0;
-                        } else {
-                            l = i + 1;
-                            new_week = current_week + 1;
-                        }
-                        console.log(l);
-                        $('.week' + l).removeClass('invisible');
-                    }
-                }
+        // Initializes week scrolling routine by verifying if any week is tagged as the current one
+        // If none are, tags the first week.
+        function startWeekScrolling() {
+            if(findCurrentWeek() == -1) {
+                $('.week0').addClass('currentWeek');
             }
-            if(current_week === -1) {
-                $('.week0').removeClass('invisible');
-                current_week = 0;
-            }
-            if(!first_execution) {
-                current_week = new_week;
-            }
-            first_execution = false;
         };
         
+        // Deals with overflow and underflow of the 'current week' indexing 
+        function updateWeekIndex(currentWeek) {
+            if(currentWeek >= (" . $week . ")) {
+                return 0;
+            } else if(currentWeek < 0) {
+                return (" . $week . " - 1);
+            } else {
+                return currentWeek;
+            }
+        }
         
-        function backwardWeek() {
-            new_week = 0;
+        function forward1Week() {
+            let currentFWeek = findCurrentWeek();
+            $('.week' + currentFWeek).removeClass('currentWeek');
+            currentFWeek = updateWeekIndex(currentFWeek + 1);
+            $('.week' + currentFWeek).addClass('currentWeek');
             for(i = 0; i < " . $week . "; i++) {
-                if(first_execution) {
-                    if( !$('.week' + i).hasClass('currentWeek') ) {
-                        $('.week' + i).addClass('invisible');
-                    } else {
-                        current_week = i;
-                    }
-                } else {
-                    if(i == current_week) {
-                        $('.week' + i).addClass('invisible');
-                        if(current_week == 0) {
-                            l = " . ($week - 1) . ";
-                            new_week = " . ($week - 1) . ";
-                        } else {
-                            l = i - 1;
-                            new_week = current_week - 1;
-                        }
-                        console.log(l);
-                        $('.week' + l).removeClass('invisible');
-                    }
+                if(i != currentFWeek) {
+                    $('.week' + i).fadeOut('slow');
                 }
             }
-            if(current_week === -1) {
-                $('.week" . ($week-1) . "').removeClass('invisible');
-                current_week = " . ($week-1) . ";
+            $('.week' + currentFWeek).fadeIn('slow');
+        };
+        
+        function backward1Week() {
+            let currentBWeek = findCurrentWeek();
+            $('.week' + currentBWeek).removeClass('currentWeek');
+            currentBWeek = updateWeekIndex(currentBWeek - 1);
+            $('.week' + currentBWeek).addClass('currentWeek');
+            for(i = 0; i < " . $week . "; i++) {
+                if(i != currentBWeek) {
+                    $('.week' + i).fadeOut('slow');
+                }
             }
-            if(!first_execution) {
-                current_week = new_week;
-            }
-            console.log(first_execution);
-            first_execution = false;
+            $('.week' + currentBWeek).fadeIn('slow');
         };
         
         function showFullCalendar() {
             for(i = 0; i < " . $week . "; i++) {
-                $('.week' + i).removeClass('invisible');
+                $('.week' + i).fadeIn('slow');
             }
-            first_execution = true;
-            current_week = -1;
         };
         
-        
-        ";
+        function findCurrentWeek() {
+            for(i = 0; i < " . $week . "; i++) {
+                if($('.week' + i).hasClass('currentWeek')) {
+                    return i;
+                }
+            }
+            return -1;
+        };";
 
         echo html::scriptBlock($js);
 

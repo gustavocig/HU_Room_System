@@ -107,7 +107,7 @@ sup {
 }
 
 .right {
-    text-align: right !important;
+    text-align: right;
 }
 
 .floatright {
@@ -208,7 +208,7 @@ hr {
 /* ################--------------- Page ---------------#################### */
 
 #page {
-    padding: 8px 0px 20px 0px;
+    padding: 8px 0 20px 0;
     min-height: 80%;
     margin: 15px auto;
 }
@@ -300,7 +300,6 @@ select {
     background-color: inherit;
     padding-left: 1em;
     margin-left: .5em;
-    background-color: inherit;
     line-height: 26px;
     margin-top: -2px;
 }
@@ -467,7 +466,7 @@ span.vsubmit, a.vsubmit,
 
 #BackToTop:hover {
     opacity: .9;
-    box-shadow: 0px 1px 1px #999;
+    box-shadow: 0 1px 1px #999;
 }
 
 input.save {
