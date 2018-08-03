@@ -1314,20 +1314,13 @@ class Reservation extends CommonDBChild
                     /**
                      * #HOLDAT Changed to allow all users to see comments
                      */
-                    if ($resa->canEdit($row['id'])) {
-                        $modif = "<a id='content_" . $ID . $rand . "'
-                                  href='reservation.form.php?id=" . $row['id'] . "'>";
-                        $modif_end = "</a>";
-                        $modif_end .= Html::showToolTip($tooltipContent,
-                            array('applyto' => "content_" . $ID . $rand,
-                                'display' => false));
-                    } else {
-                        $modif = "<a id='content_" . $ID . $rand . "'>";
-                        $modif_end = "</a>";
-                        $modif_end .= Html::showToolTip($tooltipContent,
-                            array('applyto' => "content_" . $ID . $rand,
-                                'display' => false));
-                    }
+
+                    $modif = "<a id='content_" . $ID . $rand . "'";
+                    $modif .= ($resa->canEdit($row['id'])) ? "href='reservation.form.php?id=" . $row['id'] . "'>" : "";
+                    $modif_end = "</a>";
+                    $modif_end .= Html::showToolTip($tooltipContent,
+                        array('applyto' => "content_" . $ID . $rand,
+                            'display' => false));
 
                     echo "<td class='tab_resa center'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
                         formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],

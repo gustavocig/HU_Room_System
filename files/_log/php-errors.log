@@ -17035,3 +17035,23 @@ Test
   inc/commonglpi.class.php:725                       
   inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
   plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-02 10:29:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:858                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-02 10:29:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:859                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-02 10:30:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:858                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-02 10:30:00 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:859                      
+  front/reservation.form.php:217                     Reservation->showForm()
