@@ -658,7 +658,7 @@ class Reservation extends CommonDBChild
                 echo "<td class='top' height='100px'>";
             }*/
             echo "<td class='top day" . $i . "' height='100px'>";
-            echo "<table class='center test" . $i . "' width='100%'><tr><td class='center'>";
+            echo "<table class='center' width='100%'><tr><td class='center'>";
             echo "<span class='calendrier_jour'>" . $i . "</span></td></tr>\n";
 
             if (!empty($ID)) {
@@ -1178,6 +1178,7 @@ class Reservation extends CommonDBChild
      **/
     static function displayReservationDay($ID, $date)
     {
+        global $CFG_GLPI;
         global $DB;
 
         //HOLDAT First method to show reservations in calendar
@@ -1221,14 +1222,13 @@ class Reservation extends CommonDBChild
                                     $item->fields["peripheraltypes_id"]);
                             }
                         }
-
+                        $idToggle = mt_rand();
                         list($annee, $mois, $jour) = explode("-", $date);
-                        echo "<tr class='tab_bg_1'><td>";
-                        echo "<a href='reservation.php?reservationitems_id=" . $data['id'] .
-                            "&amp;mois_courant=$mois&amp;annee_courante=$annee'>" .
-                            sprintf(__('%1$s'), $item->getName()) . "</a></td></tr>\n";
+                        echo "<tr class='tab_bg_1' id='" . $idToggle . "'><td>";
+                        echo "<a>" . sprintf(__('%1$s'), $item->getName()) . "</a>";
+                        echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/down.png' class='resToggle'></td></tr>\n";
                         echo "<tr><td>";
-                        self::displayReservationsForAnItem($data['id'], $date);
+                        self::displayReservationsForAnItem($data['id'], $date, $idToggle);
                         echo "</td></tr>\n";
                     }
                 }
@@ -1243,7 +1243,7 @@ class Reservation extends CommonDBChild
      * @param $ID     ID a the reservation item
      * @param $date   date to display
      **/
-    static function displayReservationsForAnItem($ID, $date)
+    static function displayReservationsForAnItem($ID, $date, $idToggle='')
     {
         global $DB;
 
@@ -1322,9 +1322,19 @@ class Reservation extends CommonDBChild
                         array('applyto' => "content_" . $ID . $rand,
                             'display' => false));
 
-                    echo "<td class='tab_resa center'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
-                        formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],
-                            $user->fields["firstname"]);
+
+                    /**
+                     * #HOLDAT Maybe a possible fault point
+                     */
+                    if($_GET['reservationitems_id'] != "") {
+                        echo "<td class='tab_resa center resa" . $idToggle ."'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
+                            formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],
+                                $user->fields["firstname"]);
+                    } else {
+                        echo "<td class='tab_resa center invisible resa" . $idToggle . "'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
+                            formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],
+                                $user->fields["firstname"]);
+                    }
                     echo "</span></span>";
                     echo $modif_end;
                     echo "</td></tr>\n";

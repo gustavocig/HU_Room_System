@@ -963,5 +963,16 @@ salasToggle = $(document).ready(function() {
 });
 
 
+/**
+ * Function that operates the toggle of each room's reservations in reservation.php
+ * @type {jQuery}
+ */
+reservationsToggle = $(document).ready(function() {
+    $('.tab_bg_1').click(function() {
+        $('.resa' + $(this).attr('id')).toggle();
+    });
+})
+
+
 
 
