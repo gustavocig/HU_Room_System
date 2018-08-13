@@ -20555,3 +20555,9 @@ Test
   inc/reservation.class.php:1187                     Reservation::displayReservationsForAnItem()
   inc/reservation.class.php:673                      Reservation::displayReservationDay()
   front/reservation.php:53                           Reservation::showCalendar()
+2018-08-13 12:17:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  plugins/room/front/room.form.php:120               CommonGLPI->display()

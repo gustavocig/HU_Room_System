@@ -484,14 +484,27 @@ class Reservation extends CommonDBChild
          * Sometimes CSS changes aren't immediately visible, needing things, such as, changing browser, to be able to visualize
          * or you can disable CSS caching in your browser, to see the effects immediatelly.
          */
-        $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+        /*$query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
                                 `glpi_plugin_room_rooms`.`name` AS name,
-                                `glpi_plugin_room_rooms`.`comment` AS comment
+                                `glpi_plugin_room_rooms`.`comment` AS comment,
+                                `glpi_plugin_room_rooms`.`location` AS location
                 FROM `glpi_plugin_room_rooms`
                 LEFT JOIN `glpi_reservations`
                     ON (`glpi_plugin_room_rooms`.`id` = `glpi_reservations`.`reservationitems_id`)
                 WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0
-                ORDER BY `glpi_plugin_room_rooms`.`name`";
+                ORDER BY `glpi_plugin_room_rooms`.`name`";*/
+
+
+
+        $query = "SELECT DISTINCT `glpi_plugin_room_rooms`.`id` AS id,
+                              `glpi_plugin_room_rooms`.`name` AS name,
+                              `glpi_plugin_room_rooms`.`comment` AS comment,
+                              `glpi_locations`.`name` AS location
+                            FROM `glpi_plugin_room_rooms`
+                            LEFT JOIN `glpi_locations`
+                                ON (`glpi_plugin_room_rooms`.`locations_id` = `glpi_locations`.`id`)
+                            WHERE `glpi_plugin_room_rooms`.`is_deleted` = 0";
+
 
         if ($result = $DB->query($query)) {
             if ($result->num_rows > 0) {
@@ -499,12 +512,29 @@ class Reservation extends CommonDBChild
                     <span class='fodder1'></span>
                     <a class='vsubmit' id='salasToggle' title='Mostrar Salas'>Salas
                     <img src='" . $CFG_GLPI["root_doc"] . "/pics/right.png' id='rightImgToggle'></a>\n
-                    <a class='vsubmit tabSala' id='voltarTabSalas'>
-                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>Voltar</a>\n";
-                while ($row = $DB->fetch_assoc($result)) {
-                    echo "<a class='vsubmit tabSala' href='../front/reservation.php?reservationitems_id=" . $row['id'] .
-                        "' title='Mostrar calendário - " . $row['comment'] . "'>" . $row['name'] . "</a>";
+                    <a class='vsubmit tabSala tabLocations voltarTabLocations'>
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>Voltar</a>\n
+                    <a class='vsubmit tabSala tabGEP' id='VoltarGEP'>
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>GEP</a>\n
+                    <a class='vsubmit tabSala tabLocations' id='GEP'>GEP
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/right.png' id='leftImgToggle'></a>\n
+                    <a class='vsubmit tabSala tabHU' id='VoltarHU'>
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>HU</a>\n
+                    <a class='vsubmit tabSala tabLocations' id='HU'>HU
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/right.png' id='leftImgToggle'></a>\n
+                    <a class='vsubmit tabSala tabMEAC' id='VoltarMEAC'>
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/left.png' id='leftImgToggle'>MEAC</a>\n
+                    <a class='vsubmit tabSala tabLocations' id='MEAC'>MEAC
+                    <img src='" . $CFG_GLPI["root_doc"] . "/pics/right.png' id='leftImgToggle'></a>\n";
+
                     echo "<span class='fodderTabSala'></span>";
+                    echo "<span class='fodderTabSala'></span>";
+                    echo "<span class='fodderTabSala'></span>";
+
+                while ($row = $DB->fetch_assoc($result)) {
+                    echo "<a class='vsubmit tabSala tab" . $row['location'] . "' href='../front/reservation.php?reservationitems_id=" . $row['id'] .
+                        "' title='Mostrar calendário - " . $row['comment'] . "'>" . $row['name'] . "</a>";
+                    echo "<span class='fodderTabSala tab" . $row['location'] . "'></span>";
                 }
                 echo "</div>";
             }

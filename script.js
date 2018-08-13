@@ -950,16 +950,56 @@ $(function(){
  * @type {jQuery}
  */
 salasToggle = $(document).ready(function() {
-    $('#salasToggle').click(() => {
-        $('#salasToggle').fadeToggle(200, () => {
-            $('.tabSala').fadeToggle(200);
+        $('#salasToggle').click(() => {
+            $('#salasToggle').fadeToggle(200, () => {
+                $('.tabLocations').fadeToggle(200);
+            });
         });
-    });
-    $('#voltarTabSalas').click(() => {
-        $('.tabSala').fadeToggle(200, () => {
-            $('#salasToggle').fadeIn(200);
+
+        $('.voltarTabLocations').click(() => {
+            $('.tabLocations').fadeToggle(200, () => {
+                $('#salasToggle').fadeIn(200);
+            });
         });
-    });
+
+        $('#GEP').click(() => {
+            $('.tabLocations').fadeToggle(200, () => {
+                $('#VoltarGEP').fadeIn(200);
+                $('.tabGEP').fadeIn(200);
+            });
+        });
+
+        $('#VoltarGEP').click(() => {
+            $('.tabGEP').fadeToggle(200, () => {
+                $('.tabLocations').fadeIn(200);
+            });
+        });
+
+        $('#HU').click(() => {
+            $('.tabLocations').fadeToggle(200, () => {
+                $('#VoltarHU').fadeIn(200);
+                $('.tabHU').fadeIn(200);
+            });
+        });
+
+        $('#VoltarHU').click(() => {
+            $('.tabHU').fadeToggle(200, () => {
+                $('.tabLocations').fadeIn(200);
+            });
+        });
+
+        $('#MEAC').click(() => {
+            $('.tabLocations').fadeToggle(200, () => {
+                $('#VoltarMEAC').fadeIn(200);
+                $('.tabMEAC').fadeIn(200);
+            });
+        });
+
+        $('#VoltarMEAC').click(() => {
+            $('.tabMEAC').fadeToggle(200, () => {
+                $('.tabLocations').fadeIn(200);
+            });
+        });
 });
 
 
