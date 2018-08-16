@@ -693,10 +693,17 @@ class Reservation extends CommonDBChild
 
             if (!empty($ID)) {
                 echo "<tr><td class='center'>";
-                echo "<a href='reservation.form.php?id=&amp;item[$ID]=$ID&amp;" .
-                    "begin=" . $annee_courante . "-" . $mois_courant . "-" . $ii . " 12:00:00'>";
-                echo "<img  src='" . $CFG_GLPI["root_doc"] . "/pics/addresa.png' alt=\"" .
-                    __s('Reserve') . "\" title=\"" . __s('Reserve') . "\"></a></td></tr>\n";
+                if (($mois_courant - $currentmonth <= 6) &&
+                    ($annee_courante == $currentyear)) {
+                    if ((($mois_courant > $currentmonth) || ($annee_courante > $currentyear)) ||
+                        (($mois_courant == $currentmonth) && ($annee_courante == $currentyear) && ($i >= $currentday))){
+                        echo "<a href='reservation.form.php?id=&amp;item[$ID]=$ID&amp;direct&amp;" .
+                            "day=" . $annee_courante . "-" . $mois_courant . "-" . $ii . "'>";
+                        echo "<img  src='" . $CFG_GLPI["root_doc"] . "/pics/addresa.png' alt=\"" .
+                            __s('Reserve') . "\" title=\"" . __s('Reserve') . "\"></a>";
+                    }
+                }
+                echo "</td></tr>\n";
             }
 
             echo "<tr><td>";
@@ -1082,6 +1089,269 @@ class Reservation extends CommonDBChild
 
         echo Html::scriptBlock($js);
 
+        Html::closeForm();
+        echo "</div>\n";
+    }
+
+
+    /**
+     * #HOLDAT Secondary method reservation implementation
+     * @param $ID
+     * @param array $options
+     * @return bool
+     */
+    function showFormDirect($ID, $options=array()) {
+        global $CFG_GLPI;
+        if (!Session::haveRight("reservation", ReservationItem::RESERVEANITEM)) {
+            return false;
+        }
+        $resa = new self();
+        if (!empty($ID)) {
+            if (!$resa->getFromDB($ID)) {
+                return false;
+            }
+            if (!$resa->can($ID, UPDATE)) {
+                return false;
+            }
+            // Set item if not set
+            if ((!isset($options['item']) || (count($options['item']) == 0))
+                && ($itemid = $resa->getField('reservationitems_id'))) {
+                $options['item'][$itemid] = $itemid;
+            }
+        } else {
+            $resa->getEmpty();
+
+            if (!isset($options['day']) || (count($options['day']) == 0)) {
+                $day = date("Y-m-d");
+            } else {
+                $day = $options['day'];
+            }
+
+            /**
+             * #HOLDAT Remove begin and end times from GET URL parameters.
+             * Since there would be to many edge cases, otherwise.
+             */
+
+            $begin_time = '';
+            if (!isset($options['begin']) || (count($options['begin']) == 0)) {
+                $begin_time = time();
+                $begin_time -= ($begin_time % HOUR_TIMESTAMP);
+                $begin_time = date("H:i", $begin_time);
+            } else {
+                $begin_time -= ($options['begin'] % HOUR_TIMESTAMP);
+            }
+            $test = $day . " " . $begin_time;
+            $resa->fields["begin"] = $test;
+
+
+            if (!isset($options['end']) || (count($options['end']) == 0)) {
+                $resa->fields["end"] = date("Y-m-d H:00:00",
+                    strtotime($resa->fields["begin"]) + HOUR_TIMESTAMP);
+            } else {
+                $resa->fields["end"] = $options['end'];
+            }
+        }
+        // No item : problem
+        if (!isset($options['item']) || (count($options['item']) == 0)) {
+            return false;
+        }
+
+
+
+        echo "<div class='center'><form method='post' name=form action='reservation.form.php'>";
+        if (!empty($ID)) {
+            echo "<input type='hidden' name='id' value='$ID'>";
+        }
+        echo "<table class='tab_cadre' width='700px'>";
+        echo "<tr><th colspan='2'>".__('Reserva')."</th></tr>\n";
+        // Add Hardware name
+        $r = new ReservationItem();
+        echo "<tr class='tab_bg_1'><td>".__('Item')."</td>";
+        echo "<td>";
+        foreach ($options['item'] as $itemID) {
+            $r->getFromDB($itemID);
+            $type = $r->fields["itemtype"];
+            $name = NOT_AVAILABLE;
+            $item = NULL;
+            if ($item = getItemForItemtype($r->fields["itemtype"])) {
+                $type = $item->getTypeName();
+                if ($item->getFromDB($r->fields["items_id"])) {
+                    $name = $item->getName();
+                } else {
+                    $item = NULL;
+                }
+            }
+            echo "<span class='b'>".sprintf(__('%1$s'), $name)."</span><br>";
+            echo "<input type='hidden' name='items[$itemID]' value='$itemID'>";
+        }
+        echo "</td></tr>\n";
+        if (!Session::haveRight("reservation", UPDATE)
+            || is_null($item)
+            || !Session::haveAccessToEntity($item->fields["entities_id"])) {
+            echo "<input type='hidden' name='users_id' value='".Session::getLoginUserID()."'>";
+        } else {
+            echo "<tr class='tab_bg_2'><td>".__('By')."</td>";
+            echo "<td>";
+            if (empty($ID)) {
+                User::dropdown(array('value'  => Session::getLoginUserID(),
+                    'entity' => $item->getEntityID(),
+                    'right'  => 'all'));
+            } else {
+                User::dropdown(array('value'  => $resa->fields["users_id"],
+                    'entity' => $item->getEntityID(),
+                    'right'  => 'all'));
+            }
+            echo "</td></tr>\n";
+        }
+
+
+        /**
+         * #HOLDAT Controls 'semester' reservation logic
+         */
+        $currentMonth = date('m');
+        $maxMonth = 12;
+        if((1 <= $currentMonth) && ($currentMonth <= 6)) {
+            $maxMonth = 6;
+        }
+        $maxDate = '31' . '-' . $maxMonth . '-' . date('Y');
+
+        /**
+         * #HOLDAT Split fields from $resa to better adjust to modified logic
+         */
+
+        list($defaultDate, $defaultTime) = explode(" ",
+                                            $resa->fields["begin"]);
+
+        /**
+         * #HOLDAT Definition of min and max time values
+         */
+        $timeMin = 6;
+        $timeMax = 23;
+
+        // #HOLDAT MARKER
+        echo "<tr class='tab_bg_2'><td>Data</td><td>";
+        $rand_begin = Html::showDateField("resa[_day]",
+            array('value'      => $defaultDate,
+                'maybeempty' => false,
+                'readonlyHTML' => true,
+                'min' => date('d-m-Y'),
+                'max' => $maxDate
+            ));
+        echo "</td></tr>\n";
+        /*$default_delay = floor((strtotime($resa->fields["end"])-strtotime($resa->fields["begin"]))
+                /$CFG_GLPI['time_step']/MINUTE_TIMESTAMP)
+            *$CFG_GLPI['time_step']*MINUTE_TIMESTAMP;*/
+
+        echo "<tr class='tab_bg_2'><td>Horário de Inicio</td><td>";
+        $randTimeInit = Dropdown::showSimpleTimeDropdown("resa[_begin]",
+            array('value'             => '',
+                'width'               => '55%',
+                'display_emptychoice' => true,
+                'min'                 => $timeMin,
+                'max'                 => $timeMax,
+                'emptylabel'          => 'Especifique o horario de inicio do evento'));
+        echo "<br><div id='date_end$randTimeInit'></div>";
+
+
+
+        echo "<tr class='tab_bg_2'><td>Horário de Termino</td><td>";
+        $randTimeEnd = Dropdown::showSimpleTimeDropdown("resa[_end]",
+            array('value'             => '',
+                'width'               => '55%',
+                'display_emptychoice' => true,
+                'min'                 => $timeMin,
+                'max'                 => $timeMax,
+                'emptylabel'          => 'Especifique o horario de termino do evento'));
+        echo "<br><div id='date_end$randTimeEnd'></div>";
+
+
+        Alert::displayLastAlert('Reservation', $ID);
+        echo "</td></tr>\n";
+        if (empty($ID)) {
+            echo "<tr class='tab_bg_2'><td>".__('Rehearsal')."</td>";
+            echo "<td>";
+            $values   = array(''      => _x('periodicity', 'None'),
+                'day'   => _x('periodicity', 'Daily'),
+                'week'  => _x('periodicity', 'Weekly'),
+                'month' => _x('periodicity', 'Monthly'));
+            $rand     = Dropdown::showFromArray('periodicity[type]', $values);
+            $field_id = Html::cleanId("dropdown_periodicity[type]$rand");
+            $params   = array('type'     => '__VALUE__',
+                'end'      => $resa->fields["end"]);
+            //echo "HEREEEEEE - ".$params['type'];
+            Ajax::updateItemOnSelectEvent($field_id, "resaperiodcontent$rand",
+                $CFG_GLPI["root_doc"]."/ajax/resaperiod.php", $params);
+            echo "<br><div id='resaperiodcontent$rand'></div>";
+            echo "</td></tr>\n";
+        }
+
+
+        echo "<tr class='tab_bg_2'><td>Área Temática da reserva</td><td>";
+        $valueThemes = array('NULL' => ' ---- ',
+            'Aula' => 'Aula',
+            'Apresentação' => 'Apresentação');
+        Dropdown::showFromArray('theme', $valueThemes);
+
+
+        echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
+        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
+        echo "</td></tr>\n";
+        echo "<input type='hidden' name='direct' value='true'>";
+        if (empty($ID)) {
+            echo "<tr class='tab_bg_2'>";
+            echo "<td colspan='2' class='top center'>";
+            echo "<input type='submit' id='reservationFormSubmit' name='add' value=\""._sx('button', 'Add')."\" class='submit'>";
+            echo "</td></tr>\n";
+        } else {
+            if (($resa->fields["users_id"] == Session::getLoginUserID())
+                || Session::haveRightsOr(static::$rightname, array(PURGE, UPDATE))) {
+                echo "<tr class='tab_bg_2'>";
+                if (($resa->fields["users_id"] == Session::getLoginUserID())
+                    || Session::haveRight(static::$rightname, PURGE)) {
+                    echo "<td class='top center'>";
+                    echo "<input type='submit' name='purge' value=\""._sx('button', 'Delete permanently')."\"
+                      class='submit'>";
+                    if ($resa->fields["group"] > 0) {
+                        echo "<br><input type='checkbox' name='_delete_group'>&nbsp;".
+                            __s('Delete all rehearsals');
+                    }
+                    echo "</td>";
+                }
+                if (($resa->fields["users_id"] == Session::getLoginUserID())
+                    || Session::haveRight(static::$rightname, UPDATE)) {
+                    echo "<td class='top center'>";
+                    echo "<input type='submit'  name='update' value=\""._sx('button', 'Save')."\"
+                     class='submit'>";
+                    echo "</td>";
+                }
+                echo "</tr>\n";
+            }
+        }
+        echo "</table>";
+
+        $js = "$(document).ready(function() {
+            $('#reservationText').qtip({
+                content: {
+                    text: 520 - $('#reservationText').val().length,
+                    title: 'Número de caracteres restantes'
+                },
+                style: {
+                    classes: 'qtip-shadow qtip-bootstrap'
+                },
+                hide: {
+                    event: 'unfocus'
+                }
+            });
+        });
+
+        $('#reservationText').keyup(function () {
+            let qapi = $('#reservationText').data('qtip');
+            let newtip = 520 - $('#reservationText').val().length;
+            qapi.options.content.text = newtip;
+            qapi.elements.content.text(newtip);
+        });";
+
+        echo Html::scriptBlock($js);
         Html::closeForm();
         echo "</div>\n";
     }

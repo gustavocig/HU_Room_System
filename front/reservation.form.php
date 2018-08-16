@@ -81,6 +81,9 @@ if (isset($_POST["update"])) {
    if (empty($_POST['users_id'])) {
       $_POST['users_id'] = Session::getLoginUserID();
    }
+   if (isset($_POST['direct'])) {
+       Toolbox::manageDirectReservation($_POST);
+   }
    Toolbox::manageBeginAndEndPlanDates($_POST['resa']);
    $dates_to_add = array();
    list($begin_year,$begin_month,$begin_day) = explode("-",$_POST['resa']["begin"]);
@@ -205,18 +208,32 @@ if (isset($_POST["update"])) {
 //    }
 
 } else if (isset($_GET["id"])) {
-   if (!isset($_GET['begin'])) {
-      $_GET['begin'] = date('Y-m-d H:00:00');
-   }
-   if (empty($_GET["id"])
-       && (!isset($_GET['item']) || (count($_GET['item']) == 0 ))) {
-      Html::back();
-   }
-   if (!empty($_GET["id"])
-       || (isset($_GET['item']) && isset($_GET['begin']))) {
-      $rr->showForm($_GET['id'], $_GET);
-   }
+
+    if (isset($_GET['direct'])) {
+        echo "TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+        $rr->showFormDirect($_GET['id'], $_GET);
+    } else {
+        if (!isset($_GET['begin'])) {
+            $_GET['begin'] = date('Y-m-d H:00:00');
+        }
+        if (empty($_GET["id"])
+            && (!isset($_GET['item']) || (count($_GET['item']) == 0 ))) {
+            Html::back();
+        }
+        if (!empty($_GET["id"])
+            || (isset($_GET['item']) && isset($_GET['begin']))) {
+            $rr->showForm($_GET['id'], $_GET);
+        }
+    }
 }
+
+/**
+ * #HOLDAT Secondary reservation method for direct reserves
+ */
+/*else if (isset($_GET['direct'])) {
+    echo "TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+    $rr->showFormDirect($_GET['id'], $_GET);
+}*/
 
 if ($_SESSION["glpiactiveprofile"]["interface"] == "helpdesk") {
    Html::helpFooter();

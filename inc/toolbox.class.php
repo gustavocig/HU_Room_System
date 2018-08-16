@@ -2648,4 +2648,16 @@ class Toolbox {
       $length = strlen($needle);
       return (substr($haystack, 0, $length) === $needle);
    }
+
+
+   static public function manageDirectReservation(&$data) {
+        $reformated_begin = $data['resa']['_begin'] + 6;
+        $reformated_begin = $reformated_begin . ":" . "00";
+
+        $reformated_end = $data['resa']['_end'] + 6;
+        $reformated_end = $reformated_end . ":" . "00";
+
+        $data['resa']['begin'] = $data['resa']['_day'] . " " . $reformated_begin;
+        $data['resa']['end']   = $data['resa']['_day'] . " " . $reformated_end;
+   }
 }

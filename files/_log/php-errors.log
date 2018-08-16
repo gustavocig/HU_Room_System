@@ -20561,3 +20561,469 @@ Test
   inc/commonglpi.class.php:725                       
   inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
   plugins/room/front/room.form.php:120               CommonGLPI->display()
+2018-08-13 13:21:25 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:21:25 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:36:56 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:36:56 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:39:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:39:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:39:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:39:58 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:40:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 13:40:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 14:14:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Warning(2): Missing argument 1 for Reservation::showFormDirect(), called in /usr/share/Estagio-HU/glpi/front/reservation.form.php on line 223 and defined
+  Backtrace :
+  inc/reservation.class.php:1091                     
+  front/reservation.form.php:223                     Reservation->showFormDirect()
+2018-08-13 14:14:39 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1111                     
+  front/reservation.form.php:223                     Reservation->showFormDirect()
+2018-08-13 14:15:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 14:15:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 14:16:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 14:16:01 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-13 14:16:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: id
+  Backtrace :
+  front/reservation.form.php:223                     
+2018-08-13 14:16:11 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1111                     
+  front/reservation.form.php:223                     Reservation->showFormDirect()
+2018-08-14 12:46:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-14 12:46:29 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-14 12:49:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timebegin
+  Backtrace :
+  inc/reservation.class.php:888                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-14 12:49:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: timeend
+  Backtrace :
+  inc/reservation.class.php:889                      
+  front/reservation.form.php:217                     Reservation->showForm()
+2018-08-14 12:49:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: id
+  Backtrace :
+  front/reservation.form.php:226                     
+2018-08-14 12:49:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:226                     Reservation->showFormDirect()
+2018-08-14 12:53:31 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:109                     
+2018-08-14 12:59:07 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:109                     
+2018-08-14 13:27:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 2018--01 12:00:00! 
+2018-08-14 13:27:36 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 201801 12:00:00! 
+2018-08-14 13:27:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  From Html::convDate() in /usr/share/Estagio-HU/glpi/inc/html.class.php line 158
+  Invalid date 2018--01 12:00:00! 
+2018-08-14 13:28:32 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:109                     
+2018-08-14 14:56:37 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 14:57:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 14:59:30 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:00:44 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:01:26 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:02:09 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:02:51 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:03:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:03:33 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:17:34 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/reservation.class.php:1116                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-14 15:45:53 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:109                     
+2018-08-16 09:31:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: rand
+  Backtrace :
+  inc/reservation.class.php:1251                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-16 09:31:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: rand
+  Backtrace :
+  inc/reservation.class.php:1251                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-16 09:31:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: default_delay
+  Backtrace :
+  inc/reservation.class.php:1253                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-16 09:31:19 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined variable: rand
+  Backtrace :
+  inc/reservation.class.php:1255                     
+  front/reservation.form.php:211                     Reservation->showFormDirect()
+2018-08-16 09:33:23 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  ajax/planningend.php:55                            
+2018-08-16 09:33:28 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  inc/html.class.php:3421                            
+  ajax/planningend.php:62                            Html::showDateTimeField()
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:21:10 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:21:23 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:25:41 [5@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:26:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:31:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:31:21 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: _day
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: _begin
+  Backtrace :
+  inc/toolbox.class.php:2654                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: _day
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: _end
+  Backtrace :
+  inc/toolbox.class.php:2655                         
+  front/reservation.form.php:85                      Toolbox::manageDirectReservation()
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 2
+  Backtrace :
+  front/reservation.form.php:89                      
+2018-08-16 11:42:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:43:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:45:26 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:48:35 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 11:49:17 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
+2018-08-16 12:00:10 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: theme
+  Backtrace :
+  front/reservation.form.php:112                     
