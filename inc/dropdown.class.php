@@ -1808,7 +1808,11 @@ class Dropdown {
     *    - emptylabel          : empty label if empty displayed (default self::EMPTY_VALUE)
     *    - display_emptychoice : display empty choice (default false)
     *    - tooltip             : string / message to add as tooltip on the dropdown (default '')
-    *    - option_tooltips     : array / message to add as tooltip on the dropdown options. Use the same keys as for the $elements parameter, but none is mandotary. Missing keys will just be ignored and no tooltip will be added. To add a tooltip on an option group, is the '__optgroup_label' key inside the array describing option tooltips : 'optgroupname1' => array('__optgroup_label' => 'tooltip for option group') (default empty)
+    *    - option_tooltips     : array / message to add as tooltip on the dropdown options.
+    * Use the same keys as for the $elements parameter, but none is mandotary.
+    * Missing keys will just be ignored and no tooltip will be added.
+    * To add a tooltip on an option group, is the '__optgroup_label' key inside the array describing option tooltips :
+    *    'optgroupname1' => array('__optgroup_label' => 'tooltip for option group') (default empty)
     *
     * Permit to use optgroup defining items in arrays
     * array('optgroupname'  => array('key1' => 'val1',

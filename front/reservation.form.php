@@ -208,9 +208,7 @@ if (isset($_POST["update"])) {
 //    }
 
 } else if (isset($_GET["id"])) {
-
     if (isset($_GET['direct'])) {
-        echo "TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
         $rr->showFormDirect($_GET['id'], $_GET);
     } else {
         if (!isset($_GET['begin'])) {
@@ -226,14 +224,6 @@ if (isset($_POST["update"])) {
         }
     }
 }
-
-/**
- * #HOLDAT Secondary reservation method for direct reserves
- */
-/*else if (isset($_GET['direct'])) {
-    echo "TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
-    $rr->showFormDirect($_GET['id'], $_GET);
-}*/
 
 if ($_SESSION["glpiactiveprofile"]["interface"] == "helpdesk") {
    Html::helpFooter();

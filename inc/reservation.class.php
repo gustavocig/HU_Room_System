@@ -1027,7 +1027,9 @@ class Reservation extends CommonDBChild
         Dropdown::showFromArray('theme', $valueThemes);
 
         echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
-        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
+        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' 
+                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "
+                </textarea>";
         echo "</td></tr>\n";
 
 
@@ -1294,7 +1296,9 @@ class Reservation extends CommonDBChild
 
 
         echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
-        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
+        echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' 
+                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "
+                </textarea>";
         echo "</td></tr>\n";
         echo "<input type='hidden' name='direct' value='true'>";
         if (empty($ID)) {
@@ -1627,11 +1631,13 @@ class Reservation extends CommonDBChild
                      * #HOLDAT Maybe a possible fault point
                      */
                     if($_GET['reservationitems_id'] != "") {
-                        echo "<td class='tab_resa center resa" . $idToggle ."'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
+                        echo "<td class='tab_resa center resa" . $idToggle ."'>" . $modif . "<span>" . $display . "<br>
+                                <span class='b'>" .
                             formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],
                                 $user->fields["firstname"]);
                     } else {
-                        echo "<td class='tab_resa center invisible resa" . $idToggle . "'>" . $modif . "<span>" . $display . "<br><span class='b'>" .
+                        echo "<td class='tab_resa center invisible resa" . $idToggle . "'>" . $modif . "<span>" .
+                                $display . "<br><span class='b'>" .
                             formatUserName($user->fields["id"], $user->fields["name"], $user->fields["realname"],
                                 $user->fields["firstname"]);
                     }

@@ -21027,3 +21027,15 @@ Test
   *** PHP Notice(8): Undefined index: theme
   Backtrace :
   front/reservation.form.php:112                     
+2018-08-17 12:33:40 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/config.form.php:68                           CommonGLPI->display()
+2018-08-17 12:33:49 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: ReservationItem$1
+  Backtrace :
+  inc/commonglpi.class.php:725                       
+  inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
+  front/config.form.php:68                           CommonGLPI->display()
