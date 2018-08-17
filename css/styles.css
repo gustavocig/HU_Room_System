@@ -4033,6 +4033,8 @@ textarea {
 
 .vsubmit:hover {
     background: #d9d9d9;
+    -webkit-box-shadow: 1px 1px 6px #888;
+    -moz-box-shadow: 1px 1px 6px #888;
     box-shadow: 1px 1px 6px #888;
     color: #222;
     cursor: pointer;
@@ -4042,6 +4044,10 @@ textarea {
     background-color: #999999;
     box-shadow: none;
     color: #222;
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
     transform: translateY(4px);
 }
 
@@ -4071,6 +4077,10 @@ textarea {
     box-shadow: none;
     color: #222;
     border: none;
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
     transform: translateY(4px);
     margin: 1px;
 }
@@ -4088,6 +4098,10 @@ textarea {
     cursor: pointer;
     opacity: .9;
     text-shadow: 0.1px 0px 0px #4c3006;
+    -moz-text-shadow: 0.1px 0px 0px #4c3006;
+    -webkit-text-shadow: 0.1px 0px 0px #4c3006;
+    -moz-text-shadow: 0.1px 0px 0px #4c3006;
+    -o-text-shadow: 0.1px 0px 0px #4c3006;
     background-color: #fefdf9;
 }
 
@@ -4109,6 +4123,10 @@ textarea {
 .menuCalendar:hover {
     cursor: pointer;
     opacity: .9;
+    -moz-text-shadow: 0.5px 0px 0px #8f5a0a;
+    -webkit-text-shadow: 0.5px 0px 0px #8f5a0a;
+    -moz-text-shadow: 0.5px 0px 0px #8f5a0a;
+    -o-text-shadow: 0.5px 0px 0px #8f5a0a;
     text-shadow: 0.5px 0px 0px #8f5a0a;
     background-color: #fefdf9;
 }
@@ -4135,6 +4153,8 @@ textarea {
     padding-left: 45px;
     border-bottom: solid 0.5px #d8d8d8;
     background-color: #efefef;
+    -webkit-box-shadow: 0px 0px 11px 0 #333333;
+    -moz-box-shadow: 0px 0px 11px 0 #333333;
     box-shadow: 0px 0px 11px 0 #333333;
 }
 
