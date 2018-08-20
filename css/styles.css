@@ -4205,3 +4205,7 @@ img.resToggle {
 .currentDay {
     background-color: #cccccc;
 }
+
+.day:hover {
+    background-color: #bdbdbd;
+}
