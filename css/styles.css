@@ -4201,3 +4201,7 @@ textarea {
 img.resToggle {
     float: right;
 }
+
+.currentDay {
+    background-color: #cccccc;
+}

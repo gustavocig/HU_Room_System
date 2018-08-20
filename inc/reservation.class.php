@@ -687,7 +687,11 @@ class Reservation extends CommonDBChild
             } else {
                 echo "<td class='top' height='100px'>";
             }*/
-            echo "<td class='top day" . $i . "' height='100px'>";
+            $dayClasses = "top day" . $i;
+            if ($currentday == $i && $currentmonth == $mois_courant && $currentyear == $annee_courante) {
+                $dayClasses .= " currentDay";
+            }
+            echo "<td class='" . $dayClasses . "' height='100px'>";
             echo "<table class='center' width='100%'><tr><td class='center'>";
             echo "<span class='calendrier_jour'>" . $i . "</span></td></tr>\n";
 
