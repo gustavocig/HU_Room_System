@@ -1842,3 +1842,7 @@ Interno #1: Executar ticketrecurrent
 Interno #1: Executar graph
 2018-08-20 09:53:43 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
 Interno #1: Executar queuedmail
+2018-08-20 10:10:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar closeticket
+2018-08-20 10:16:16 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+Interno #1: Executar alertnotclosed

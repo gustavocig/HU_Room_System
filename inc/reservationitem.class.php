@@ -898,7 +898,7 @@ class ReservationItem extends CommonDBChild {
                 }
 
                 if ($ok) {
-                    echo "<tr class='tab_bg_1 center'><td colspan='8'>";
+                    echo "<tr class='tab_bg_1 center'><td colspan='12'>";
                     if (isset($_POST['reserve'])) {
                         echo Html::hidden('timebegin', array('value' => $begin));
                         echo Html::hidden('timeend', array('value' => $end));
