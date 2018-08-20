@@ -1028,8 +1028,7 @@ class Reservation extends CommonDBChild
 
         echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
         echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' 
-                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "
-                </textarea>";
+                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
         echo "</td></tr>\n";
 
 
@@ -1297,8 +1296,7 @@ class Reservation extends CommonDBChild
 
         echo "<tr class='tab_bg_2'><td>Descrição da Atividade</td>";
         echo "<td><textarea name='comment' id='reservationText' rows='8' cols='60' maxlength='520' 
-                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "
-                </textarea>";
+                placeholder='Descreva sua atividade com no mínimo X caracteres' required>" . $resa->fields["comment"] . "</textarea>";
         echo "</td></tr>\n";
         echo "<input type='hidden' name='direct' value='true'>";
         if (empty($ID)) {
