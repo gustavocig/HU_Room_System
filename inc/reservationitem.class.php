@@ -467,12 +467,12 @@ class ReservationItem extends CommonDBChild {
 
         echo "<br><div id='time_begin$randTimeInit'></div>";
 
-        $params = array('duration'     => '__VALUE__',
+        /*$params = array('duration'     => '__VALUE__',
             'begin'          => $_POST['reserve']["timebegin"],
             'name'         => "reserve[timebegin]");
 
         Ajax::updateItemOnSelectEvent("dropdown_reserve[_timebegin]$randTimeInit", "time_begin$randTimeInit",
-            $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);
+            $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);*/
 
         echo "</td></tr>";
 
@@ -508,12 +508,13 @@ class ReservationItem extends CommonDBChild {
                 'emptylabel'          => 'Especifique o horario de termino do evento'));
 
         echo "<br><div id='time_end$randTimeEnd'></div>";
-        $params = array('duration'     => '__VALUE__',
+
+        /*$params = array('duration'     => '__VALUE__',
             'end'          => $_POST['reserve']["timeend"],
             'name'         => "reserve[timeend]");
 
         Ajax::updateItemOnSelectEvent("dropdown_reserve[_timeend]$randTimeEnd", "time_end$randTimeEnd",
-            $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);
+            $CFG_GLPI["root_doc"]."/ajax/planningend.php", $params);*/
         echo "</td></tr>";
 
 

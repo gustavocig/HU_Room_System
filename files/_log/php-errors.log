@@ -21039,3 +21039,12 @@ Test
   inc/commonglpi.class.php:725                       
   inc/commonglpi.class.php:1170                      CommonGLPI->showTabsContent()
   front/config.form.php:68                           CommonGLPI->display()
+2018-08-20 09:53:47 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined offset: 1
+  Backtrace :
+  inc/html.class.php:3421                            
+  ajax/planningend.php:62                            Html::showDateTimeField()
+2018-08-20 09:53:57 [2@gustavoc-HP-Compaq-Pro-6305-SFF]
+  *** PHP Notice(8): Undefined index: end
+  Backtrace :
+  ajax/planningend.php:55                            
