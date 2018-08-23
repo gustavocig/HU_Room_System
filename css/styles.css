@@ -2680,7 +2680,7 @@ ul#menu ul.ssmenu {
 }
 
 a.copyright {
-    font-size: 9px;
+    font-size: 8px;
     color: #000;
 }
 
@@ -4202,10 +4202,54 @@ img.resToggle {
     float: right;
 }
 
+/**
+    #HOLDAT Highlights the current day in the calendar
+ */
 .currentDay {
     background-color: #cccccc;
 }
 
+/*
+    #HOLDAT Highlights a hovered over day in the calendar
+ */
 .day:hover {
-    background-color: #bdbdbd;
+    background-color: #F5F5F5;
+}
+
+/*
+    #HOLDAT
+    ################--------------- Contact Footer Design ---------------####################
+ */
+
+.contactFooter {
+    padding: 1em 0 1em 2em;
+    font-weight: unset;
+}
+
+.contactFooterHeader {
+    font-size: 18px;
+    color: #252525;
+    border-bottom: solid 0.5px #c3c3c3;
+    padding-bottom: 1em;
+    margin: 0;
+    width: 20em;
+}
+
+.contactInfo {
+    font-size: 1.4em;
+    color: #424242;
+    opacity: .9;
+    margin: 1em 0;
+}
+
+.contactImgs {
+    width: 30px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.fodderVertical {
+    height: 0px;
 }

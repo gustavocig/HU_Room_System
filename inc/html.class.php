@@ -1949,7 +1949,7 @@ class Html
 
         echo "<div id='footer' >";
         echo "<table width='100%'><tr><td class='left'><span class='copyright'>";
-        $timedebug = sprintf(_n('%s second', '%s seconds', $TIMER_DEBUG->getTime()),
+        /*$timedebug = sprintf(_n('%s second', '%s seconds', $TIMER_DEBUG->getTime()),
             $TIMER_DEBUG->getTime());
 
         if (function_exists("memory_get_usage")) {
@@ -1966,9 +1966,16 @@ class Html
             printf(__('A new version is available: %s.'), $latest_version);
 
             echo "</td>";
-        }
-        echo "<td class='right'>" . self::getCopyrightMessage() . "</td>";
+        }*/
+        echo "<td class='left'>" . self::getCopyrightMessage() . "</td>";
         echo "</tr></table></div>";
+
+
+        /**
+         * #HOLDAT Function to show HU's contact information
+         */
+        self::showContactInfo();
+
 
         if ($_SESSION['glpi_use_mode'] == Session::TRANSLATION_MODE) { // debug mode traduction
             echo "<div id='debug-float'>";
@@ -6301,6 +6308,20 @@ class Html
             " - Copyright (C) 2003-2015 INDEPNET Development Team" .
             "</a>";
         return $message;
+    }
+
+    static function showContactInfo() {
+        echo "<div id='infoFooter'>
+                <h5 class='contactFooter left'>
+                        <p class='contactFooterHeader'>Contato</p>
+                        <p class='contactInfo'>
+                            <img src='/glpi/pics/contactMail.svg' class='contactImgs'>setordeensinohuwc@gmail.com
+                        </p>
+                        <p class='contactInfo'>
+                            <img src='/glpi/pics/contactPhone.svg' class='contactImgs'>(85) 3366-8153
+                        </p>
+                </h5>
+             </div>";
     }
 
 }
